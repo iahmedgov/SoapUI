@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1e5bbce6-189e-4dd6-9a8d-db3cb5464bef" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PartialRefund" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1e5bbce6-189e-4dd6-9a8d-db3cb5464beffileName">PartialRefund</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceForSaleTransaction" id="24ee10d8-fc1d-4993-94ec-76f323c0fdc5">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/PartialRefund.xlsx</file>
+          <worksheet>SaleAndPartialRefund</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>TestNotes</con:property>
+      <con:property>AT_Username</con:property>
+      <con:property>AT_Password</con:property>
+      <con:property>AT_RequestID</con:property>
+      <con:property>AT_Identifier</con:property>
+      <con:property>Notes</con:property>
+      <con:property>FeeType</con:property>
+      <con:property>FeeAmount</con:property>
+      <con:property>SegmentAmount</con:property>
+      <con:property>SegmentType</con:property>
+      <con:property>PaymentType</con:property>
+      <con:property>ProcessDate</con:property>
+      <con:property>UDF1Label</con:property>
+      <con:property>UDF1Value</con:property>
+      <con:property>UDF2Label</con:property>
+      <con:property>UDF2Value</con:property>
+      <con:property>UDF3Label</con:property>
+      <con:property>UDF3Value</con:property>
+      <con:property>UDF4Label</con:property>
+      <con:property>UDF4Value</con:property>
+      <con:property>UDF5Label</con:property>
+      <con:property>UDF5Value</con:property>
+      <con:property>UDF6Label</con:property>
+      <con:property>UDF6Value</con:property>
+      <con:property>UDF7Label</con:property>
+      <con:property>UDF7Value</con:property>
+      <con:property>UDF8Label</con:property>
+      <con:property>UDF8Value</con:property>
+      <con:property>UDF9Label</con:property>
+      <con:property>UDF9Value</con:property>
+      <con:property>UDF10Label</con:property>
+      <con:property>UDF10Value</con:property>
+      <con:property>C_AL1</con:property>
+      <con:property>C_AL2</con:property>
+      <con:property>C_Country</con:property>
+      <con:property>C_Email</con:property>
+      <con:property>C_FirstName</con:property>
+      <con:property>C_LastName</con:property>
+      <con:property>C_MI</con:property>
+      <con:property>C_Notest</con:property>
+      <con:property>C_Phone</con:property>
+      <con:property>C_ZIP</con:property>
+      <con:property>C_Username</con:property>
+      <con:property>C_Password</con:property>
+      <con:property>C_CAN</con:property>
+      <con:property>C_PreAuthOnly</con:property>
+      <con:property>C_PaymentSource</con:property>
+      <con:property>P_AccountName</con:property>
+      <con:property>P_AL1</con:property>
+      <con:property>P_AL2</con:property>
+      <con:property>P_Country</con:property>
+      <con:property>P_Phone</con:property>
+      <con:property>P_FirstName</con:property>
+      <con:property>P_LastName</con:property>
+      <con:property>P_MI</con:property>
+      <con:property>P_Email</con:property>
+      <con:property>P_ZIP</con:property>
+      <con:property>P_BusinessName</con:property>
+      <con:property>P_IsBusiness</con:property>
+      <con:property>V_ABA</con:property>
+      <con:property>V_AccountType</con:property>
+      <con:property>V_CheckNumber</con:property>
+      <con:property>V_CheckType</con:property>
+      <con:property>V_CheckPos</con:property>
+      <con:property>V_CVV</con:property>
+      <con:property>V_ExpDate</con:property>
+      <con:property>V_VehicleNumber</con:property>
+      <con:property>V_PMCategory</con:property>
+      <con:property>V_EnforcePin</con:property>
+      <con:property>ResultCode</con:property>
+      <con:property>ResultText</con:property>
+      <con:property>Success</con:property>
+      <con:property>R_Amount</con:property>
+      <con:property>R_ResultCode</con:property>
+      <con:property>R_ResultText</con:property>
+      <con:property>R_Success</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="SaleTransaction" id="3fa81836-6626-438f-a9bb-b503a2a4ffd1">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPayment</con:operation>
+      <con:request name="SaleTransaction" id="a0456696-734a-488d-91fb-ff3fe935f424">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceForSaleTransaction#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenForProcessDate#TodaysDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourceForSaleTransaction#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourceForSaleTransaction#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceForSaleTransaction#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceForSaleTransaction#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourceForSaleTransaction#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourceForSaleTransaction#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceForSaleTransaction#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceForSaleTransaction#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourceForSaleTransaction#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourceForSaleTransaction#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourceForSaleTransaction#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourceForSaleTransaction#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourceForSaleTransaction#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceForSaleTransaction#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceForSaleTransaction#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourceForSaleTransaction#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourceForSaleTransaction#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceForSaleTransaction#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceForSaleTransaction#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourceForSaleTransaction#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourceForSaleTransaction#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourceForSaleTransaction#C_ZIP}</ppi:Zip><ppi:Username>${DataSourceForSaleTransaction#C_Username}</ppi:Username><ppi:Password>${DataSourceForSaleTransaction#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="898f57e2-aa6b-44bb-af49-c2b35b101bd2"/>
+        <con:assertion type="XPath Match" id="9c000180-37ab-4915-ba24-9f131d6ab1bf" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourceForSaleTransaction#ResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="f2569a2b-5053-46d2-9a3e-d03e84fb8060" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourceForSaleTransaction#ResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="8e955c60-0882-4d52-b564-e26b57ca17c4" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourceForSaleTransaction#Success}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="RefundRequest" id="10339e1d-1edb-46c8-91f6-be738d689fd1">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="RefundRequest" id="4edfd7f8-54ff-434d-8c25-df27679c9e13">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>${SaleTransaction#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId><ws:code>A01</ws:code><ws:comments>This is a Comment</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount><ws:ppiPayment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#R_Amount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceForSaleTransaction#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenForProcessDate#TodaysDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PaymentSource}</ppi:PaymentSource></ws:ppiPayment>
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="fff23a7e-e5d0-495c-bbaf-af6f9fcaa403"/>
+        <con:assertion type="XPath Match" id="36694f4f-6e06-4122-88b7-77d1da7146f1" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourceForSaleTransaction#R_ResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="979804be-0379-40c9-994f-aa91766b2eca" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourceForSaleTransaction#R_ResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="bd9e7d80-e7e3-41bf-bc9a-0fb6262f8fc3" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourceForSaleTransaction#R_Success}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenForProcessDate" id="cf74645f-f0c5-4443-91c8-c82b4e82e342">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:dd.sss'Z'")
+return sdf.format(new Date())</script>
+        </con:configuration>
+        <con:name>TodaysDate</con:name>
+        <con:mode>READ</con:mode>
+        <con:shared>true</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="73639dea-e257-47db-ab2d-ea4551d1d4db">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceForSaleTransaction</dataSourceStep>
+      <targetStep>SaleTransaction</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>24ee10d8-fc1d-4993-94ec-76f323c0fdc5</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>10339e1d-1edb-46c8-91f6-be738d689fd1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>cf74645f-f0c5-4443-91c8-c82b4e82e342</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>3fa81836-6626-438f-a9bb-b503a2a4ffd1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>73639dea-e257-47db-ab2d-ea4551d1d4db</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

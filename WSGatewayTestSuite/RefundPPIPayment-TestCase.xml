@@ -113,57 +113,58 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:RefundPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>delcorp</ppi:UserName>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:Password>D3lC0rp0r</ppi:Password>\r
-            <ppi:PPITransactionRequestId>201801391744</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <ws:paymentId>542348606108568</ws:paymentId>\r
-         <ws:code>other</ws:code>\r
-         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20187488199</ws:comments>\r
-         <ws:isRefundMemo>false</ws:isRefundMemo>\r
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
-         <ws:ppiPayment>\r
-            <ppi:AdditionalInfo>\r
-               <ppi:Fees>\r
-                  <ppip:FeeType>Customer</ppip:FeeType>\r
-                  <ppip:Amount>0</ppip:Amount>\r
-               </ppi:Fees>\r
-               <ppi:InvoiceData>\r
-                  <ppip:Amount>0</ppip:Amount>\r
-               </ppi:InvoiceData>\r
-               <ppi:PaymentSegment>\r
-                  <ppip:Amount>1</ppip:Amount>\r
-                  <ppip:SegmentType>Regular</ppip:SegmentType>\r
-               </ppi:PaymentSegment>\r
-               <ppi:PaymentType>Regular</ppi:PaymentType>\r
-               <ppi:ProcessDate>2019-01-10T10:15:29.6471-05:00</ppi:ProcessDate>\r
-            </ppi:AdditionalInfo>\r
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
-            <ppi:PaymentSource>Web</ppi:PaymentSource>\r
-         </ws:ppiPayment>\r
-         <!--Optional:-->\r
-      </ws:RefundPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>delcorp</ppi:UserName>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Password>D3lC0rp0r</ppi:Password>
+            <ppi:PPITransactionRequestId>201801391744</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+         <ws:paymentId>542348606108568</ws:paymentId>
+         <ws:code>other</ws:code>
+         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20187488199</ws:comments>
+         <ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
+         <ws:ppiPayment>
+            <ppi:AdditionalInfo>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:InvoiceData>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:InvoiceData>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>1</ppip:Amount>
+                  <ppip:SegmentType>Regular</ppip:SegmentType>
+               </ppi:PaymentSegment>
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2019-01-10T10:15:29.6471-05:00</ppi:ProcessDate>
+            </ppi:AdditionalInfo>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PaymentSource>Web</ppi:PaymentSource>
+         </ws:ppiPayment>
+         <!--Optional:-->
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>

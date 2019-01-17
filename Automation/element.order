@@ -7,3 +7,6 @@ GetVelocityFeeSingle-TestCase.xml
 GetVelocityFeeSingleANDDualAdvanced-TestCase.xml
 GetVelocityFeeNegativeAdvanced-TestCase.xml
 GetVelocityFeeNegative.xml
+Refund.xml
+PartialRefund.xml
+MultiplePartialRefund.xml

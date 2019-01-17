@@ -58,6 +58,7 @@ WSGatewayTestSuite\SubmitWalletInformation-TestCase.xml
 WSGatewayTestSuite\ValidateFinancialInfo-TestCase.xml
 WSGatewayTestSuite\ValidatePPICustomer-TestCase.xml
 WSGatewayTestSuite\VoidPPIPayment-TestCase.xml
+WSGatewayTestSuite\TestCase-1.xml
 WSGatewayTestSuite\GetVelocityFeeNegative.xml
 WSGatewayTestSuite\GetVelocityFeeSingle-TestCase.xml
 WSGatewayTestSuite\GetVelocityFee-TestCase1.xml
@@ -103,3 +104,6 @@ Automation\GetVelocityFeeSingle-TestCase.xml
 Automation\GetVelocityFeeSingleANDDualAdvanced-TestCase.xml
 Automation\GetVelocityFeeNegativeAdvanced-TestCase.xml
 Automation\GetVelocityFeeNegative.xml
+Automation\Refund.xml
+Automation\PartialRefund.xml
+Automation\MultiplePartialRefund.xml

@@ -18,6 +18,7 @@ SubmitWalletInformation-TestCase.xml
 ValidateFinancialInfo-TestCase.xml
 ValidatePPICustomer-TestCase.xml
 VoidPPIPayment-TestCase.xml
+TestCase-1.xml
 GetVelocityFeeNegative.xml
 GetVelocityFeeSingle-TestCase.xml
 GetVelocityFee-TestCase1.xml
