@@ -107,3 +107,4 @@ Automation\GetVelocityFeeNegative.xml
 Automation\Refund.xml
 Automation\PartialRefund.xml
 Automation\MultiplePartialRefund.xml
+AutomationUpgrade\SubmitPPIPaymentUpgrade.xml

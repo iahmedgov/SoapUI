@@ -30,8 +30,8 @@
             <!--Optional:-->
             <ppi:Password>pwd524</ppi:Password><ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:paymentAmount>10.00</ws:paymentAmount>
-         <ws:method>CreditCard</ws:method>
+         <ws:paymentAmount>20.00</ws:paymentAmount>
+         <ws:method>Ach</ws:method>
          <!--Optional:-->
          
       </ws:GetPPIPaymentFee>
@@ -42,6 +42,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
