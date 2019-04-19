@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2d6c180c-2041-44c5-afbf-6cdeac79bc4a" discardOkResults="false" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="GetVelocityFeeUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2d6c180c-2041-44c5-afbf-6cdeac79bc4afileName">GetVelocityFeeUpgrade</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceGetVelocityFeeUpgrade" id="432d4a2e-431e-4d2d-8134-dea6ef4904d9">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/GetVelocityFeeDataUpgrade.xlsx</file>
+          <worksheet>Single</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>TestNotes</con:property>
+      <con:property>AT_Username</con:property>
+      <con:property>AT_Password</con:property>
+      <con:property>AT_RequestID</con:property>
+      <con:property>AT_Identifier</con:property>
+      <con:property>Amount</con:property>
+      <con:property>PaymentType</con:property>
+      <con:property>Account</con:property>
+      <con:property>Fee Value</con:property>
+      <con:property>TenderType</con:property>
+      <con:property>Success</con:property>
+      <con:property>ResultCode</con:property>
+      <con:property>ResultText</con:property>
+      <con:property>Success2</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="GetVelocityFeeUpgrade" id="6482da5d-e5f2-4156-9a7c-d8800a8e4c74">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetVelocityFee</con:operation>
+      <con:request name="GetVelocityFeeUpgrade" id="a490ceb3-19aa-4348-82ea-eca40b920b37">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceGetVelocityFeeUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:amount>${DataSourceGetVelocityFeeUpgrade#Amount}</ws:amount>
+         <ws:paymentType>${DataSourceGetVelocityFeeUpgrade#PaymentType}</ws:paymentType><ws:accountNumber>${DataSourceGetVelocityFeeUpgrade#Account}</ws:accountNumber>
+      </ws:GetVelocityFee>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="c0b08754-2736-42c6-aee4-a47f9b8175ce"/>
+        <con:assertion type="XPath Match" id="6b8358e3-ed1b-4ad3-bd8a-526c5925442b" name="Match content of [ns0:PPIFeeValue]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:PPIFeeValue[1]/text()</path>
+            <content>${DataSourceGetVelocityFeeUpgrade#Fee Value}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="1a1d21f7-a2e9-4ad1-8626-2a23176968d2" name="Match content of [ns0:TenderType]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:TenderType[1]/text()</path>
+            <content>${DataSourceGetVelocityFeeUpgrade#TenderType}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="12b3ed14-ce8a-48a3-a3e8-557e5835c309" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourceGetVelocityFeeUpgrade#Success}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="6d4ea2ce-fc29-4960-9ed4-d5247e825e48" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourceGetVelocityFeeUpgrade#ResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="263841d1-8deb-4ff4-aeeb-432e821e2166" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourceGetVelocityFeeUpgrade#ResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="2310eb72-68e6-46cb-b888-1ef4a8ce1083" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:GetVelocityFeeResponse[1]/ns1:GetVelocityFeeResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourceGetVelocityFeeUpgrade#Success2}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="01139ccc-1968-4e68-b86f-7dcdb10878af">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceGetVelocityFeeUpgrade</dataSourceStep>
+      <targetStep>GetVelocityFeeUpgrade</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>432d4a2e-431e-4d2d-8134-dea6ef4904d9</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>
