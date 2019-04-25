@@ -114,3 +114,10 @@ AutomationUpgrade\VoidUpgrade.xml
 AutomationUpgrade\FullRefundUpgrade.xml
 AutomationUpgrade\PartialRefundUpgrade.xml
 AutomationUpgrade\CaptureUpgrade.xml
+AutomationProduction\SubmitPPIPaymentUpgrade.xml
+AutomationProduction\GetVelocityFeeUpgrade.xml
+AutomationProduction\SubmitWalletUpgrade.xml
+AutomationProduction\VoidUpgrade.xml
+AutomationProduction\FullRefundUpgrade.xml
+AutomationProduction\PartialRefundUpgrade.xml
+AutomationProduction\CaptureUpgrade.xml
