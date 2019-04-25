@@ -28,7 +28,7 @@
             <ppi:Password>pwd524</ppi:Password>
             <!--Optional:-->
             <ppi:PPITransactionRequestId>sdfsdf345fsdfsdffs</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token><ws:paymentId>52457220055570</ws:paymentId><ws:code>A1</ws:code>
+         </ws:token><ws:paymentId>5944950881735699</ws:paymentId><ws:code>A1</ws:code>
          <!--Optional:-->
          
          <!--Optional:-->
@@ -43,6 +43,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/VoidPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>

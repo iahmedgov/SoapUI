@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="49b276f1-f849-44fb-82d0-78dafb9c7063" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="VoidUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="49b276f1-f849-44fb-82d0-78dafb9c7063fileName">VoidUpgrade</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourceVoidUpgrade" id="f41c028d-8454-4c56-9c24-913b86f8b5c8">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/VoidDataUpgrade.xlsx</file>
+          <worksheet>SaleUpgrade</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>TestNotes</con:property>
+      <con:property>AT_Username</con:property>
+      <con:property>AT_Password</con:property>
+      <con:property>AT_RequestID</con:property>
+      <con:property>AT_Identifier</con:property>
+      <con:property>Notes</con:property>
+      <con:property>FeeType</con:property>
+      <con:property>FeeAmount</con:property>
+      <con:property>SegmentAmount</con:property>
+      <con:property>SegmentType</con:property>
+      <con:property>PaymentType</con:property>
+      <con:property>ProcessDate</con:property>
+      <con:property>UDF1Label</con:property>
+      <con:property>UDF1Value</con:property>
+      <con:property>UDF2Label</con:property>
+      <con:property>UDF2Value</con:property>
+      <con:property>UDF3Label</con:property>
+      <con:property>UDF3Value</con:property>
+      <con:property>UDF4Label</con:property>
+      <con:property>UDF4Value</con:property>
+      <con:property>UDF5Label</con:property>
+      <con:property>UDF5Value</con:property>
+      <con:property>UDF6Label</con:property>
+      <con:property>UDF6Value</con:property>
+      <con:property>UDF7Label</con:property>
+      <con:property>UDF7Value</con:property>
+      <con:property>UDF8Label</con:property>
+      <con:property>UDF8Value</con:property>
+      <con:property>UDF9Label</con:property>
+      <con:property>UDF9Value</con:property>
+      <con:property>UDF10Label</con:property>
+      <con:property>UDF10Value</con:property>
+      <con:property>C_AL1</con:property>
+      <con:property>C_AL2</con:property>
+      <con:property>C_Country</con:property>
+      <con:property>C_Email</con:property>
+      <con:property>C_FirstName</con:property>
+      <con:property>C_LastName</con:property>
+      <con:property>C_MI</con:property>
+      <con:property>C_Notest</con:property>
+      <con:property>C_Phone</con:property>
+      <con:property>C_ZIP</con:property>
+      <con:property>C_Username</con:property>
+      <con:property>C_Password</con:property>
+      <con:property>C_CAN</con:property>
+      <con:property>C_PreAuthOnly</con:property>
+      <con:property>C_PaymentSource</con:property>
+      <con:property>P_AccountName</con:property>
+      <con:property>P_AL1</con:property>
+      <con:property>P_AL2</con:property>
+      <con:property>P_Country</con:property>
+      <con:property>P_Phone</con:property>
+      <con:property>P_FirstName</con:property>
+      <con:property>P_LastName</con:property>
+      <con:property>P_MI</con:property>
+      <con:property>P_Email</con:property>
+      <con:property>P_ZIP</con:property>
+      <con:property>P_BusinessName</con:property>
+      <con:property>P_IsBusiness</con:property>
+      <con:property>V_ABA</con:property>
+      <con:property>V_AccountType</con:property>
+      <con:property>V_CheckNumber</con:property>
+      <con:property>V_CheckType</con:property>
+      <con:property>V_CheckPos</con:property>
+      <con:property>V_CVV</con:property>
+      <con:property>V_ExpDate</con:property>
+      <con:property>V_VehicleNumber</con:property>
+      <con:property>V_PMCategory</con:property>
+      <con:property>V_EnforcePin</con:property>
+      <con:property>ResultCode</con:property>
+      <con:property>ResultText</con:property>
+      <con:property>Success</con:property>
+      <con:property>VoidResultCode</con:property>
+      <con:property>VoidResultText</con:property>
+      <con:property>VoidSuccess</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="SaleToBeVoidedUpgrade" id="42e9de64-03bb-45fb-a7a3-5ef7fdc13d15">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPayment</con:operation>
+      <con:request name="SaleToBeVoidedUpgrade" id="42591ab7-6849-4ee0-ac2e-abec168e8a30">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#FeeType}</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceVoidUpgrade#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenSaleVoidUpgrade#SaleVoidTodayDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourceVoidUpgrade#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourceVoidUpgrade#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceVoidUpgrade#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceVoidUpgrade#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourceVoidUpgrade#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourceVoidUpgrade#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceVoidUpgrade#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceVoidUpgrade#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourceVoidUpgrade#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourceVoidUpgrade#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourceVoidUpgrade#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourceVoidUpgrade#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourceVoidUpgrade#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceVoidUpgrade#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceVoidUpgrade#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourceVoidUpgrade#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourceVoidUpgrade#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceVoidUpgrade#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceVoidUpgrade#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourceVoidUpgrade#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourceVoidUpgrade#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourceVoidUpgrade#C_ZIP}</ppi:Zip><ppi:Username>${DataSourceVoidUpgrade#C_Username}</ppi:Username><ppi:Password>${DataSourceVoidUpgrade#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="6c7a6ea5-5c68-4f6d-bec0-058b54279ef7"/>
+        <con:assertion type="XPath Match" id="c5790fdd-1fb2-45d5-9b60-75d77e4b5e7e" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourceVoidUpgrade#ResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="68f497fc-6152-4586-95be-bf1b42eb8ac9" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourceVoidUpgrade#ResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="c27b3fee-84cf-40a4-b140-d9c111fca984" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourceVoidUpgrade#Success}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="transfer" name="PropertyTransfer 1" id="05ef8efe-775c-400f-9276-76e8edf7b695">
+    <con:settings/>
+    <con:config xsi:type="con:PropertyTransfersStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:transfers setNullOnMissingSource="true" transferTextContent="true" failOnError="true" transferToAll="false" entitize="false" transferChildNodes="false" ignoreEmpty="false">
+        <con:name>ns0:PaymentID</con:name>
+        <con:sourceType>Response</con:sourceType>
+        <con:sourceStep>SaleToBeVoidedUpgrade</con:sourceStep>
+        <con:sourcePath>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]</con:sourcePath>
+        <con:targetType>Request</con:targetType>
+        <con:targetStep>VoidUpgrade</con:targetStep>
+        <con:targetPath>declare namespace ws='https://www.velocitypayment.com/ws';
+//ws:VoidPPIPayment[1]/ws:paymentId[1]</con:targetPath>
+        <con:type>XPATH</con:type>
+        <con:targetTransferType>XPATH</con:targetTransferType>
+        <con:upgraded>true</con:upgraded>
+      </con:transfers>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenSaleVoidUpgrade" id="0d884989-667b-41df-b232-8b04984926cd">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd")
+return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
+        </con:configuration>
+        <con:name>SaleVoidTodayDate</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="VoidUpgrade" id="b868fb9f-1a85-4e9d-a845-552c63d5a1a7">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>VoidPPIPayment</con:operation>
+      <con:request name="VoidUpgrade" id="c70d25e3-c58a-43ed-990a-95931bf23a24">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:VoidPPIPayment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">sdfsdf456ygdfgdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>1914043916951039</ws:paymentId><ws:code>A1</ws:code><ws:comments>Voiding this payment</ws:comments></ws:VoidPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="397183af-3e92-4de1-9f88-66d2fe13f0bf"/>
+        <con:assertion type="XPath Match" id="b6d1beab-b4f9-4c3a-820b-2e48995686ea" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:VoidPPIPaymentResponse[1]/ns1:VoidPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourceVoidUpgrade#VoidResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="91155a81-fd5e-4c67-9d7c-6dcbd2741377" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:VoidPPIPaymentResponse[1]/ns1:VoidPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourceVoidUpgrade#VoidResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="97320c98-cb57-4a22-9040-3760fe0158b8" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:VoidPPIPaymentResponse[1]/ns1:VoidPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourceVoidUpgrade#VoidSuccess}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="4e2e5720-6dda-4a82-bdcd-01885309ce20">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourceVoidUpgrade</dataSourceStep>
+      <targetStep>SaleToBeVoidedUpgrade</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>f41c028d-8454-4c56-9c24-913b86f8b5c8</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>4e2e5720-6dda-4a82-bdcd-01885309ce20</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

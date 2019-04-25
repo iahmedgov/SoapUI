@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="0dc83380-4de1-4525-9826-f5adc9c11d16" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="PartialRefundUpgrade" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword="" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0dc83380-4de1-4525-9826-f5adc9c11d16fileName">PartialRefundUpgrade</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSourcePartialRefundUpgrade" id="f0ce489b-b7a9-49cb-a0d1-30890678d9f1">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Excel">
+        <con:configuration>
+          <file>C:/SoapData/PartialRefundDataUpgrade.xlsx</file>
+          <worksheet>SaleUpgrade</worksheet>
+          <cell>A2</cell>
+          <ignoreEmpty>true</ignoreEmpty>
+          <evaluateFormulas>false</evaluateFormulas>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>TestNotes</con:property>
+      <con:property>AT_Username</con:property>
+      <con:property>AT_Password</con:property>
+      <con:property>AT_RequestID</con:property>
+      <con:property>AT_Identifier</con:property>
+      <con:property>Notes</con:property>
+      <con:property>FeeType</con:property>
+      <con:property>FeeAmount</con:property>
+      <con:property>SegmentAmount</con:property>
+      <con:property>SegmentType</con:property>
+      <con:property>PaymentType</con:property>
+      <con:property>ProcessDate</con:property>
+      <con:property>UDF1Label</con:property>
+      <con:property>UDF1Value</con:property>
+      <con:property>UDF2Label</con:property>
+      <con:property>UDF2Value</con:property>
+      <con:property>UDF3Label</con:property>
+      <con:property>UDF3Value</con:property>
+      <con:property>UDF4Label</con:property>
+      <con:property>UDF4Value</con:property>
+      <con:property>UDF5Label</con:property>
+      <con:property>UDF5Value</con:property>
+      <con:property>UDF6Label</con:property>
+      <con:property>UDF6Value</con:property>
+      <con:property>UDF7Label</con:property>
+      <con:property>UDF7Value</con:property>
+      <con:property>UDF8Label</con:property>
+      <con:property>UDF8Value</con:property>
+      <con:property>UDF9Label</con:property>
+      <con:property>UDF9Value</con:property>
+      <con:property>UDF10Label</con:property>
+      <con:property>UDF10Value</con:property>
+      <con:property>C_AL1</con:property>
+      <con:property>C_AL2</con:property>
+      <con:property>C_Country</con:property>
+      <con:property>C_Email</con:property>
+      <con:property>C_FirstName</con:property>
+      <con:property>C_LastName</con:property>
+      <con:property>C_MI</con:property>
+      <con:property>C_Notest</con:property>
+      <con:property>C_Phone</con:property>
+      <con:property>C_ZIP</con:property>
+      <con:property>C_Username</con:property>
+      <con:property>C_Password</con:property>
+      <con:property>C_CAN</con:property>
+      <con:property>C_PreAuthOnly</con:property>
+      <con:property>C_PaymentSource</con:property>
+      <con:property>P_AccountName</con:property>
+      <con:property>P_AL1</con:property>
+      <con:property>P_AL2</con:property>
+      <con:property>P_Country</con:property>
+      <con:property>P_Phone</con:property>
+      <con:property>P_FirstName</con:property>
+      <con:property>P_LastName</con:property>
+      <con:property>P_MI</con:property>
+      <con:property>P_Email</con:property>
+      <con:property>P_ZIP</con:property>
+      <con:property>P_BusinessName</con:property>
+      <con:property>P_IsBusiness</con:property>
+      <con:property>V_ABA</con:property>
+      <con:property>V_AccountType</con:property>
+      <con:property>V_CheckNumber</con:property>
+      <con:property>V_CheckType</con:property>
+      <con:property>V_CheckPos</con:property>
+      <con:property>V_CVV</con:property>
+      <con:property>V_ExpDate</con:property>
+      <con:property>V_VehicleNumber</con:property>
+      <con:property>V_PMCategory</con:property>
+      <con:property>V_EnforcePin</con:property>
+      <con:property>ResultCode</con:property>
+      <con:property>ResultText</con:property>
+      <con:property>Success</con:property>
+      <con:property>RefundResultCode</con:property>
+      <con:property>RefundResultText</con:property>
+      <con:property>RefundSuccess</con:property>
+      <con:completeLastOperation>true</con:completeLastOperation>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="PartialRefundSaleUpgrade" id="72ae142d-2a72-4679-a15b-72376162a6af">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPayment</con:operation>
+      <con:request name="PartialRefundSaleUpgrade" id="a88ab22b-980a-4744-b6cc-9ef6b5a0eaa5">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#FeeType}</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourcePartialRefundUpgrade#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenPartialRefundTodayDate#Refund Today Date}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourcePartialRefundUpgrade#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourcePartialRefundUpgrade#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourcePartialRefundUpgrade#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourcePartialRefundUpgrade#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourcePartialRefundUpgrade#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourcePartialRefundUpgrade#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourcePartialRefundUpgrade#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourcePartialRefundUpgrade#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourcePartialRefundUpgrade#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourcePartialRefundUpgrade#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourcePartialRefundUpgrade#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourcePartialRefundUpgrade#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourcePartialRefundUpgrade#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourcePartialRefundUpgrade#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourcePartialRefundUpgrade#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourcePartialRefundUpgrade#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourcePartialRefundUpgrade#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourcePartialRefundUpgrade#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourcePartialRefundUpgrade#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourcePartialRefundUpgrade#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourcePartialRefundUpgrade#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourcePartialRefundUpgrade#C_ZIP}</ppi:Zip><ppi:Username>${DataSourcePartialRefundUpgrade#C_Username}</ppi:Username><ppi:Password>${DataSourcePartialRefundUpgrade#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="92529ab2-b4b0-4875-934c-bb66fe946dff"/>
+        <con:assertion type="XPath Match" id="295afc88-714c-4f5c-8160-0e64d889a5ab" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourcePartialRefundUpgrade#ResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="f1ee2f9b-a120-408e-a090-4c48885be098" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourcePartialRefundUpgrade#ResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="a6a558ea-6b97-438b-a4a4-b7b36fe686c0" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourcePartialRefundUpgrade#Success}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" name="PartialRefundUpgrade" id="fb6d04d9-f75a-449d-ae81-3e578c2b1648">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>RefundPPIPayment</con:operation>
+      <con:request name="PartialRefundUpgrade" id="6b72a4b3-3f85-4888-bad5-5c3433cbcc3a">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:RefundPPIPayment>
+         <ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdf34efsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>${PartialRefundSaleUpgrade#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId><ws:code>A01</ws:code><ws:comments>Doing a Partial Refund</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount><ws:ppiPayment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">2.50</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">Regular</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>Utility</ppi:PaymentType><ppi:ProcessDate>${DataGenPartialRefundTodayDate#Refund Today Date}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource></ws:ppiPayment>
+      </ws:RefundPPIPayment>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="20f6d412-9210-4355-b3ab-c2df2267f021"/>
+        <con:assertion type="XPath Match" id="40b12310-b654-40fc-969f-736029fd15f3" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>${DataSourcePartialRefundUpgrade#RefundResultCode}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="4e9421d0-31be-4f74-8303-512c38150ac9" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>${DataSourcePartialRefundUpgrade#RefundResultText}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="d7d0e527-977d-4630-a59b-ab912cd8f496" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:RefundPPIPaymentResponse[1]/ns1:RefundPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>${DataSourcePartialRefundUpgrade#RefundSuccess}</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datasourceloop" name="DataSource Loop" id="6eaf48a9-5518-4d19-992f-6f70caf382d2">
+    <con:settings/>
+    <con:config>
+      <dataSourceStep>DataSourcePartialRefundUpgrade</dataSourceStep>
+      <targetStep>PartialRefundSaleUpgrade</targetStep>
+      <discardResults>true</discardResults>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="datagen" name="DataGenPartialRefundTodayDate" id="7e70bc24-ad63-4e05-a488-787544b477ff">
+    <con:settings/>
+    <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:property type="Script">
+        <con:configuration>
+          <script>def sdf = new java.text.SimpleDateFormat("yyyy-MM-dd'T'HH:mm:dd.sss'Z'")
+return sdf.format(new Date())</script>
+        </con:configuration>
+        <con:name>Refund Today Date</con:name>
+        <con:mode>STEP</con:mode>
+        <con:shared>false</con:shared>
+      </con:property>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>f0ce489b-b7a9-49cb-a0d1-30890678d9f1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6eaf48a9-5518-4d19-992f-6f70caf382d2</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

@@ -1,3 +1,7 @@
 SubmitPPIPaymentUpgrade.xml
 GetVelocityFeeUpgrade.xml
 SubmitWalletUpgrade.xml
+VoidUpgrade.xml
+FullRefundUpgrade.xml
+PartialRefundUpgrade.xml
+CaptureUpgrade.xml

@@ -262,7 +262,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -297,7 +297,7 @@
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Utility</ppi:PaymentType><ppi:ProcessDate>2019-04-17T12:47:38.536-05:00</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>udf1</ppi:Value></ppi:CustomData>
+               <ppi:PaymentType>Utility</ppi:PaymentType><ppi:ProcessDate>2019-04-25T12:47:38.536-05:00</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>udf1</ppi:Value></ppi:CustomData>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -330,7 +330,7 @@
             <ppi:AddressLine1>2311 main st</ppi:AddressLine1><ppi:PhoneNumber>240 258 9632</ppi:PhoneNumber><ppi:Zip>21114</ppi:Zip></ppi:Customer>
             <!--Optional:-->
             
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:PreAuthorizeOnly>true</ppi:PreAuthorizeOnly>
             <ppi:ClientAccountNumber>145879603</ppi:ClientAccountNumber><ppi:PaymentSource>Agent</ppi:PaymentSource>
             <!--Optional:-->
             <ppi:Payor>
@@ -835,7 +835,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Debt</ppi:PaymentType><ppi:ProcessDate>2019-02-07T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:PaymentType>Debt</ppi:PaymentType><ppi:ProcessDate>2019-04-23T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
