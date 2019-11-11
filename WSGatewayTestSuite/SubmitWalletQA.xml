@@ -37,7 +37,7 @@
             <!--Optional:-->
             
             <!--Optional:-->
-            <ppi:WalletID>180WalletID709</ppi:WalletID><ppi:Vehicle>
+            <ppi:NickName>180WalletID713</ppi:NickName><ppi:WalletID>180WalletID713</ppi:WalletID><ppi:Vehicle>
                <!--Optional:-->
                
                <ppip:AccountType/>
@@ -51,7 +51,7 @@
                
                <!--Optional:-->
                
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/22</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/22</ppip:ExpirationDate><ppip:PaymentVehicleNumber>5424000000000015</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -78,8 +78,8 @@
                
                <!--Optional:-->
                
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1><ppi:PhoneNumber>564556456456</ppi:PhoneNumber><ppi:FirstName>fname</ppi:FirstName><ppi:LastName>lname</ppi:LastName><ppi:ZipCode>1234567890</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
-            </ppi:Payor><ppi:ClientReferenceNumber>536563554</ppi:ClientReferenceNumber>
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1><ppi:PhoneNumber>564556456456</ppi:PhoneNumber><ppi:FirstName>fname</ppi:FirstName><ppi:LastName>lname</ppi:LastName><ppi:ZipCode>21054</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor><ppi:ClientReferenceNumber>536563555</ppi:ClientReferenceNumber>
             <!--Optional:-->
             
             <!--Optional:-->
@@ -94,6 +94,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
@@ -165,7 +166,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -189,7 +190,7 @@
             <!--Optional:-->
             
             <!--Optional:-->
-            <ppi:NickName>2325PC220</ppi:NickName><ppi:WalletID>2325PC220</ppi:WalletID><ppi:Vehicle>
+            <ppi:NickName>2325PC228</ppi:NickName><ppi:WalletID>2325PC228</ppi:WalletID><ppi:Vehicle>
                <!--Optional:-->
                
                <ppip:AccountType/>
@@ -230,8 +231,8 @@
                
                <!--Optional:-->
                
-               <ppi:AddressLine1>1387 N DUPONT HWY</ppi:AddressLine1><ppi:AddressLine2>NULL</ppi:AddressLine2><ppi:Country>CA</ppi:Country><ppi:PhoneNumber>4106280790</ppi:PhoneNumber><ppi:FirstName>chotass</ppi:FirstName><ppi:LastName>chatriss</ppi:LastName><ppi:ZipCode>M5G2L2</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
-            </ppi:Payor><ppi:ClientReferenceNumber>536563561</ppi:ClientReferenceNumber>
+               <ppi:AddressLine1>1387 N DUPONT HWY</ppi:AddressLine1><ppi:PhoneNumber>4106280790</ppi:PhoneNumber><ppi:FirstName>chotass</ppi:FirstName><ppi:LastName>chatriss</ppi:LastName><ppi:ZipCode>21054</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor><ppi:ClientReferenceNumber>536563569</ppi:ClientReferenceNumber>
             <!--Optional:-->
             
             <!--Optional:-->
@@ -382,7 +383,7 @@
             <!--Optional:-->
             
             <!--Optional:-->
-            <ppi:NickName>1286Nickname202</ppi:NickName><ppi:WalletID>1286WalletID202</ppi:WalletID><ppi:Vehicle><ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType><ppip:CheckType>Personal</ppip:CheckType><ppip:CheckNumberPosition/><ppip:PaymentVehicleNumber>22222222</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Payor><ppi:AddressLine1>2311 main road</ppi:AddressLine1><ppi:PhoneNumber>4444444444</ppi:PhoneNumber><ppi:FirstName>Jamesx</ppi:FirstName><ppi:LastName>Anthonyx</ppi:LastName><ppi:ZipCode>21114</ppi:ZipCode><ppi:IsBusinessName/></ppi:Payor>
+            <ppi:NickName>1286Nickname203</ppi:NickName><ppi:WalletID>1286WalletID203</ppi:WalletID><ppi:Vehicle><ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType><ppip:CheckType>Personal</ppip:CheckType><ppip:CheckNumberPosition/><ppip:PaymentVehicleNumber>22222222</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Payor><ppi:AddressLine1>2311 main road</ppi:AddressLine1><ppi:PhoneNumber>4444444444</ppi:PhoneNumber><ppi:FirstName>Jamesx</ppi:FirstName><ppi:LastName>Anthonyx</ppi:LastName><ppi:ZipCode>21114</ppi:ZipCode><ppi:IsBusinessName/></ppi:Payor><ppi:ClientReferenceNumber>asd123</ppi:ClientReferenceNumber>
             <!--Optional:-->
             
             <!--Optional:-->
@@ -495,13 +496,13 @@
             
             <!--Optional:-->
             
-            <ppi:NickName>495Nickname100</ppi:NickName><ppi:WalletID>495Wallet100</ppi:WalletID><ppi:Vehicle>
+            <ppi:NickName>495Nickname101</ppi:NickName><ppi:WalletID>495Wallet101</ppi:WalletID><ppi:Vehicle>
                <!--Optional:-->
                
-               <ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType>
+               <ppip:AccountType/>
                <!--Optional:-->
                
-               <ppip:CheckType>Business</ppip:CheckType>
+               <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
                <!--Optional:-->
@@ -509,7 +510,7 @@
                <!--Optional:-->
                
                
-               <ppip:PaymentVehicleNumber>33333333</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
+               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/25</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -537,7 +538,7 @@
                
                
                <ppi:AccountName>ac name</ppi:AccountName><ppi:AddressLine1>2311 york road</ppi:AddressLine1><ppi:AddressLine2>NULL</ppi:AddressLine2><ppi:Country>US</ppi:Country><ppi:PhoneNumber>5471250011</ppi:PhoneNumber><ppi:FirstName>fname</ppi:FirstName><ppi:LastName>lname</ppi:LastName><ppi:ZipCode>19806</ppi:ZipCode><ppi:BusinessName>DELAWARE KIA &amp; SUBARU</ppi:BusinessName><ppi:IsBusinessName>false</ppi:IsBusinessName>
-            </ppi:Payor><ppi:ClientReferenceNumber>495CAN100</ppi:ClientReferenceNumber>
+            </ppi:Payor><ppi:ClientReferenceNumber>495CAN101</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
             
@@ -552,6 +553,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
