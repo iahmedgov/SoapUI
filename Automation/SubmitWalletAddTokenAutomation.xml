@@ -613,7 +613,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   <con:properties>
     <con:property>
       <con:name>WalletID</con:name>
-      <con:value>1380928997</con:value>
+      <con:value>6706180845</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>

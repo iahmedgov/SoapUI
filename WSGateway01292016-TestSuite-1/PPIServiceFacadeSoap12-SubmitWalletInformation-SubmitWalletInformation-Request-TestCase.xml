@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2f754912-c90d-44fb-a5b0-570445623cf0" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-SubmitWalletInformation-SubmitWalletInformation Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2f754912-c90d-44fb-a5b0-570445623cf0fileName">PPIServiceFacadeSoap12-SubmitWalletInformation-SubmitWalletInformation-Request-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="607e7a74-da7b-4766-ac2a-38ac3c7a75f9" name="SubmitWalletInformation SubmitWalletInformation Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap12</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="SubmitWalletInformation SubmitWalletInformation Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="52d55b45-8824-4553-bd95-b0dd6ab681d4">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:SubmitWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:walletRequest>\r
+            <ppi:Action>?</ppi:Action>\r
+            <!--Optional:-->\r
+            <ppi:NickName>?</ppi:NickName>\r
+            <!--Optional:-->\r
+            <ppi:WalletID>?</ppi:WalletID>\r
+            <!--Optional:-->\r
+            <ppi:Vehicle>\r
+               <!--Optional:-->\r
+               <ppip:AbaNumber>?</ppip:AbaNumber>\r
+               <ppip:AccountType>?</ppip:AccountType>\r
+               <!--Optional:-->\r
+               <ppip:CheckNumber>?</ppip:CheckNumber>\r
+               <ppip:CheckType>?</ppip:CheckType>\r
+               <ppip:CheckNumberPosition>?</ppip:CheckNumberPosition>\r
+               <!--Optional:-->\r
+               <ppip:CVV2Code>?</ppip:CVV2Code>\r
+               <!--Optional:-->\r
+               <ppip:ExpirationDate>?</ppip:ExpirationDate>\r
+               <!--Optional:-->\r
+               <ppip:PaymentVehicleNumber>?</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory>?</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation>?</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+            <!--Optional:-->\r
+            <ppi:Payor>\r
+               <!--Optional:-->\r
+               <ppi:AccountName>?</ppi:AccountName>\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>?</ppi:AddressLine1>\r
+               <!--Optional:-->\r
+               <ppi:AddressLine2>?</ppi:AddressLine2>\r
+               <!--Optional:-->\r
+               <ppi:Country>?</ppi:Country>\r
+               <!--Optional:-->\r
+               <ppi:PhoneNumber>?</ppi:PhoneNumber>\r
+               <!--Optional:-->\r
+               <ppi:FirstName>?</ppi:FirstName>\r
+               <!--Optional:-->\r
+               <ppi:LastName>?</ppi:LastName>\r
+               <!--Optional:-->\r
+               <ppi:MiddleInitial>?</ppi:MiddleInitial>\r
+               <!--Optional:-->\r
+               <ppi:EmailAddress>?</ppi:EmailAddress>\r
+               <!--Optional:-->\r
+               <ppi:ZipCode>?</ppi:ZipCode>\r
+               <!--Optional:-->\r
+               <ppi:BusinessName>?</ppi:BusinessName>\r
+               <ppi:IsBusinessName>?</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <!--Optional:-->\r
+            <ppi:PaymentAccountToken>?</ppi:PaymentAccountToken>\r
+            <!--Optional:-->\r
+            <ppi:ClientReferenceNumber>?</ppi:ClientReferenceNumber>\r
+         </ws:walletRequest>\r
+      </ws:SubmitWalletInformation>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="c28e204b-f07f-4cd1-bf5f-707d4b2faad7" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="e57b0e94-aa46-4864-ae38-b6ea4a62d386" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="edf91ad8-ad09-4872-977d-213369ef6b97" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="7c41444f-d03f-4500-9c8c-935d4e23d970" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="155cbab1-d20f-4c3a-8115-02b95dc683f7" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/SubmitWalletInformationRequest"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

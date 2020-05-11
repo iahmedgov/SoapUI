@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2dfbcd23-802a-4f91-ba67-3d5c732662a7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="VLinkPaymentPlan Test Case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2dfbcd23-802a-4f91-ba67-3d5c732662a7fileName">VLinkPaymentPlan-Test-Case</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="request" id="74580796-40e9-4db1-948f-9971e962d908" name="cancelPaymentPlan-QA">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
+      <con:operation>cancelPaymentPlan</con:operation>
+      <con:request name="cancelPaymentPlan-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="afa2f2b7-8609-4a52-a88a-cf3564eef81c">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com/vlink/VLinkPaymentPlanHttpEndpoint</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vel="https://www.velocitypayment.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <vel:cancelPaymentPlan>
+         <vel:application_id>561</vel:application_id>
+         <vel:user_name>user561</vel:user_name>
+         <vel:password>pwd561</vel:password>
+         <vel:remittance_id>dfsdf3454tfsdfs</vel:remittance_id>
+         <vel:payment_plan_id>97132</vel:payment_plan_id>
+         <vel:action_type>CancelPlan</vel:action_type>
+         <vel:client_account_number>049842134</vel:client_account_number>
+      </vel:cancelPaymentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="542262ed-1c20-4110-bb9f-5a17a55dbddb" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="a7818c78-43fc-4cbd-bc91-9cd72157ff58" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="9cb927e5-ddf3-4bfa-bfe3-61470a87785d" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="7d21197d-650f-44ed-8110-29330e442938" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:cancelPaymentPlan"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="e84eea8d-225e-4115-ad4a-7565db4cf1f5" name="processTransaction">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
+      <con:operation>processTransaction</con:operation>
+      <con:request name="processTransaction" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c6b1fe65-cb26-459e-88a7-b0ec501968c5">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vlink/VLinkPaymentPlanHttpEndpoint</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vel="https://www.velocitypayment.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <vel:processTransaction>
+         <vel:requestModel>
+            <!--Optional:-->
+            <vel:account_type>?</vel:account_type>
+            <!--Optional:-->
+            <vel:amount>?</vel:amount>
+            <!--Optional:-->
+            <vel:application_id>?</vel:application_id>
+            <!--Optional:-->
+            <vel:approval_code>?</vel:approval_code>
+            <!--Optional:-->
+            <vel:card_address>?</vel:card_address>
+            <!--Optional:-->
+            <vel:card_address2>?</vel:card_address2>
+            <!--Optional:-->
+            <vel:card_city>?</vel:card_city>
+            <!--Optional:-->
+            <vel:card_email>?</vel:card_email>
+            <!--Optional:-->
+            <vel:card_exmo>?</vel:card_exmo>
+            <!--Optional:-->
+            <vel:card_exyr>?</vel:card_exyr>
+            <!--Optional:-->
+            <vel:card_name>?</vel:card_name>
+            <!--Optional:-->
+            <vel:card_number>?</vel:card_number>
+            <!--Optional:-->
+            <vel:card_state>?</vel:card_state>
+            <!--Optional:-->
+            <vel:card_zip>?</vel:card_zip>
+            <!--Optional:-->
+            <vel:category>?</vel:category>
+            <!--Optional:-->
+            <vel:check_account>?</vel:check_account>
+            <!--Optional:-->
+            <vel:check_address>?</vel:check_address>
+            <!--Optional:-->
+            <vel:check_city>?</vel:check_city>
+            <!--Optional:-->
+            <vel:check_company>?</vel:check_company>
+            <!--Optional:-->
+            <vel:check_dl_number>?</vel:check_dl_number>
+            <!--Optional:-->
+            <vel:check_dl_state>?</vel:check_dl_state>
+            <!--Optional:-->
+            <vel:check_dob>?</vel:check_dob>
+            <!--Optional:-->
+            <vel:check_ein>?</vel:check_ein>
+            <!--Optional:-->
+            <vel:check_email>?</vel:check_email>
+            <!--Optional:-->
+            <vel:check_first_name>?</vel:check_first_name>
+            <!--Optional:-->
+            <vel:check_last_name>?</vel:check_last_name>
+            <!--Optional:-->
+            <vel:check_ssn>?</vel:check_ssn>
+            <!--Optional:-->
+            <vel:check_state>?</vel:check_state>
+            <!--Optional:-->
+            <vel:check_type>?</vel:check_type>
+            <!--Optional:-->
+            <vel:check_zip>?</vel:check_zip>
+            <!--Optional:-->
+            <vel:client_account_number>?</vel:client_account_number>
+            <!--Optional:-->
+            <vel:country_id>?</vel:country_id>
+            <!--Optional:-->
+            <vel:cvv_data>?</vel:cvv_data>
+            <!--Optional:-->
+            <vel:cvv_state>?</vel:cvv_state>
+            <!--Optional:-->
+            <vel:entry_mode>?</vel:entry_mode>
+            <!--Optional:-->
+            <vel:message_version>?</vel:message_version>
+            <!--Optional:-->
+            <vel:order_number>?</vel:order_number>
+            <!--Optional:-->
+            <vel:original_transaction_id>?</vel:original_transaction_id>
+            <!--Optional:-->
+            <vel:original_transaction_type>?</vel:original_transaction_type>
+            <!--Optional:-->
+            <vel:password>?</vel:password>
+            <!--Optional:-->
+            <vel:remittance_id>?</vel:remittance_id>
+            <!--Optional:-->
+            <vel:response_format>?</vel:response_format>
+            <!--Optional:-->
+            <vel:routing_number>?</vel:routing_number>
+            <!--Optional:-->
+            <vel:standard_entry_class>?</vel:standard_entry_class>
+            <!--Optional:-->
+            <vel:track_2_data>?</vel:track_2_data>
+            <!--Optional:-->
+            <vel:track_data>?</vel:track_data>
+            <!--Optional:-->
+            <vel:transaction_id>?</vel:transaction_id>
+            <!--Optional:-->
+            <vel:transaction_type>?</vel:transaction_type>
+            <!--Zero or more repetitions:-->
+            <vel:tx_custom_data>
+               <!--Optional:-->
+               <vel:name>?</vel:name>
+               <!--Optional:-->
+               <vel:value>?</vel:value>
+            </vel:tx_custom_data>
+            <!--Optional:-->
+            <vel:user_defined1>?</vel:user_defined1>
+            <!--Optional:-->
+            <vel:user_defined10>?</vel:user_defined10>
+            <!--Optional:-->
+            <vel:user_defined2>?</vel:user_defined2>
+            <!--Optional:-->
+            <vel:user_defined3>?</vel:user_defined3>
+            <!--Optional:-->
+            <vel:user_defined4>?</vel:user_defined4>
+            <!--Optional:-->
+            <vel:user_defined5>?</vel:user_defined5>
+            <!--Optional:-->
+            <vel:user_defined6>?</vel:user_defined6>
+            <!--Optional:-->
+            <vel:user_defined7>?</vel:user_defined7>
+            <!--Optional:-->
+            <vel:user_defined8>?</vel:user_defined8>
+            <!--Optional:-->
+            <vel:user_defined9>?</vel:user_defined9>
+            <!--Optional:-->
+            <vel:username>?</vel:username>
+            <!--Optional:-->
+            <vel:reasonCode>?</vel:reasonCode>
+            <!--Optional:-->
+            <vel:encrypted_track_1_data>?</vel:encrypted_track_1_data>
+            <!--Optional:-->
+            <vel:encrypted_track_2_data>?</vel:encrypted_track_2_data>
+            <!--Optional:-->
+            <vel:emv_data>?</vel:emv_data>
+            <!--Optional:-->
+            <vel:ksn>?</vel:ksn>
+            <!--Optional:-->
+            <vel:slot_number>?</vel:slot_number>
+         </vel:requestModel>
+      </vel:processTransaction>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="0caf7630-ab94-40b6-b263-9e84978ce63a" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="b1cab238-43ca-44e1-a7e7-c577b440bb93" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="a0505321-a576-4650-86ac-352ccb9d7149" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="db89d649-18f8-492f-9b2c-7355cfa57e0d" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="c0275e60-f70b-45df-93e5-590d2cdd7751" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:processTransaction"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="82b00e90-574d-49f5-a91d-0e98d551b978" name="retrievePaymentPlan">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
+      <con:operation>retrievePaymentPlan</con:operation>
+      <con:request name="retrievePaymentPlan" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e6b09516-5e95-4abf-a1b2-4f2a3b0155bf">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vlink/VLinkPaymentPlanHttpEndpoint</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vel="https://www.velocitypayment.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <vel:retrievePaymentPlan>
+         <vel:user_name>username</vel:user_name>
+         <vel:password>password</vel:password>
+         <vel:application_id>418</vel:application_id>
+         <vel:plan_creation_start_date>2020-04-21 00:00:00.0</vel:plan_creation_start_date>
+         <vel:plan_creation_end_date/>
+      </vel:retrievePaymentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="af79fb9b-204b-45b7-a24d-d9f182c45f7d" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="9ad2cec0-e624-4f55-8254-5b037f007018" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="5cbd4c8a-2811-4ea5-91c5-cd1186d543c2" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="096ab4a0-dbde-4cad-9fb6-10c6bdc22673" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="dd7b89f5-7f5a-4ae7-a768-f690399db691" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:retrievePaymentPlan"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="41c1e029-2a3f-47df-a5e3-0a71ff86a065" name="cancelPaymentPlan-WWW">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>VLinkPaymentPlanHttpEndpointBinding</con:interface>
+      <con:operation>cancelPaymentPlan</con:operation>
+      <con:request name="cancelPaymentPlan-WWW" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="afa2f2b7-8609-4a52-a88a-cf3564eef81c">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://www.velocitypayment.com:443/vlink/VLinkPaymentPlanHttpEndpoint</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vel="https://www.velocitypayment.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <vel:cancelPaymentPlan>
+         <vel:application_id>2324</vel:application_id>
+         <vel:user_name>username</vel:user_name>
+         <vel:password>password</vel:password>
+         <vel:remittance_id>dfsdf3454tfsdfs</vel:remittance_id>
+         <vel:payment_plan_id>839368</vel:payment_plan_id>
+         <vel:action_type>CancelPlan</vel:action_type>
+         <vel:client_account_number>0859562300017</vel:client_account_number>
+      </vel:cancelPaymentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="542262ed-1c20-4110-bb9f-5a17a55dbddb" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="a7818c78-43fc-4cbd-bc91-9cd72157ff58" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="9cb927e5-ddf3-4bfa-bfe3-61470a87785d" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="7d21197d-650f-44ed-8110-29330e442938" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:cancelPaymentPlan"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

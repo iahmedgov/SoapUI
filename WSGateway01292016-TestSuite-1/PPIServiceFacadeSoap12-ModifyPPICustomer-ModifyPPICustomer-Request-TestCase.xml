@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="473807c8-e253-49f6-83b5-042432712413" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-ModifyPPICustomer-ModifyPPICustomer Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="473807c8-e253-49f6-83b5-042432712413fileName">PPIServiceFacadeSoap12-ModifyPPICustomer-ModifyPPICustomer-Request-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="ddb66b14-c963-4216-8cb7-c5ac0cb83ed5" name="ModifyPPICustomer ModifyPPICustomer Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap12</con:interface>
+      <con:operation>ModifyPPICustomer</con:operation>
+      <con:request name="ModifyPPICustomer ModifyPPICustomer Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="c0a9efc9-3be5-4354-968f-d9bbba53d906">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:ModifyPPICustomer>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:paymentId>?</ws:paymentId>\r
+         <!--Optional:-->\r
+         <ws:customer>\r
+            <!--Optional:-->\r
+            <ppi:AddressLine1>?</ppi:AddressLine1>\r
+            <!--Optional:-->\r
+            <ppi:AddressLine2>?</ppi:AddressLine2>\r
+            <!--Optional:-->\r
+            <ppi:Country>?</ppi:Country>\r
+            <!--Optional:-->\r
+            <ppi:EmailAddress>?</ppi:EmailAddress>\r
+            <!--Optional:-->\r
+            <ppi:FirstName>?</ppi:FirstName>\r
+            <!--Optional:-->\r
+            <ppi:LastName>?</ppi:LastName>\r
+            <!--Optional:-->\r
+            <ppi:MiddleInitial>?</ppi:MiddleInitial>\r
+            <!--Optional:-->\r
+            <ppi:Notes>?</ppi:Notes>\r
+            <!--Optional:-->\r
+            <ppi:PhoneNumber>?</ppi:PhoneNumber>\r
+            <!--Optional:-->\r
+            <ppi:Zip>?</ppi:Zip>\r
+            <!--Optional:-->\r
+            <ppi:Username>?</ppi:Username>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+         </ws:customer>\r
+      </ws:ModifyPPICustomer>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="5330c6ef-2f89-4e42-8720-029c3dd5d140" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="0f7f2a52-5307-4aba-8d2a-426e08f86a25" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="a1c15593-dcd1-47a8-b28e-4cff6e808c71" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="e35f54d3-efd2-453d-8d58-13c60563b855" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="0c7550ca-5dfe-409b-b7fd-c42c8a9ea443" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/ModifyPPICustomerRequest"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

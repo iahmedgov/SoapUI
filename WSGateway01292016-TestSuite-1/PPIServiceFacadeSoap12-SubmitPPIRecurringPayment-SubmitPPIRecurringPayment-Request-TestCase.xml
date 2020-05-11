@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="7d260816-81ff-4b4d-9ca7-2acb4b913d48" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="PPIServiceFacadeSoap12-SubmitPPIRecurringPayment-SubmitPPIRecurringPayment Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="7d260816-81ff-4b4d-9ca7-2acb4b913d48fileName">PPIServiceFacadeSoap12-SubmitPPIRecurringPayment-SubmitPPIRecurringPayment-Request-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="0cdcacd2-d1d3-4986-a1bc-d30b332d04f0" name="SubmitPPIRecurringPayment SubmitPPIRecurringPayment Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap12</con:interface>
+      <con:operation>SubmitPPIRecurringPayment</con:operation>
+      <con:request name="SubmitPPIRecurringPayment SubmitPPIRecurringPayment Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="6caf1115-3c77-4334-a730-9cb95b692f88">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:SubmitPPIRecurringPayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:paymentId>?</ws:paymentId>\r
+         <ws:paymentAmount>?</ws:paymentAmount>\r
+         <!--Optional:-->\r
+         <ws:checkNumber>?</ws:checkNumber>\r
+         <!--Optional:-->\r
+         <ws:feeEntry>\r
+            <ppip:FeeType>?</ppip:FeeType>\r
+            <ppip:Amount>?</ppip:Amount>\r
+         </ws:feeEntry>\r
+      </ws:SubmitPPIRecurringPayment>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="537a2f9d-abf4-4000-ac94-2a429b5ae88c" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="b6dcd66c-debd-4dad-8fec-519883fcb417" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="2e8bc773-c6ae-4ac5-a263-535940ba18f4" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="636b0350-d3f5-430f-ae76-bc2b041f238e" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="48da6887-4a1b-4523-a6d8-468a5aa81279" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/SubmitPPIRecurringPaymentRequest"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

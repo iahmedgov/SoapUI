@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="f4b8b7e9-b95b-402c-ba1b-f17880280226" isOneWay="false" action="urn:cancelPaymentPlan" name="cancelPaymentPlan" bindingOperationName="cancelPaymentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f4b8b7e9-b95b-402c-ba1b-f17880280226fileName">cancelPaymentPlan</con:setting>
+  </con:settings>
+  <con:call id="c1046006-b9f8-429c-a2b6-08d23dc54952" name="cancelPaymentPlan Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vlink/VLinkPaymentPlanHttpEndpoint</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vel="https://www.velocitypayment.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <vel:cancelPaymentPlan>\r
+         <vel:application_id>?</vel:application_id>\r
+         <vel:user_name>?</vel:user_name>\r
+         <vel:password>?</vel:password>\r
+         <vel:remittance_id>?</vel:remittance_id>\r
+         <vel:payment_plan_id>?</vel:payment_plan_id>\r
+         <vel:action_type>?</vel:action_type>\r
+         <vel:client_account_number>?</vel:client_account_number>\r
+      </vel:cancelPaymentPlan>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:cancelPaymentPlan"/>
+  </con:call>
+</con:operation>

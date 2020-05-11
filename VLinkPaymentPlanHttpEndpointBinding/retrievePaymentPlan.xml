@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="1b0efa06-bcff-43a5-9869-7fce8995158e" isOneWay="false" action="urn:retrievePaymentPlan" name="retrievePaymentPlan" bindingOperationName="retrievePaymentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1b0efa06-bcff-43a5-9869-7fce8995158efileName">retrievePaymentPlan</con:setting>
+  </con:settings>
+  <con:call id="cbe348e6-a8cb-439e-abfd-2485d3866cc9" name="retrievePaymentPlan Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vlink/VLinkPaymentPlanHttpEndpoint</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:vel="https://www.velocitypayment.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <vel:retrievePaymentPlan>\r
+         <vel:user_name>?</vel:user_name>\r
+         <vel:password>?</vel:password>\r
+         <vel:application_id>?</vel:application_id>\r
+         <vel:plan_creation_start_date>?</vel:plan_creation_start_date>\r
+         <vel:plan_creation_end_date>?</vel:plan_creation_end_date>\r
+      </vel:retrievePaymentPlan>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:retrievePaymentPlan"/>
+  </con:call>
+</con:operation>

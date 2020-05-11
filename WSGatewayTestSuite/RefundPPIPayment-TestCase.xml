@@ -349,7 +349,7 @@
          
          <!--Optional:-->
          
-         <ws:paymentId>707891369400814</ws:paymentId><ws:code>other</ws:code><ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
+         <ws:paymentId>10103910907939262</ws:paymentId><ws:code>other</ws:code><ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
          <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
          <!--Optional:-->
          
@@ -361,6 +361,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/RefundPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>

@@ -30,7 +30,7 @@
             <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
-         <ws:paymentId>1840854379397497</ws:paymentId>
+         <ws:paymentId>1735073537935555</ws:paymentId>
          <ws:paymentAmount>10.00</ws:paymentAmount>
          <!--Optional:-->
          
@@ -39,6 +39,7 @@
             <ppip:FeeType>Customer</ppip:FeeType>
             <ppip:Amount>0</ppip:Amount>
          </ws:feeEntry>
+         <ws:storedCredential>true</ws:storedCredential>
       </ws:SubmitPPIRecurringPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
@@ -47,6 +48,7 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIRecurringPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
