@@ -3586,7 +3586,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-05-11T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2020-05-13T14:01:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -3727,7 +3727,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-05-11T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2020-05-13T01:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -3798,16 +3798,16 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
-               <ppip:CVV2Code>145</ppip:CVV2Code>
+               
                <!--Optional:-->
-               <ppip:ExpirationDate>12/20</ppip:ExpirationDate>
+               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/20</ppip:ExpirationDate>
                <!--Optional:-->
                <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
          </ws:payment>
-         <ws:storedCredential>TRUE</ws:storedCredential>
+         <ws:storedCredential></ws:storedCredential>
 
       </ws:SubmitPPIPayment>
    </soapenv:Body>

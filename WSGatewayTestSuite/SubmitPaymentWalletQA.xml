@@ -944,6 +944,85 @@
       </con:request>
     </con:config>
   </con:testStep>
+  <con:testStep type="request" id="4dcd5ab2-7627-4622-98b9-a0ab3de24c38" name="SubmitPPIPaymentUsingWallet-QA-RCECOM-667-StrCre">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
+      <con:request name="SubmitPPIPaymentUsingWallet-QA-RCECOM-667-StrCre" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPaymentUsingWallet>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user667</ppi:UserName>\r
+            <ppi:Password>pwd667</ppi:Password>\r
+            <ppi:PPITransactionRequestId>ssdf344545efsdfsdfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>667</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:ppiWalletPayment Notes="">\r
+            <!--Optional:-->\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>Customer</ppip:FeeType>\r
+                  <ppip:Amount>0</ppip:Amount>\r
+               </ppi:Fees>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>3.00</ppip:Amount>\r
+                  <ppip:SegmentType>Enter Amount</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>Regular</ppi:PaymentType>\r
+               <ppi:ProcessDate>2020-05-13T23:20:00.000Z</ppi:ProcessDate>\r
+               <!--Zero or more repetitions:-->\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
+            <ppi:ClientAccountNumber>667WalletID111</ppi:ClientAccountNumber>\r
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>\r
+            <ppi:WalletID>667WalletID111</ppi:WalletID>\r
+            <ppi:PaymentAccountToken>1283881111</ppi:PaymentAccountToken>\r
+            <ppi:ScheduledIndicator>Unscheduled</ppi:ScheduledIndicator>
+            <!--Optional:-->
+            <ppi:TransactionInitIndicator>Customer</ppi:TransactionInitIndicator>
+
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <ppi:Zip>22201</ppi:Zip>\r
+            </ppi:Customer>\r
+         </ws:ppiWalletPayment>\r
+      </ws:SubmitPPIPaymentUsingWallet>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
   <con:properties/>
   <con:reportParameters/>
 </con:testCase>
