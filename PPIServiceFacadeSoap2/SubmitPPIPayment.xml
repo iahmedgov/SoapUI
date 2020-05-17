@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="6b2b02df-0389-4d49-9ed7-13f85fa8e6c1" discardOkResults="true" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="SubmitPPIPayment TestCase" searchProperties="true" maxResults="0" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="94fbc208-b374-4fe4-8bed-58245e0bd2ab" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIPayment" name="SubmitPPIPayment" bindingOperationName="SubmitPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="6b2b02df-0389-4d49-9ed7-13f85fa8e6c1fileName">SubmitPPIPayment-TestCase</con:setting>
+    <con:setting id="94fbc208-b374-4fe4-8bed-58245e0bd2abfileName">SubmitPPIPayment</con:setting>
   </con:settings>
-  <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="request" id="6f8ca943-1281-4a74-a087-d621895c408a" name="SubmitPPIPayment">
+  <con:call id="815eacc3-373b-4e2d-bf85-d460b5490db8" name="SubmitPPIPayment Request">
     <con:settings/>
-    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-      <con:interface>PPIServiceFacadeSoap12</con:interface>
-      <con:operation>SubmitPPIPayment</con:operation>
-      <con:request name="SubmitPPIPayment" id="d2f86bbd-76e7-4542-a479-db2b4ae526ae" defaultOutgoingWss="" defaultIncomingWss="">
-        <con:settings/>
-        <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soap:Header/>\r
-   <soap:Body>\r
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
       <ws:SubmitPPIPayment>\r
          <!--Optional:-->\r
          <ws:token>\r
@@ -135,19 +129,22 @@
                <ppip:EnforcePinDebitValidation>?</ppip:EnforcePinDebitValidation>\r
             </ppi:Vehicle>\r
          </ws:payment>\r
+         <ws:storedCredential>?</ws:storedCredential>\r
+         <!--Optional:-->\r
+         <ws:billPaymentIndicator>?</ws:billPaymentIndicator>\r
+         <!--Optional:-->\r
+         <ws:credentialIndicator>?</ws:credentialIndicator>\r
+         <!--Optional:-->\r
+         <ws:scheduledIndicator>?</ws:scheduledIndicator>\r
+         <!--Optional:-->\r
+         <ws:transactionInitIndicator>?</ws:transactionInitIndicator>\r
       </ws:SubmitPPIPayment>\r
-   </soap:Body>\r
-</soap:Envelope>]]></con:request>
-        <con:credentials>
-          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
-          <con:authType>No Authorization</con:authType>
-        </con:credentials>
-        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/SubmitPPIPaymentRequest" mustUnderstand="NONE" version="200508"/>
-        <con:wsrmConfig version="1.2"/>
-      </con:request>
-    </con:config>
-  </con:testStep>
-  <con:properties/>
-  <con:reportParameters/>
-</con:testCase>
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPayment"/>
+  </con:call>
+</con:operation>

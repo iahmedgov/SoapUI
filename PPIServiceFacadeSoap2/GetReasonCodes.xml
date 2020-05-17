@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="9275fb3f-f241-4930-b8fc-647287eec23b" isOneWay="false" action="https://www.velocitypayment.com/ws/GetReasonCodes" name="GetReasonCodes" bindingOperationName="GetReasonCodes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9275fb3f-f241-4930-b8fc-647287eec23bfileName">GetReasonCodes</con:setting>
+  </con:settings>
+  <con:call id="e4743634-04ed-4c22-a8ef-0adfe0f11d94" name="GetReasonCodes Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetReasonCodes>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:reasonCategory>?</ws:reasonCategory>\r
+      </ws:GetReasonCodes>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetReasonCodes"/>
+  </con:call>
+</con:operation>

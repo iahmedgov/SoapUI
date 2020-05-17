@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="181ab93a-3581-46e2-bb5c-9f16ed2f7941" isOneWay="false" action="https://www.velocitypayment.com/ws/FinalizePPIPayment" name="FinalizePPIPayment" bindingOperationName="FinalizePPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="181ab93a-3581-46e2-bb5c-9f16ed2f7941fileName">FinalizePPIPayment</con:setting>
+  </con:settings>
+  <con:call id="cc711d49-0ac5-4fff-90c2-c999e8468164" name="FinalizePPIPayment Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:FinalizePPIPayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:confirmationNumber>?</ws:confirmationNumber>\r
+         <ws:newPaymentSegmentAmount>?</ws:newPaymentSegmentAmount>\r
+      </ws:FinalizePPIPayment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/FinalizePPIPayment"/>
+  </con:call>
+</con:operation>

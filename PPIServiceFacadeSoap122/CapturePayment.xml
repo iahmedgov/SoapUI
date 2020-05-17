@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="1ff08f2d-a68c-42d1-b138-aee5bf19ef71" isOneWay="false" action="https://www.velocitypayment.com/ws/CapturePayment" name="CapturePayment" bindingOperationName="CapturePayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1ff08f2d-a68c-42d1-b138-aee5bf19ef71fileName">CapturePayment</con:setting>
+  </con:settings>
+  <con:call id="211e9085-1012-4ae7-861e-5b48409e1c3e" name="CapturePayment Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:CapturePayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:paymentId>?</ws:paymentId>\r
+         <!--Optional:-->\r
+         <ws:amount>?</ws:amount>\r
+      </ws:CapturePayment>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/CapturePaymentRequest"/>
+  </con:call>
+</con:operation>

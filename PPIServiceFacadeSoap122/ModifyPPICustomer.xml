@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="680c0797-bb14-481f-8d17-6e96b1430de3" isOneWay="false" action="https://www.velocitypayment.com/ws/ModifyPPICustomer" name="ModifyPPICustomer" bindingOperationName="ModifyPPICustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="680c0797-bb14-481f-8d17-6e96b1430de3fileName">ModifyPPICustomer</con:setting>
+  </con:settings>
+  <con:call id="83ebdaed-ef74-4e23-935f-49560b3000f6" name="ModifyPPICustomer Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:ModifyPPICustomer>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:paymentId>?</ws:paymentId>\r
+         <!--Optional:-->\r
+         <ws:customer>\r
+            <!--Optional:-->\r
+            <ppi:AddressLine1>?</ppi:AddressLine1>\r
+            <!--Optional:-->\r
+            <ppi:AddressLine2>?</ppi:AddressLine2>\r
+            <!--Optional:-->\r
+            <ppi:Country>?</ppi:Country>\r
+            <!--Optional:-->\r
+            <ppi:EmailAddress>?</ppi:EmailAddress>\r
+            <!--Optional:-->\r
+            <ppi:FirstName>?</ppi:FirstName>\r
+            <!--Optional:-->\r
+            <ppi:LastName>?</ppi:LastName>\r
+            <!--Optional:-->\r
+            <ppi:MiddleInitial>?</ppi:MiddleInitial>\r
+            <!--Optional:-->\r
+            <ppi:Notes>?</ppi:Notes>\r
+            <!--Optional:-->\r
+            <ppi:PhoneNumber>?</ppi:PhoneNumber>\r
+            <!--Optional:-->\r
+            <ppi:Zip>?</ppi:Zip>\r
+            <!--Optional:-->\r
+            <ppi:Username>?</ppi:Username>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+         </ws:customer>\r
+      </ws:ModifyPPICustomer>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/ModifyPPICustomerRequest"/>
+  </con:call>
+</con:operation>

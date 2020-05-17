@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="4a852634-f281-4a4e-a939-67f4968dbdf1" isOneWay="false" action="https://www.velocitypayment.com/ws/ValidateFinancialInfo" name="ValidateFinancialInfo" bindingOperationName="ValidateFinancialInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4a852634-f281-4a4e-a939-67f4968dbdf1fileName">ValidateFinancialInfo</con:setting>
+  </con:settings>
+  <con:call id="64bc21cd-4e2b-4ec1-ad26-40238e1885ca" name="ValidateFinancialInfo Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:ValidateFinancialInfo>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:financialType>?</ws:financialType>\r
+         <!--Optional:-->\r
+         <ws:input>?</ws:input>\r
+      </ws:ValidateFinancialInfo>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/ValidateFinancialInfoRequest"/>
+  </con:call>
+</con:operation>

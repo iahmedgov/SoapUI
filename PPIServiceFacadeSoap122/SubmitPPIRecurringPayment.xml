@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="4608016b-0af0-4eda-b7c4-53192422b31b" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIRecurringPayment" name="SubmitPPIRecurringPayment" bindingOperationName="SubmitPPIRecurringPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4608016b-0af0-4eda-b7c4-53192422b31bfileName">SubmitPPIRecurringPayment</con:setting>
+  </con:settings>
+  <con:call id="1c80d6d5-07b3-493c-92ca-2f4ccdc28aaf" name="SubmitPPIRecurringPayment Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:SubmitPPIRecurringPayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:paymentId>?</ws:paymentId>\r
+         <ws:paymentAmount>?</ws:paymentAmount>\r
+         <!--Optional:-->\r
+         <ws:checkNumber>?</ws:checkNumber>\r
+         <!--Optional:-->\r
+         <ws:feeEntry>\r
+            <ppip:FeeType>?</ppip:FeeType>\r
+            <ppip:Amount>?</ppip:Amount>\r
+         </ws:feeEntry>\r
+      </ws:SubmitPPIRecurringPayment>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/SubmitPPIRecurringPaymentRequest"/>
+  </con:call>
+</con:operation>

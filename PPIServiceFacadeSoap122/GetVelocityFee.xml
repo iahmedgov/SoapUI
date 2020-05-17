@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="d689c31c-39a2-4a05-9405-9cc33ca64c3f" isOneWay="false" action="https://www.velocitypayment.com/ws/GetVelocityFee" name="GetVelocityFee" bindingOperationName="GetVelocityFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d689c31c-39a2-4a05-9405-9cc33ca64c3ffileName">GetVelocityFee</con:setting>
+  </con:settings>
+  <con:call id="98a4db76-1fdb-4bb1-954b-f45dc92d9f1a" name="GetVelocityFee Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService12</con:endpoint>
+    <con:request><![CDATA[<soap:Envelope xmlns:soap="http://www.w3.org/2003/05/soap-envelope" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soap:Header/>\r
+   <soap:Body>\r
+      <ws:GetVelocityFee>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:amount>?</ws:amount>\r
+         <ws:paymentType>?</ws:paymentType>\r
+         <!--Optional:-->\r
+         <ws:accountNumber>?</ws:accountNumber>\r
+      </ws:GetVelocityFee>\r
+   </soap:Body>\r
+</soap:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/PPIServiceFacadeSoap/GetVelocityFeeRequest"/>
+  </con:call>
+</con:operation>

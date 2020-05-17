@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="1b8ba5e9-ff7a-4b6c-9d72-be2b544ee807" isOneWay="false" action="https://www.velocitypayment.com/ws/VoidPPIPayment" name="VoidPPIPayment" bindingOperationName="VoidPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1b8ba5e9-ff7a-4b6c-9d72-be2b544ee807fileName">VoidPPIPayment</con:setting>
+  </con:settings>
+  <con:call id="a43c35d4-94f3-4f71-a08c-9ac66baee786" name="VoidPPIPayment Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:VoidPPIPayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:paymentId>?</ws:paymentId>\r
+         <!--Optional:-->\r
+         <ws:code>?</ws:code>\r
+         <!--Optional:-->\r
+         <ws:comments>?</ws:comments>\r
+      </ws:VoidPPIPayment>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/VoidPPIPayment"/>
+  </con:call>
+</con:operation>

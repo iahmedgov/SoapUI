@@ -3,6 +3,8 @@ PPIServiceFacadeSoap12
 PPIServiceFacadeSoap1
 PPIServiceFacadeSoap121
 VLinkPaymentPlanHttpEndpointBinding
+PPIServiceFacadeSoap2
+PPIServiceFacadeSoap122
 WSGatewayTestSuite
 PPIServiceFacadeSoap12-TestSuite
 Automation
@@ -10,3 +12,4 @@ AutomationUpgrade
 AutomationProduction
 WSGateway01292016-TestSuite-1
 VLinkPaymentPlan-Test-Suite
+WSGateway01292016-TestSuite-2
