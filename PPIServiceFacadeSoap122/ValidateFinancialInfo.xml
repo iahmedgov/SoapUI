@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="4a852634-f281-4a4e-a939-67f4968dbdf1" isOneWay="false" action="https://www.velocitypayment.com/ws/ValidateFinancialInfo" name="ValidateFinancialInfo" bindingOperationName="ValidateFinancialInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="4a852634-f281-4a4e-a939-67f4968dbdf1" isOneWay="false" action="https://www.velocitypayment.com/ws/ValidateFinancialInfo" name="ValidateFinancialInfo" bindingOperationName="ValidateFinancialInfo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="4a852634-f281-4a4e-a939-67f4968dbdf1fileName">ValidateFinancialInfo</con:setting>
   </con:settings>

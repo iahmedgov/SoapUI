@@ -166,7 +166,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -190,13 +190,13 @@
             <!--Optional:-->
             
             <!--Optional:-->
-            <ppi:NickName>2325PC228</ppi:NickName><ppi:WalletID>2325PC228</ppi:WalletID><ppi:Vehicle>
+            <ppi:NickName>2325PC229</ppi:NickName><ppi:WalletID>2325PC229</ppi:WalletID><ppi:Vehicle>
                <!--Optional:-->
                
-               <ppip:AccountType/>
+               <ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType>
                <!--Optional:-->
                
-               <ppip:CheckType/>
+               <ppip:CheckType>Personal</ppip:CheckType>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
                
@@ -204,7 +204,7 @@
                
                <!--Optional:-->
                
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/22</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:PaymentVehicleNumber>22222222</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -232,7 +232,7 @@
                <!--Optional:-->
                
                <ppi:AddressLine1>1387 N DUPONT HWY</ppi:AddressLine1><ppi:PhoneNumber>4106280790</ppi:PhoneNumber><ppi:FirstName>chotass</ppi:FirstName><ppi:LastName>chatriss</ppi:LastName><ppi:ZipCode>21054</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
-            </ppi:Payor><ppi:ClientReferenceNumber>536563569</ppi:ClientReferenceNumber>
+            </ppi:Payor><ppi:ClientReferenceNumber>536563570</ppi:ClientReferenceNumber>
             <!--Optional:-->
             
             <!--Optional:-->

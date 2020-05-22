@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="2c2f584d-cd92-427e-8f94-a3f898a44c8c" isOneWay="false" action="https://www.velocitypayment.com/ws/RefundPPIPayment" name="RefundPPIPayment" bindingOperationName="RefundPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="2c2f584d-cd92-427e-8f94-a3f898a44c8c" isOneWay="false" action="https://www.velocitypayment.com/ws/RefundPPIPayment" name="RefundPPIPayment" bindingOperationName="RefundPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="2c2f584d-cd92-427e-8f94-a3f898a44c8cfileName">RefundPPIPayment</con:setting>
   </con:settings>

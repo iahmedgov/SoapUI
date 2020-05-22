@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="b5282cd3-037a-47cf-95ce-143cbc431f62" isOneWay="false" action="https://www.velocitypayment.com/ws/CapturePayment" name="CapturePayment" bindingOperationName="CapturePayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="b5282cd3-037a-47cf-95ce-143cbc431f62" isOneWay="false" action="https://www.velocitypayment.com/ws/CapturePayment" name="CapturePayment" bindingOperationName="CapturePayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="b5282cd3-037a-47cf-95ce-143cbc431f62fileName">CapturePayment</con:setting>
   </con:settings>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f847d59d-dc70-4616-a7a2-746947b320e7" isOneWay="false" action="https://www.velocitypayment.com/ws/GetWalletInformation" name="GetWalletInformation" bindingOperationName="GetWalletInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="f847d59d-dc70-4616-a7a2-746947b320e7" isOneWay="false" action="https://www.velocitypayment.com/ws/GetWalletInformation" name="GetWalletInformation" bindingOperationName="GetWalletInformation" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f847d59d-dc70-4616-a7a2-746947b320e7fileName">GetWalletInformation</con:setting>
   </con:settings>

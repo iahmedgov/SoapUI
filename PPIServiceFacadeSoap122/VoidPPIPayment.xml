@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="05d9aa0c-67d5-494e-8666-4449f0462a6b" isOneWay="false" action="https://www.velocitypayment.com/ws/VoidPPIPayment" name="VoidPPIPayment" bindingOperationName="VoidPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="05d9aa0c-67d5-494e-8666-4449f0462a6b" isOneWay="false" action="https://www.velocitypayment.com/ws/VoidPPIPayment" name="VoidPPIPayment" bindingOperationName="VoidPPIPayment" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="05d9aa0c-67d5-494e-8666-4449f0462a6bfileName">VoidPPIPayment</con:setting>
   </con:settings>

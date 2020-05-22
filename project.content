@@ -190,6 +190,7 @@ Automation\GetVelocityFeeNegative.xml
 Automation\Refund.xml
 Automation\PartialRefund.xml
 Automation\MultiplePartialRefund.xml
+Automation\ZeroDollarError.xml
 AutomationUpgrade\SubmitPPIPaymentUpgrade.xml
 AutomationUpgrade\GetVelocityFeeUpgrade.xml
 AutomationUpgrade\SubmitWalletUpgrade.xml

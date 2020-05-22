@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="f7e709de-ca8b-45ad-89a2-b182de8be118" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" name="SubmitPPIPaymentUsingWallet" bindingOperationName="SubmitPPIPaymentUsingWallet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="f7e709de-ca8b-45ad-89a2-b182de8be118" isOneWay="false" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" name="SubmitPPIPaymentUsingWallet" bindingOperationName="SubmitPPIPaymentUsingWallet" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f7e709de-ca8b-45ad-89a2-b182de8be118fileName">SubmitPPIPaymentUsingWallet</con:setting>
   </con:settings>

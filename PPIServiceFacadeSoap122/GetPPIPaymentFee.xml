@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="00bcd4ca-344d-419e-ae0e-186e0d0ecf09" isOneWay="false" action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" name="GetPPIPaymentFee" bindingOperationName="GetPPIPaymentFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="00bcd4ca-344d-419e-ae0e-186e0d0ecf09" isOneWay="false" action="https://www.velocitypayment.com/ws/GetPPIPaymentFee" name="GetPPIPaymentFee" bindingOperationName="GetPPIPaymentFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="00bcd4ca-344d-419e-ae0e-186e0d0ecf09fileName">GetPPIPaymentFee</con:setting>
   </con:settings>

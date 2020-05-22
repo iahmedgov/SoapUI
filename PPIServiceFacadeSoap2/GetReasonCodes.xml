@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="9275fb3f-f241-4930-b8fc-647287eec23b" isOneWay="false" action="https://www.velocitypayment.com/ws/GetReasonCodes" name="GetReasonCodes" bindingOperationName="GetReasonCodes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="9275fb3f-f241-4930-b8fc-647287eec23b" isOneWay="false" action="https://www.velocitypayment.com/ws/GetReasonCodes" name="GetReasonCodes" bindingOperationName="GetReasonCodes" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="9275fb3f-f241-4930-b8fc-647287eec23bfileName">GetReasonCodes</con:setting>
   </con:settings>

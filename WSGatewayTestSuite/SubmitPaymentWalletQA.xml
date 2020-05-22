@@ -214,13 +214,13 @@
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:Amount>0.00</ppip:Amount>
                   <ppip:SegmentType>Regular</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Utility</ppi:PaymentType>
-               <ppi:ProcessDate>2019-10-04T23:20:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2020-05-22T23:20:00.000-04:00</ppi:ProcessDate>
                <ppi:CustomData>
                   <ppi:ID>CustomData1</ppi:ID>
                   <ppi:Value>Hello</ppi:Value>
@@ -232,12 +232,12 @@
             <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:ClientAccountNumber>536563559</ppi:ClientAccountNumber>
             <ppi:PaymentSource>WEB</ppi:PaymentSource>
-            <ppi:WalletID>2325PC228</ppi:WalletID>
-            <ppi:PaymentAccountToken>17937881111</ppi:PaymentAccountToken>
+            <ppi:WalletID>2325PC220</ppi:WalletID>
+            <ppi:PaymentAccountToken>15929054444</ppi:PaymentAccountToken>
             <!--Optional:-->
             <!--Optional:-->
             <ppi:Customer>
-               <ppi:AddressLine1>5701 Truxton Avenue, Suite 200</ppi:AddressLine1><ppi:Country>US</ppi:Country><ppi:FirstName>Administration I</ppi:FirstName><ppi:LastName>Sun World International, LLC</ppi:LastName><ppi:PhoneNumber>6616314144</ppi:PhoneNumber><ppi:Zip>93309</ppi:Zip>
+               <ppi:AddressLine1>5701 Truxton Avenue, Suite 200</ppi:AddressLine1><ppi:Country>US</ppi:Country><ppi:FirstName>Administration I</ppi:FirstName><ppi:LastName>Sun World International, LLC</ppi:LastName><ppi:PhoneNumber>6616314144</ppi:PhoneNumber><ppi:Zip>22201</ppi:Zip>
             </ppi:Customer>
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>

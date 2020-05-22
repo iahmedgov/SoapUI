@@ -3580,13 +3580,13 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:InvoiceData>
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:Amount>0.00</ppip:Amount>
                   <!--Optional:-->
                   <ppip:SegmentType>Enter Amount</ppip:SegmentType>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-05-15T14:01:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2020-05-22T14:01:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>

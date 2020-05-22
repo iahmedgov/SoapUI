@@ -10,3 +10,4 @@ GetVelocityFeeNegative.xml
 Refund.xml
 PartialRefund.xml
 MultiplePartialRefund.xml
+ZeroDollarError.xml

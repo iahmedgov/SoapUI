@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:operation id="d689c31c-39a2-4a05-9405-9cc33ca64c3f" isOneWay="false" action="https://www.velocitypayment.com/ws/GetVelocityFee" name="GetVelocityFee" bindingOperationName="GetVelocityFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+<con:operation id="d689c31c-39a2-4a05-9405-9cc33ca64c3f" isOneWay="false" action="https://www.velocitypayment.com/ws/GetVelocityFee" name="GetVelocityFee" bindingOperationName="GetVelocityFee" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="d689c31c-39a2-4a05-9405-9cc33ca64c3ffileName">GetVelocityFee</con:setting>
   </con:settings>
