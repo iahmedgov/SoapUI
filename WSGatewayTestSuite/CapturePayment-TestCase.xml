@@ -156,8 +156,8 @@
             <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
-         <ws:paymentId>2791806030211098</ws:paymentId>
-         <ws:amount>9.00</ws:amount>
+         <ws:paymentId>340079334685422</ws:paymentId>
+         <ws:amount>2.00</ws:amount>
       </ws:CapturePayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
