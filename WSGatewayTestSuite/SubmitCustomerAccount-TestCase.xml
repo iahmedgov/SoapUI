@@ -251,10 +251,10 @@
                                                                  
                                                                 <ppi:PhoneNumber>6262232323</ppi:PhoneNumber> 
                                                                  
-                                                                <ppi:Zip>97078</ppi:Zip><ppi:Username>12341100060</ppi:Username> 
-                                                                <ppi:Password>prime3333</ppi:Password> 
+                                                                <ppi:Zip>97078</ppi:Zip><ppi:Username>12341100062</ppi:Username> 
+                                                                <ppi:Password>prime33332</ppi:Password> 
                                                 </ppi:Customer> 
-                                                <ppi:ClientAccountNumber>12341100060</ppi:ClientAccountNumber> 
+                                                <ppi:ClientAccountNumber>12341100062</ppi:ClientAccountNumber> 
                                                 <ppi:Action>Register</ppi:Action><ppi:MaxAmountForRecurringPayments/> 
                                 </ws:accountInformation> 
                 </ws:SubmitCustomerAccount> 
@@ -906,6 +906,55 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="279265e8-c7bf-4e0c-9e6f-bd6940d560ae" name="SubmitCustomerAccount-Demo-3792">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitCustomerAccount</con:operation>
+      <con:request name="SubmitCustomerAccount-Demo-3792" id="12942269-5c07-45f8-bc0b-0422c04179bf" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitCustomerAccount>
+         <ws:token>
+            <ppi:UserName>dtc_paratransit</ppi:UserName>
+            <ppi:Password>velocity2020</ppi:Password>
+            <ppi:PPITransactionRequestId>123411000590</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:accountInformation>
+            <ppi:Customer>
+               <ppi:AddressLine1>2000 14th street N</ppi:AddressLine1>
+               <ppi:AddressLine2>Suite 600</ppi:AddressLine2>
+               <ppi:Country>USA</ppi:Country>
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>
+               <ppi:FirstName>Andy</ppi:FirstName>
+               <ppi:LastName>Smith</ppi:LastName>
+               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
+               <ppi:Zip>22201</ppi:Zip>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>12341003</ppi:ClientAccountNumber>
+            <ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>Hello</ppi:Value></ppi:CustomData><ppi:Action>Register</ppi:Action>
+            <ppi:MaxAmountForRecurringPayments/>
+         </ws:accountInformation>
+      </ws:SubmitCustomerAccount>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitCustomerAccount" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>

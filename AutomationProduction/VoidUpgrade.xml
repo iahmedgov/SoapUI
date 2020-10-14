@@ -208,7 +208,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
    <soapenv:Header/>
    <soapenv:Body>
-      <ws:VoidPPIPayment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">sdfsdf456ygdfgdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>2380461856582094</ws:paymentId><ws:code>A1</ws:code><ws:comments>Voiding this payment</ws:comments></ws:VoidPPIPayment>
+      <ws:VoidPPIPayment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">sdfsdf456ygdfgdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>1777996052717782</ws:paymentId><ws:code>A1</ws:code><ws:comments>Voiding this payment</ws:comments></ws:VoidPPIPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="397183af-3e92-4de1-9f88-66d2fe13f0bf"/>
