@@ -28,7 +28,7 @@
             
             <!--Optional:-->
             
-         <ppi:UserName>user524</ppi:UserName><ppi:Password>pwd524</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>524Wallet142</ws:walletID>
+         <ppi:UserName>user524</ppi:UserName><ppi:Password>pwd524</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>524Wallet151</ws:walletID>
          <!--Optional:-->
          
       </ws:GetWalletInformation>
@@ -282,7 +282,7 @@
             
             <!--Optional:-->
             
-         <ppi:UserName>user495</ppi:UserName><ppi:Password>pwd495</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>495Wallet100</ws:walletID>
+         <ppi:UserName>user495</ppi:UserName><ppi:Password>pwd495</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>495WalletID850</ws:walletID>
          <!--Optional:-->
          
       </ws:GetWalletInformation>
@@ -623,8 +623,8 @@
             <ppi:Password>velocity2020</ppi:Password>
             <ppi:PPITransactionRequestId>gdfg54gdgdssg555</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:walletID>W41</ws:walletID>
+         </ws:token><ws:walletID>3792WalletID176</ws:walletID>
+         
          <!--Optional:-->
       </ws:GetWalletInformation>
    </soapenv:Body>
