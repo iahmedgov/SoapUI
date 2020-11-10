@@ -1144,11 +1144,11 @@
          </ws:token>
          <!--Optional:-->
          <ws:walletRequest>
-            <ppi:Action>AddToken</ppi:Action>
+            <ppi:Action>ModifyToken</ppi:Action>
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:WalletID>3792WalletID186</ppi:WalletID>
+            <ppi:WalletID>3792WalletID187</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -1177,15 +1177,15 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               <ppi:AddressLine1>2311 york roadMOD</ppi:AddressLine1>
                <ppi:Country>US</ppi:Country>
                <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
-               <ppi:FirstName>fname</ppi:FirstName>
-               <ppi:LastName>lname</ppi:LastName>
-               <ppi:ZipCode>22201</ppi:ZipCode>
+               <ppi:FirstName>fnameMOD</ppi:FirstName>
+               <ppi:LastName>lnameMOD</ppi:LastName>
+               <ppi:ZipCode>21054</ppi:ZipCode>
                <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:ClientReferenceNumber>12341186</ppi:ClientReferenceNumber>
+            <ppi:PaymentAccountToken>3707161111</ppi:PaymentAccountToken><ppi:ClientReferenceNumber>12341187</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>

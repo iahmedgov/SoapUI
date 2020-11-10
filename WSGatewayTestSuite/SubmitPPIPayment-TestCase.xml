@@ -53,7 +53,7 @@
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-08-17T19:57:02.338Z</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>hello</ppi:Value></ppi:CustomData>
+               <ppi:ProcessDate>2020-11-06T19:57:02.338Z</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>hello</ppi:Value></ppi:CustomData>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -869,7 +869,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Debt</ppi:PaymentType><ppi:ProcessDate>2020-08-17T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:PaymentType>Debt</ppi:PaymentType><ppi:ProcessDate>2020-11-06T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -877,7 +877,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             
             <!--Optional:-->
             
-            <ppi:ClientAccountNumber>147857001</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>true</ppi:PreAuthorizeOnly>
+            <ppi:ClientAccountNumber>147857001</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource>Agent</ppi:PaymentSource>
             <!--Optional:-->
             <ppi:Payor>
@@ -920,7 +920,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                
                <!--Optional:-->
                
-               <ppip:CVV2Code>147</ppip:CVV2Code><ppip:ExpirationDate>12/21</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:CVV2Code>147</ppip:CVV2Code><ppip:ExpirationDate>12/49</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
          <ppi:Customer><ppi:AddressLine2>suite 600</ppi:AddressLine2></ppi:Customer></ws:payment>
@@ -3590,13 +3590,13 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:InvoiceData>
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>0.00</ppip:Amount>
+                  <ppip:Amount>1.50</ppip:Amount>
                   <!--Optional:-->
                   <ppip:SegmentType>Enter Amount</ppip:SegmentType>
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-05-22T14:01:00.000-04:00</ppi:ProcessDate>
+               <ppi:ProcessDate>2020-11-06T14:01:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -3669,7 +3669,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                <!--Optional:-->
                <ppip:CVV2Code>145</ppip:CVV2Code>
                <!--Optional:-->
-               <ppip:ExpirationDate>12/20</ppip:ExpirationDate>
+               <ppip:ExpirationDate>12/45</ppip:ExpirationDate>
                <!--Optional:-->
                <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
