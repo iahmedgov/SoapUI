@@ -1067,7 +1067,7 @@
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-10-20T10:59:00.000Z</ppi:ProcessDate>
+               <ppi:ProcessDate>2020-11-13T10:59:00.000Z</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <!--Optional:-->
@@ -1091,11 +1091,11 @@
                <ppi:Zip>22201</ppi:Zip>
             </ppi:Customer>
             <!--Optional:-->
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
-            <ppi:ClientAccountNumber>3792177</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>true</ppi:PreAuthorizeOnly>
+            <ppi:ClientAccountNumber>1234193</ppi:ClientAccountNumber>
             <ppi:PaymentSource>Agent</ppi:PaymentSource>
-            <ppi:WalletID>3792WalletID177</ppi:WalletID>
-            <ppi:PaymentAccountToken>3700371111</ppi:PaymentAccountToken>
+            <ppi:WalletID>3792WalletID193</ppi:WalletID>
+            <ppi:PaymentAccountToken>3707511111</ppi:PaymentAccountToken>
             <!--Optional:-->
             <!--Optional:-->
          </ws:ppiWalletPayment>

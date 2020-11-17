@@ -623,7 +623,7 @@
             <ppi:Password>velocity2020</ppi:Password>
             <ppi:PPITransactionRequestId>gdfg54gdgdssg555</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token><ws:walletID>3792WalletID187</ws:walletID>
+         </ws:token><ws:walletID>3792WalletID193</ws:walletID>
          
          <!--Optional:-->
       </ws:GetWalletInformation>

@@ -1148,7 +1148,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:WalletID>3792WalletID187</ppi:WalletID>
+            <ppi:NickName>3792Nickname193MOD</ppi:NickName>
+            <ppi:WalletID>3792WalletID193</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -1158,9 +1159,10 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
+               <ppip:CVV2Code>163</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/27</ppip:ExpirationDate>
                
-               
-               <ppip:CVV2Code>124</ppip:CVV2Code><ppip:ExpirationDate>12/23</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
@@ -1177,20 +1179,123 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               <ppi:AddressLine1>2311 york roadMOD</ppi:AddressLine1>
-               <ppi:Country>US</ppi:Country>
-               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
-               <ppi:FirstName>fnameMOD</ppi:FirstName>
-               <ppi:LastName>lnameMOD</ppi:LastName>
+               
+<ppi:AccountName>ac name193MOD</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road193MOD</ppi:AddressLine1>
+               
+<ppi:AddressLine2>suite 600193MOD</ppi:AddressLine2>
+               
+               
+<ppi:Country>US</ppi:Country><ppi:PhoneNumber>7038945999</ppi:PhoneNumber>
+               <ppi:FirstName>fname193MOD</ppi:FirstName>
+               <ppi:LastName>lname193MOD</ppi:LastName>
+               
+<ppi:MiddleInitial>T</ppi:MiddleInitial>
+               <ppi:EmailAddress>iahmed193MOD@govolution.com</ppi:EmailAddress>
                <ppi:ZipCode>21054</ppi:ZipCode>
-               <ppi:IsBusinessName>false</ppi:IsBusinessName>
+               <ppi:IsBusinessName>true</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:PaymentAccountToken>3707161111</ppi:PaymentAccountToken><ppi:ClientReferenceNumber>12341187</ppi:ClientReferenceNumber>
+            
+<ppi:PaymentAccountToken>3707511111</ppi:PaymentAccountToken>
+            <ppi:ClientReferenceNumber>1234193000</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
       </ws:SubmitWalletInformation>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="9c732443-bfb3-4145-9b68-a1f12a995e15" name="SubmitWalletInformation-ManualDemo3792">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="SubmitWalletInformation-ManualDemo3792" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>dtc_paratransit</ppi:UserName>\r
+            <ppi:Password>velocity2020</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:walletRequest>\r
+            <ppi:Action>ModifyToken</ppi:Action>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:NickName>3792Nickname193</ppi:NickName>\r
+            <ppi:WalletID>3792WalletID193</ppi:WalletID>\r
+            <ppi:Vehicle>\r
+               <!--Optional:-->\r
+               <ppip:AccountType/>\r
+               <!--Optional:-->\r
+               <ppip:CheckType/>\r
+               <ppip:CheckNumberPosition/>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppip:CVV2Code>124</ppip:CVV2Code>\r
+               <ppip:ExpirationDate>12/23</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber/>\r
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+            <!--Optional:-->\r
+            <ppi:Payor>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AccountName>ac name193</ppi:AccountName>\r
+               <ppi:AddressLine1>2311 york road193</ppi:AddressLine1>\r
+               <ppi:AddressLine2>suite 600193</ppi:AddressLine2>\r
+               <ppi:Country>US</ppi:Country>\r
+               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>\r
+               <ppi:FirstName>fname193</ppi:FirstName>\r
+               <ppi:LastName>lname193</ppi:LastName>\r
+               <ppi:MiddleInitial>S</ppi:MiddleInitial>\r
+               <ppi:EmailAddress>iahmed193@govolution.com</ppi:EmailAddress>\r
+               <ppi:ZipCode>22201</ppi:ZipCode>\r
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <ppi:PaymentAccountToken>3707511111</ppi:PaymentAccountToken>\r
+            <ppi:ClientReferenceNumber>1234193</ppi:ClientReferenceNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:walletRequest>\r
+      </ws:SubmitWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
         <con:credentials>
@@ -1411,4 +1516,9 @@
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>9c732443-bfb3-4145-9b68-a1f12a995e15</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
 </con:testCase>

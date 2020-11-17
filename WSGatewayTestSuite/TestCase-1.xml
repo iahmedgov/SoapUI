@@ -132,9 +132,9 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>524Nickname209</ppi:NickName>
+            <ppi:NickName>524Nickname212MOD</ppi:NickName>
             
-            <ppi:WalletID>524Wallet209</ppi:WalletID><ppi:Vehicle>
+            <ppi:WalletID>524Wallet212</ppi:WalletID><ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
                <!--Optional:-->
@@ -145,9 +145,9 @@
                <!--Optional:-->
                
                
-               <ppip:CVV2Code>145</ppip:CVV2Code><ppip:ExpirationDate>12/26</ppip:ExpirationDate>
                
-               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               
+               <ppip:ExpirationDate>12/25</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -164,20 +164,20 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               <ppi:AccountName>ac name209</ppi:AccountName>
-               <ppi:AddressLine1>2311 york road209</ppi:AddressLine1>
-               <ppi:AddressLine2>suite 209</ppi:AddressLine2>
+               <ppi:AccountName>ac name212MOD</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road212MOD</ppi:AddressLine1>
+               <ppi:AddressLine2>suite 212MOD</ppi:AddressLine2>
                <ppi:Country>US</ppi:Country>
-               <ppi:PhoneNumber>5471250100</ppi:PhoneNumber>
                
-               <ppi:FirstName>fname209</ppi:FirstName><ppi:LastName>lname209</ppi:LastName>
-               <ppi:MiddleInitial>S</ppi:MiddleInitial>
                
-               <ppi:EmailAddress>iahmed209@govolution.com</ppi:EmailAddress><ppi:ZipCode>22201</ppi:ZipCode>
+               <ppi:PhoneNumber>7038945999</ppi:PhoneNumber><ppi:FirstName>fname212MOD</ppi:FirstName><ppi:LastName>lname212MOD</ppi:LastName>
+               <ppi:MiddleInitial>Y</ppi:MiddleInitial>
+               
+               <ppi:EmailAddress>iahmed212MOD@govolution.com</ppi:EmailAddress><ppi:ZipCode>21054</ppi:ZipCode>
                <ppi:IsBusinessName/>
             </ppi:Payor>
             
-            <ppi:ClientReferenceNumber>524CAN209</ppi:ClientReferenceNumber>
+            <ppi:PaymentAccountToken>1290171111</ppi:PaymentAccountToken><ppi:ClientReferenceNumber>524CAN212MOD</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
@@ -220,7 +220,7 @@
             
             <!--Optional:-->
             
-         <ppi:UserName>user524</ppi:UserName><ppi:Password>pwd524</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>524Wallet208</ws:walletID>
+         <ppi:UserName>user524</ppi:UserName><ppi:Password>pwd524</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>524Wallet212</ws:walletID>
          <!--Optional:-->
          
       </ws:GetWalletInformation>
@@ -233,6 +233,103 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="1f0927f1-d610-4608-8068-8cbf9dfa778a" name="SubmitWalletInformation-ManualCC-QA524">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="SubmitWalletInformation-ManualCC-QA524" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user524</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd524</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>Request15</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>ModifyToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>524Nickname212MOD</ppi:NickName>
+            <ppi:WalletID>524Wallet212</ppi:WalletID>
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               
+			<ppip:CVV2Code></ppip:CVV2Code>
+			<ppip:ExpirationDate></ppip:ExpirationDate>
+               
+
+               <ppip:PaymentVehicleNumber></ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation/>
+            </ppi:Vehicle>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--<ppi:FirstName/>-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AccountName>ac name212MOD</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road212MOD</ppi:AddressLine1>
+               <ppi:AddressLine2>suite 212MOD</ppi:AddressLine2>
+               <ppi:Country>US</ppi:Country>
+               <ppi:PhoneNumber>7038945999</ppi:PhoneNumber>
+               <ppi:FirstName>fname212MOD</ppi:FirstName>
+               <ppi:LastName>lname212MOD</ppi:LastName>
+               <ppi:MiddleInitial>Y</ppi:MiddleInitial>
+               <ppi:EmailAddress>iahmed212MOD@govolution.com</ppi:EmailAddress>
+               <ppi:ZipCode>21054</ppi:ZipCode>
+               <ppi:IsBusinessName/>
+            </ppi:Payor>
+            <ppi:PaymentAccountToken>1290171111</ppi:PaymentAccountToken>
+            <ppi:ClientReferenceNumber>524CAN212MOD</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
@@ -689,6 +786,11 @@
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>06b71f2a-9f57-4098-9331-1c52eb35b296</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>1f0927f1-d610-4608-8068-8cbf9dfa778a</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
