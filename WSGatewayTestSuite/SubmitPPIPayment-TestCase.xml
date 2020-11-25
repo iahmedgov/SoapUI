@@ -53,7 +53,7 @@
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2020-11-06T19:57:02.338Z</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>hello</ppi:Value></ppi:CustomData>
+               <ppi:ProcessDate>2020-11-19T19:57:02.338Z</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>hello</ppi:Value></ppi:CustomData>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -554,7 +554,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2020-08-17T15:59:00.000-04:00</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>hello</ppi:Value></ppi:CustomData>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2020-11-21T15:59:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -668,7 +668,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2020-02-11T08:59:00.000-04:00</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2020-11-22T08:59:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -857,7 +857,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>2</ppip:Amount>
+                  <ppip:Amount>0</ppip:Amount>
                </ppi:Fees>
                <!--Zero or more repetitions:-->
                
@@ -869,7 +869,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Debt</ppi:PaymentType><ppi:ProcessDate>2020-11-06T14:30:00.000-04:00</ppi:ProcessDate>
+               <ppi:PaymentType>Debt</ppi:PaymentType><ppi:ProcessDate>2020-11-21T14:30:00.000-04:00</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -1967,7 +1967,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2018-12-21T19:57:02.338Z</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2020-11-25T19:57:02.338Z</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -2077,7 +2077,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
                </ppi:PaymentSegment>
                <!--Optional:-->
                
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2018-11-27T19:57:02.338Z</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2020-11-21T19:57:02.338Z</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
                
             </ppi:AdditionalInfo>
@@ -2085,7 +2085,7 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             
             <!--Optional:-->
             
-            <ppi:Customer><ppi:AddressLine1>1853 Mandan Terrace</ppi:AddressLine1><ppi:FirstName>Himan</ppi:FirstName><ppi:LastName>Verma</ppi:LastName><ppi:Zip>21114</ppi:Zip></ppi:Customer><ppi:ClientAccountNumber>Chor12345</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>true</ppi:PreAuthorizeOnly>
+            <ppi:Customer><ppi:AddressLine1>1853 Mandan Terrace</ppi:AddressLine1><ppi:FirstName>Himan</ppi:FirstName><ppi:LastName>Verma</ppi:LastName><ppi:Zip>21114</ppi:Zip></ppi:Customer><ppi:ClientAccountNumber>Chor12345</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource>Agent</ppi:PaymentSource>
             <!--Optional:-->
             <ppi:Payor>
@@ -2382,82 +2382,81 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
          <!--Optional:-->
          <ws:token>
             <!--Optional:-->
-            
             <!--Optional:-->
-            
             <!--Optional:-->
             <ppi:UserName>user5621</ppi:UserName>
             <!--Optional:-->
-            <ppi:Password>pwd5621</ppi:Password><ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>BEID-Token562</ppi:PPIBusinessEntityIdentifierToken>
+            <ppi:Password>pwd5621</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345r56456rgfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>BEID-Token562</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
          <ws:payment Notes="">
             <!--Optional:-->
             <ppi:AdditionalInfo>
                <!--Zero or more repetitions:-->
-               
                <!--Zero or more repetitions:-->
-               
                <!--Zero or more repetitions:-->
-               <ppi:Fees><ppip:FeeType>Customer</ppip:FeeType><ppip:Amount>0</ppip:Amount></ppi:Fees><ppi:PaymentSegment>
-                  <ppip:Amount>20.00</ppip:Amount><ppip:SegmentType>Enter Amount</ppip:SegmentType>
+               <ppi:Fees>
+                  <ppip:FeeType>Customer</ppip:FeeType>
+                  <ppip:Amount>0</ppip:Amount>
+               </ppi:Fees>
+               <ppi:PaymentSegment>
+                  <ppip:Amount>20.00</ppip:Amount>
+                  <ppip:SegmentType>Enter Amount</ppip:SegmentType>
                   <!--Optional:-->
-                  
                </ppi:PaymentSegment>
                <!--Optional:-->
-               
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2019-02-07T19:57:02.338Z</ppi:ProcessDate>
+               <ppi:PaymentType>Regular</ppi:PaymentType>
+               <ppi:ProcessDate>2020-11-22T19:57:02.338Z</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
-               
             </ppi:AdditionalInfo>
             <!--Optional:-->
-            
             <!--Optional:-->
-            
-            <ppi:Customer><ppi:AddressLine1>1853 Mandan Terrace</ppi:AddressLine1><ppi:FirstName>Himan</ppi:FirstName><ppi:LastName>Verma</ppi:LastName><ppi:Zip>21054</ppi:Zip></ppi:Customer><ppi:ClientAccountNumber>12345</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
+            <ppi:Customer>
+               <ppi:AddressLine1>1853 Mandan Terrace</ppi:AddressLine1>
+               <ppi:FirstName>Himan</ppi:FirstName>
+               <ppi:LastName>Verma</ppi:LastName>
+               <ppi:Zip>21054</ppi:Zip>
+            </ppi:Customer>
+            <ppi:ClientAccountNumber>12345</ppi:ClientAccountNumber>
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource>Agent</ppi:PaymentSource>
             <!--Optional:-->
             <ppi:Payor>
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1><ppi:PhoneNumber>(717) 983-2345</ppi:PhoneNumber><ppi:FirstName>Michael</ppi:FirstName><ppi:LastName>Clarke</ppi:LastName><ppi:EmailAddress>imtiazster@gmail.com</ppi:EmailAddress><ppi:ZipCode>21054</ppi:ZipCode><ppi:IsBusinessName>false</ppi:IsBusinessName>
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               <ppi:PhoneNumber>(717) 983-2345</ppi:PhoneNumber>
+               <ppi:FirstName>Michael</ppi:FirstName>
+               <ppi:LastName>Clarke</ppi:LastName>
+               <ppi:EmailAddress>imtiazster@gmail.com</ppi:EmailAddress>
+               <ppi:ZipCode>21054</ppi:ZipCode>
+               <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
             <!--Optional:-->
             <ppi:Vehicle>
                <!--Optional:-->
-               
                <ppip:AccountType/>
                <!--Optional:-->
-               
                <ppip:CheckType/>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
-               
                <!--Optional:-->
-               
                <!--Optional:-->
-               
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>12/22</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:CVV2Code>123</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/22</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
             </ppi:Vehicle>
          </ws:payment>
