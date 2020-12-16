@@ -128,13 +128,13 @@
          </ws:token>
          <!--Optional:-->
          <ws:walletRequest>
-            <ppi:Action>ModifyToken</ppi:Action>
+            <ppi:Action>AddToken</ppi:Action>
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>524Nickname212MOD</ppi:NickName>
-            
-            <ppi:WalletID>524Wallet212</ppi:WalletID><ppi:Vehicle>
+            <ppi:NickName>524Nickname213</ppi:NickName>
+            <ppi:WalletID>524Wallet213</ppi:WalletID>
+            <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
                <!--Optional:-->
@@ -143,11 +143,9 @@
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
-               
-               
-               
-               
-               <ppip:ExpirationDate>12/25</ppip:ExpirationDate><ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:CVV2Code>125</ppip:CVV2Code><ppip:ExpirationDate>12/25</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -165,19 +163,19 @@
                <!--Optional:-->
                <!--Optional:-->
                <ppi:AccountName>ac name212MOD</ppi:AccountName>
-               <ppi:AddressLine1>2311 york road212MOD</ppi:AddressLine1>
+               <ppi:AddressLine1>2311 york road212MODrrrr</ppi:AddressLine1>
                <ppi:AddressLine2>suite 212MOD</ppi:AddressLine2>
                <ppi:Country>US</ppi:Country>
-               
-               
-               <ppi:PhoneNumber>7038945999</ppi:PhoneNumber><ppi:FirstName>fname212MOD</ppi:FirstName><ppi:LastName>lname212MOD</ppi:LastName>
+               <ppi:PhoneNumber>7038945999</ppi:PhoneNumber>
+               <ppi:FirstName>fname212MODq</ppi:FirstName>
+               <ppi:LastName>lname212MOD</ppi:LastName>
                <ppi:MiddleInitial>Y</ppi:MiddleInitial>
-               
-               <ppi:EmailAddress>iahmed212MOD@govolution.com</ppi:EmailAddress><ppi:ZipCode>21054</ppi:ZipCode>
+               <ppi:EmailAddress>iahmed212MOD@govolution.com</ppi:EmailAddress>
+               <ppi:ZipCode>21054</ppi:ZipCode>
                <ppi:IsBusinessName/>
             </ppi:Payor>
             
-            <ppi:PaymentAccountToken>1290171111</ppi:PaymentAccountToken><ppi:ClientReferenceNumber>524CAN212MOD</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>524CAN213</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
@@ -281,11 +279,11 @@
                <!--Optional:-->
                <!--Optional:-->
                
-			<ppip:CVV2Code></ppip:CVV2Code>
-			<ppip:ExpirationDate></ppip:ExpirationDate>
+			
+			
                
 
-               <ppip:PaymentVehicleNumber></ppip:PaymentVehicleNumber>
+               
                <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
@@ -436,11 +434,11 @@
          </ws:token>
          <!--Optional:-->
          <ws:walletRequest>
-            <ppi:Action>DeleteToken</ppi:Action>
+            <ppi:Action>DeleteWallet</ppi:Action>
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:WalletID>524Wallet170</ppi:WalletID><ppi:PaymentAccountToken>1289361111</ppi:PaymentAccountToken>
+            <ppi:WalletID>524Wallet213</ppi:WalletID>
             
             
             <!--Optional:-->
