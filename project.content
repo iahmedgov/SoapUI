@@ -18,6 +18,8 @@ PPIServiceFacadeSoap\SubmitWalletInformation.xml
 PPIServiceFacadeSoap\ValidateFinancialInfo.xml
 PPIServiceFacadeSoap\ValidatePPICustomer.xml
 PPIServiceFacadeSoap\VoidPPIPayment.xml
+PPIServiceFacadeSoap\CreateInstallmentPlan.xml
+PPIServiceFacadeSoap\CancelInstallmentPlan.xml
 PPIServiceFacadeSoap12\CapturePayment.xml
 PPIServiceFacadeSoap12\FinalizePPIPayment.xml
 PPIServiceFacadeSoap12\GetIVRTransferOptions.xml
@@ -157,6 +159,7 @@ WSGatewayTestSuite\SubmitWalletAddTokenAutomation.xml
 WSGatewayTestSuite\SubmitPPIPaymentUsingWalletAutomation.xml
 WSGatewayTestSuite\SubmitPPIPaymentAutomationTesting.xml
 WSGatewayTestSuite\SubmitPPIPayment-DataCreation.xml
+WSGatewayTestSuite\CreateInstallmentPlan.xml
 PPIServiceFacadeSoap12-TestSuite\CapturePayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\FinalizePPIPayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\GetIVRTransferOptions-TestCase.xml

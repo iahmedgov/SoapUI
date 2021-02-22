@@ -49,27 +49,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetVelocityFee>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>${AdvancedDataSourceFeeSingle#AT_Username}</ppi:UserName>
-            <!--Optional:-->
-            <ppi:Password>${AdvancedDataSourceFeeSingle#AT_Password}</ppi:Password><ppi:PPITransactionRequestId>${AdvancedDataSourceFeeSingle#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>${AdvancedDataSourceFeeSingle#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:amount>${AdvancedDataSourceFeeSingle#Amount}</ws:amount>
-         <ws:paymentType>${AdvancedDataSourceFeeSingle#PaymentType}</ws:paymentType><ws:accountNumber>${AdvancedDataSourceFeeSingle#Account}</ws:accountNumber>
-         <!--Optional:-->
-         
-      </ws:GetVelocityFee>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetVelocityFee>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>${AdvancedDataSourceFeeSingle#AT_Username}</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>${AdvancedDataSourceFeeSingle#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId>${AdvancedDataSourceFeeSingle#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>${AdvancedDataSourceFeeSingle#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:amount>${AdvancedDataSourceFeeSingle#Amount}</ws:amount>\r
+         <ws:paymentType>${AdvancedDataSourceFeeSingle#PaymentType}</ws:paymentType>\r
+         <ws:accountNumber>${AdvancedDataSourceFeeSingle#Account}</ws:accountNumber>\r
+         <!--Optional:-->\r
+      </ws:GetVelocityFee>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="10f7652e-8e7a-4254-83ec-d646a29c0cfd" name="Match content of [ns0:PPIFeeValue]">
           <con:configuration>

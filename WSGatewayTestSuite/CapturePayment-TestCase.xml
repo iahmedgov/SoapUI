@@ -64,16 +64,16 @@
          <!--Optional:-->
          <ws:token>
             <!--Optional:-->
-            
             <!--Optional:-->
             <ppi:UserName>user548</ppi:UserName>
             <!--Optional:-->
             <ppi:Password>pwd548</ppi:Password>
             <!--Optional:-->
-            <ppi:PPITransactionRequestId>sdfs345sdfsdfsdfs</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>0548</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token><ws:paymentId>3777182645886010</ws:paymentId>
+            <ppi:PPITransactionRequestId>sdfs345sdfsdfsdfs</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>0548</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentId>3777182645886010</ws:paymentId>
          <!--Optional:-->
-         
       </ws:CapturePayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>

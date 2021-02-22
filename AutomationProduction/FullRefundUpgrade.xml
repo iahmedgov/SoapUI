@@ -109,11 +109,75 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#FeeType}</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceFullRefundUpgrade#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenRefundUpgrade#RefundTodayDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourceFullRefundUpgrade#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourceFullRefundUpgrade#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceFullRefundUpgrade#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceFullRefundUpgrade#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourceFullRefundUpgrade#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourceFullRefundUpgrade#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceFullRefundUpgrade#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceFullRefundUpgrade#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourceFullRefundUpgrade#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourceFullRefundUpgrade#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourceFullRefundUpgrade#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourceFullRefundUpgrade#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourceFullRefundUpgrade#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceFullRefundUpgrade#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceFullRefundUpgrade#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourceFullRefundUpgrade#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourceFullRefundUpgrade#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceFullRefundUpgrade#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceFullRefundUpgrade#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourceFullRefundUpgrade#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourceFullRefundUpgrade#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourceFullRefundUpgrade#C_ZIP}</ppi:Zip><ppi:Username>${DataSourceFullRefundUpgrade#C_Username}</ppi:Username><ppi:Password>${DataSourceFullRefundUpgrade#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_Username}</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:payment>\r
+            <ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#FeeType}</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#SegmentAmount}</ppip:Amount>\r
+                  <ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#SegmentType}</ppip:SegmentType>\r
+               </ppi:PaymentSegment>\r
+               <ppi:PaymentType>${DataSourceFullRefundUpgrade#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenRefundUpgrade#RefundTodayDate}</ppi:ProcessDate>\r
+            </ppi:AdditionalInfo>\r
+            <ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AddressLine1>${DataSourceFullRefundUpgrade#C_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceFullRefundUpgrade#C_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceFullRefundUpgrade#C_Country}</ppi:Country>\r
+               <ppi:EmailAddress>${DataSourceFullRefundUpgrade#C_Email}</ppi:EmailAddress>\r
+               <ppi:FirstName>${DataSourceFullRefundUpgrade#C_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceFullRefundUpgrade#C_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceFullRefundUpgrade#C_MI}</ppi:MiddleInitial>\r
+               <ppi:Notes>${DataSourceFullRefundUpgrade#C_Notest}</ppi:Notes>\r
+               <ppi:PhoneNumber>${DataSourceFullRefundUpgrade#C_Phone}</ppi:PhoneNumber>\r
+               <ppi:Zip>${DataSourceFullRefundUpgrade#C_ZIP}</ppi:Zip>\r
+               <ppi:Username>${DataSourceFullRefundUpgrade#C_Username}</ppi:Username>\r
+               <ppi:Password>${DataSourceFullRefundUpgrade#C_Password}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#C_CAN}</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceFullRefundUpgrade#C_PaymentSource}</ppi:PaymentSource>\r
+            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AccountName>${DataSourceFullRefundUpgrade#P_AccountName}</ppi:AccountName>\r
+               <ppi:AddressLine1>${DataSourceFullRefundUpgrade#P_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceFullRefundUpgrade#P_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceFullRefundUpgrade#P_Country}</ppi:Country>\r
+               <ppi:PhoneNumber>${DataSourceFullRefundUpgrade#P_Phone}</ppi:PhoneNumber>\r
+               <ppi:FirstName>${DataSourceFullRefundUpgrade#P_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceFullRefundUpgrade#P_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceFullRefundUpgrade#P_MI}</ppi:MiddleInitial>\r
+               <ppi:EmailAddress>${DataSourceFullRefundUpgrade#P_Email}</ppi:EmailAddress>\r
+               <ppi:ZipCode>${DataSourceFullRefundUpgrade#P_ZIP}</ppi:ZipCode>\r
+               <ppi:BusinessName>${DataSourceFullRefundUpgrade#P_BusinessName}</ppi:BusinessName>\r
+               <ppi:IsBusinessName>${DataSourceFullRefundUpgrade#P_IsBusiness}</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_ABA}</ppip:AbaNumber>\r
+               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_AccountType}</ppip:AccountType>\r
+               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CheckNumber}</ppip:CheckNumber>\r
+               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CheckType}</ppip:CheckType>\r
+               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CheckPos}</ppip:CheckNumberPosition>\r
+               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_CVV}</ppip:CVV2Code>\r
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_ExpDate}</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_PMCategory}</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceFullRefundUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+         </ws:payment>\r
+      </ws:SubmitPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="cfc09c48-b46a-458a-a93e-b1adc93f7cc8"/>
         <con:assertion type="XPath Match" id="1aac2531-dcd1-42e9-aa39-39e476d42352" name="Match content of [ns0:ResultCode]">
@@ -171,14 +235,23 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:RefundPPIPayment>
-         <ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdfsdfew34tgg</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>${SaleToBeRefunded#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId><ws:code>A01</ws:code><ws:comments>Doing a Full Refund</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>
-      </ws:RefundPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:RefundPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdfsdfew34tgg</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:paymentId>${SaleToBeRefunded#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>\r
+         <ws:code>A01</ws:code>\r
+         <ws:comments>Doing a Full Refund</ws:comments>\r
+         <ws:isRefundMemo>false</ws:isRefundMemo>\r
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
+      </ws:RefundPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="a5a081a2-fb48-444d-acfd-c4cd7efba716"/>
         <con:assertion type="XPath Match" id="3796e06a-eca0-4673-b146-fd0c2d28ee46" name="Match content of [ns0:ResultCode]">

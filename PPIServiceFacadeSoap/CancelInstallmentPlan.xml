@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="59eababa-3171-4a5e-b652-0bbd14106eac" isOneWay="false" action="https://www.velocitypayment.com/ws/CancelInstallmentPlan" name="CancelInstallmentPlan" bindingOperationName="CancelInstallmentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="59eababa-3171-4a5e-b652-0bbd14106eacfileName">CancelInstallmentPlan</con:setting>
+  </con:settings>
+  <con:call id="70157bfb-6c63-4400-9e63-740896c4dfef" name="Request 1">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CancelInstallmentPlan>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <ppi:Password>pwd495</ppi:Password>
+            <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentPlanID>98713</ws:paymentPlanID>
+         <!--Optional:-->
+      </ws:CancelInstallmentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CancelInstallmentPlan"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="186c342c-c784-41a6-8cdc-9db48b632d97" name="CanelInstPlan-QA">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CancelInstallmentPlan>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <ppi:Password>pwd495</ppi:Password>
+            <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentPlanID>98713</ws:paymentPlanID>
+         <!--Optional:-->
+      </ws:CancelInstallmentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CancelInstallmentPlan"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+</con:operation>

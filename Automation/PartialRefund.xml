@@ -109,11 +109,75 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceForSaleTransaction#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenForProcessDate#TodaysDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourceForSaleTransaction#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourceForSaleTransaction#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceForSaleTransaction#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceForSaleTransaction#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourceForSaleTransaction#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourceForSaleTransaction#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceForSaleTransaction#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceForSaleTransaction#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourceForSaleTransaction#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourceForSaleTransaction#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourceForSaleTransaction#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourceForSaleTransaction#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourceForSaleTransaction#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceForSaleTransaction#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceForSaleTransaction#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourceForSaleTransaction#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourceForSaleTransaction#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceForSaleTransaction#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceForSaleTransaction#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourceForSaleTransaction#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourceForSaleTransaction#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourceForSaleTransaction#C_ZIP}</ppi:Zip><ppi:Username>${DataSourceForSaleTransaction#C_Username}</ppi:Username><ppi:Password>${DataSourceForSaleTransaction#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Username}</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:payment>\r
+            <ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentAmount}</ppip:Amount>\r
+                  <ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentType}</ppip:SegmentType>\r
+               </ppi:PaymentSegment>\r
+               <ppi:PaymentType>${DataSourceForSaleTransaction#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenForProcessDate#TodaysDate}</ppi:ProcessDate>\r
+            </ppi:AdditionalInfo>\r
+            <ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AddressLine1>${DataSourceForSaleTransaction#C_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceForSaleTransaction#C_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceForSaleTransaction#C_Country}</ppi:Country>\r
+               <ppi:EmailAddress>${DataSourceForSaleTransaction#C_Email}</ppi:EmailAddress>\r
+               <ppi:FirstName>${DataSourceForSaleTransaction#C_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceForSaleTransaction#C_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceForSaleTransaction#C_MI}</ppi:MiddleInitial>\r
+               <ppi:Notes>${DataSourceForSaleTransaction#C_Notest}</ppi:Notes>\r
+               <ppi:PhoneNumber>${DataSourceForSaleTransaction#C_Phone}</ppi:PhoneNumber>\r
+               <ppi:Zip>${DataSourceForSaleTransaction#C_ZIP}</ppi:Zip>\r
+               <ppi:Username>${DataSourceForSaleTransaction#C_Username}</ppi:Username>\r
+               <ppi:Password>${DataSourceForSaleTransaction#C_Password}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_CAN}</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PaymentSource}</ppi:PaymentSource>\r
+            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AccountName>${DataSourceForSaleTransaction#P_AccountName}</ppi:AccountName>\r
+               <ppi:AddressLine1>${DataSourceForSaleTransaction#P_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceForSaleTransaction#P_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceForSaleTransaction#P_Country}</ppi:Country>\r
+               <ppi:PhoneNumber>${DataSourceForSaleTransaction#P_Phone}</ppi:PhoneNumber>\r
+               <ppi:FirstName>${DataSourceForSaleTransaction#P_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceForSaleTransaction#P_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceForSaleTransaction#P_MI}</ppi:MiddleInitial>\r
+               <ppi:EmailAddress>${DataSourceForSaleTransaction#P_Email}</ppi:EmailAddress>\r
+               <ppi:ZipCode>${DataSourceForSaleTransaction#P_ZIP}</ppi:ZipCode>\r
+               <ppi:BusinessName>${DataSourceForSaleTransaction#P_BusinessName}</ppi:BusinessName>\r
+               <ppi:IsBusinessName>${DataSourceForSaleTransaction#P_IsBusiness}</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_ABA}</ppip:AbaNumber>\r
+               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_AccountType}</ppip:AccountType>\r
+               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckNumber}</ppip:CheckNumber>\r
+               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckType}</ppip:CheckType>\r
+               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CheckPos}</ppip:CheckNumberPosition>\r
+               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_CVV}</ppip:CVV2Code>\r
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_ExpDate}</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_VehicleNumber}</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_PMCategory}</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#V_EnforcePin}</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+         </ws:payment>\r
+      </ws:SubmitPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="898f57e2-aa6b-44bb-af49-c2b35b101bd2"/>
         <con:assertion type="XPath Match" id="9c000180-37ab-4915-ba24-9f131d6ab1bf" name="Match content of [ns0:ResultCode]">
@@ -171,14 +235,40 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:RefundPPIPayment>
-         <ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>${SaleTransaction#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId><ws:code>A01</ws:code><ws:comments>This is a Comment</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount><ws:ppiPayment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#R_Amount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceForSaleTransaction#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenForProcessDate#TodaysDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PaymentSource}</ppi:PaymentSource></ws:ppiPayment>
-      </ws:RefundPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:RefundPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Username}</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:paymentId>${SaleTransaction#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>\r
+         <ws:code>A01</ws:code>\r
+         <ws:comments>This is a Comment</ws:comments>\r
+         <ws:isRefundMemo>false</ws:isRefundMemo>\r
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
+         <ws:ppiPayment>\r
+            <ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#R_Amount}</ppip:Amount>\r
+                  <ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceForSaleTransaction#SegmentType}</ppip:SegmentType>\r
+               </ppi:PaymentSegment>\r
+               <ppi:PaymentType>${DataSourceForSaleTransaction#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenForProcessDate#TodaysDate}</ppi:ProcessDate>\r
+            </ppi:AdditionalInfo>\r
+            <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_CAN}</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceForSaleTransaction#C_PaymentSource}</ppi:PaymentSource>\r
+         </ws:ppiPayment>\r
+      </ws:RefundPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="fff23a7e-e5d0-495c-bbaf-af6f9fcaa403"/>
         <con:assertion type="XPath Match" id="36694f4f-6e06-4122-88b7-77d1da7146f1" name="Match content of [ns0:ResultCode]">

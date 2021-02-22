@@ -108,11 +108,75 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#FeeType}</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourceVoidUpgrade#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenSaleVoidUpgrade#SaleVoidTodayDate}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourceVoidUpgrade#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourceVoidUpgrade#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceVoidUpgrade#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceVoidUpgrade#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourceVoidUpgrade#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourceVoidUpgrade#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceVoidUpgrade#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceVoidUpgrade#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourceVoidUpgrade#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourceVoidUpgrade#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourceVoidUpgrade#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourceVoidUpgrade#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourceVoidUpgrade#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceVoidUpgrade#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceVoidUpgrade#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourceVoidUpgrade#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourceVoidUpgrade#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceVoidUpgrade#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceVoidUpgrade#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourceVoidUpgrade#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourceVoidUpgrade#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourceVoidUpgrade#C_ZIP}</ppi:Zip><ppi:Username>${DataSourceVoidUpgrade#C_Username}</ppi:Username><ppi:Password>${DataSourceVoidUpgrade#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Username}</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:payment>\r
+            <ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#FeeType}</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#SegmentAmount}</ppip:Amount>\r
+                  <ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#SegmentType}</ppip:SegmentType>\r
+               </ppi:PaymentSegment>\r
+               <ppi:PaymentType>${DataSourceVoidUpgrade#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenSaleVoidUpgrade#SaleVoidTodayDate}</ppi:ProcessDate>\r
+            </ppi:AdditionalInfo>\r
+            <ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AddressLine1>${DataSourceVoidUpgrade#C_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceVoidUpgrade#C_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceVoidUpgrade#C_Country}</ppi:Country>\r
+               <ppi:EmailAddress>${DataSourceVoidUpgrade#C_Email}</ppi:EmailAddress>\r
+               <ppi:FirstName>${DataSourceVoidUpgrade#C_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceVoidUpgrade#C_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceVoidUpgrade#C_MI}</ppi:MiddleInitial>\r
+               <ppi:Notes>${DataSourceVoidUpgrade#C_Notest}</ppi:Notes>\r
+               <ppi:PhoneNumber>${DataSourceVoidUpgrade#C_Phone}</ppi:PhoneNumber>\r
+               <ppi:Zip>${DataSourceVoidUpgrade#C_ZIP}</ppi:Zip>\r
+               <ppi:Username>${DataSourceVoidUpgrade#C_Username}</ppi:Username>\r
+               <ppi:Password>${DataSourceVoidUpgrade#C_Password}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_CAN}</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourceVoidUpgrade#C_PaymentSource}</ppi:PaymentSource>\r
+            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AccountName>${DataSourceVoidUpgrade#P_AccountName}</ppi:AccountName>\r
+               <ppi:AddressLine1>${DataSourceVoidUpgrade#P_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceVoidUpgrade#P_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceVoidUpgrade#P_Country}</ppi:Country>\r
+               <ppi:PhoneNumber>${DataSourceVoidUpgrade#P_Phone}</ppi:PhoneNumber>\r
+               <ppi:FirstName>${DataSourceVoidUpgrade#P_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceVoidUpgrade#P_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceVoidUpgrade#P_MI}</ppi:MiddleInitial>\r
+               <ppi:EmailAddress>${DataSourceVoidUpgrade#P_Email}</ppi:EmailAddress>\r
+               <ppi:ZipCode>${DataSourceVoidUpgrade#P_ZIP}</ppi:ZipCode>\r
+               <ppi:BusinessName>${DataSourceVoidUpgrade#P_BusinessName}</ppi:BusinessName>\r
+               <ppi:IsBusinessName>${DataSourceVoidUpgrade#P_IsBusiness}</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_ABA}</ppip:AbaNumber>\r
+               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_AccountType}</ppip:AccountType>\r
+               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckNumber}</ppip:CheckNumber>\r
+               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckType}</ppip:CheckType>\r
+               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CheckPos}</ppip:CheckNumberPosition>\r
+               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_CVV}</ppip:CVV2Code>\r
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_ExpDate}</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_PMCategory}</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourceVoidUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+         </ws:payment>\r
+      </ws:SubmitPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="6c7a6ea5-5c68-4f6d-bec0-058b54279ef7"/>
         <con:assertion type="XPath Match" id="c5790fdd-1fb2-45d5-9b60-75d77e4b5e7e" name="Match content of [ns0:ResultCode]">
@@ -204,11 +268,21 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:VoidPPIPayment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">sdfsdf456ygdfgdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>1464650526171963</ws:paymentId><ws:code>A1</ws:code><ws:comments>Voiding this payment</ws:comments></ws:VoidPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:VoidPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">sdfsdf456ygdfgdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:paymentId>1464650526171963</ws:paymentId>\r
+         <ws:code>A1</ws:code>\r
+         <ws:comments>Voiding this payment</ws:comments>\r
+      </ws:VoidPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="397183af-3e92-4de1-9f88-66d2fe13f0bf"/>
         <con:assertion type="XPath Match" id="b6d1beab-b4f9-4c3a-820b-2e48995686ea" name="Match content of [ns0:ResultCode]">

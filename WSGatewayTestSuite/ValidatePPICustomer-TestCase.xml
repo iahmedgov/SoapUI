@@ -15,25 +15,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:ValidatePPICustomer>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>junit</ppi:UserName>
-            <!--Optional:-->
-            <ppi:Password>testing</ppi:Password>
-            <!--Optional:-->
-            <ppi:PPITransactionRequestId>sdfsdf345fsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token><ws:accountNumber>52074799203</ws:accountNumber>
-         <!--Optional:-->
-         
-      </ws:ValidatePPICustomer>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:ValidatePPICustomer>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>junit</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>testing</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>sdfsdf345fsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:accountNumber>52074799203</ws:accountNumber>\r
+         <!--Optional:-->\r
+      </ws:ValidatePPICustomer>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

@@ -108,11 +108,75 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPayment><ws:payment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#FeeType}</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#FeeAmount}</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#SegmentAmount}</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#SegmentType}</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>${DataSourcePartialRefundUpgrade#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenPartialRefundTodayDate#Refund Today Date}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_PaymentSource}</ppi:PaymentSource><ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AccountName>${DataSourcePartialRefundUpgrade#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourcePartialRefundUpgrade#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourcePartialRefundUpgrade#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourcePartialRefundUpgrade#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourcePartialRefundUpgrade#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourcePartialRefundUpgrade#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourcePartialRefundUpgrade#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourcePartialRefundUpgrade#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourcePartialRefundUpgrade#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourcePartialRefundUpgrade#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourcePartialRefundUpgrade#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourcePartialRefundUpgrade#P_IsBusiness}</ppi:IsBusinessName></ppi:Payor><ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI"><ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_ABA}</ppip:AbaNumber><ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_AccountType}</ppip:AccountType><ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckType}</ppip:CheckType><ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckPos}</ppip:CheckNumberPosition><ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_PMCategory}</ppip:PaymentMethodCategory><ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation></ppi:Vehicle><ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"><ppi:AddressLine1>${DataSourcePartialRefundUpgrade#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourcePartialRefundUpgrade#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourcePartialRefundUpgrade#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourcePartialRefundUpgrade#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourcePartialRefundUpgrade#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourcePartialRefundUpgrade#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourcePartialRefundUpgrade#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourcePartialRefundUpgrade#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourcePartialRefundUpgrade#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourcePartialRefundUpgrade#C_ZIP}</ppi:Zip><ppi:Username>${DataSourcePartialRefundUpgrade#C_Username}</ppi:Username><ppi:Password>${DataSourcePartialRefundUpgrade#C_Password}</ppi:Password></ppi:Customer></ws:payment><ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Username}</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Password}</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken></ws:token></ws:SubmitPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Username}</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:payment>\r
+            <ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#FeeType}</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#SegmentAmount}</ppip:Amount>\r
+                  <ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#SegmentType}</ppip:SegmentType>\r
+               </ppi:PaymentSegment>\r
+               <ppi:PaymentType>${DataSourcePartialRefundUpgrade#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenPartialRefundTodayDate#Refund Today Date}</ppi:ProcessDate>\r
+            </ppi:AdditionalInfo>\r
+            <ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AddressLine1>${DataSourcePartialRefundUpgrade#C_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourcePartialRefundUpgrade#C_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourcePartialRefundUpgrade#C_Country}</ppi:Country>\r
+               <ppi:EmailAddress>${DataSourcePartialRefundUpgrade#C_Email}</ppi:EmailAddress>\r
+               <ppi:FirstName>${DataSourcePartialRefundUpgrade#C_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourcePartialRefundUpgrade#C_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourcePartialRefundUpgrade#C_MI}</ppi:MiddleInitial>\r
+               <ppi:Notes>${DataSourcePartialRefundUpgrade#C_Notest}</ppi:Notes>\r
+               <ppi:PhoneNumber>${DataSourcePartialRefundUpgrade#C_Phone}</ppi:PhoneNumber>\r
+               <ppi:Zip>${DataSourcePartialRefundUpgrade#C_ZIP}</ppi:Zip>\r
+               <ppi:Username>${DataSourcePartialRefundUpgrade#C_Username}</ppi:Username>\r
+               <ppi:Password>${DataSourcePartialRefundUpgrade#C_Password}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_CAN}</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_PaymentSource}</ppi:PaymentSource>\r
+            <ppi:Payor xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:AccountName>${DataSourcePartialRefundUpgrade#P_AccountName}</ppi:AccountName>\r
+               <ppi:AddressLine1>${DataSourcePartialRefundUpgrade#P_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourcePartialRefundUpgrade#P_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourcePartialRefundUpgrade#P_Country}</ppi:Country>\r
+               <ppi:PhoneNumber>${DataSourcePartialRefundUpgrade#P_Phone}</ppi:PhoneNumber>\r
+               <ppi:FirstName>${DataSourcePartialRefundUpgrade#P_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourcePartialRefundUpgrade#P_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourcePartialRefundUpgrade#P_MI}</ppi:MiddleInitial>\r
+               <ppi:EmailAddress>${DataSourcePartialRefundUpgrade#P_Email}</ppi:EmailAddress>\r
+               <ppi:ZipCode>${DataSourcePartialRefundUpgrade#P_ZIP}</ppi:ZipCode>\r
+               <ppi:BusinessName>${DataSourcePartialRefundUpgrade#P_BusinessName}</ppi:BusinessName>\r
+               <ppi:IsBusinessName>${DataSourcePartialRefundUpgrade#P_IsBusiness}</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <ppi:Vehicle xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppip:AbaNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_ABA}</ppip:AbaNumber>\r
+               <ppip:AccountType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_AccountType}</ppip:AccountType>\r
+               <ppip:CheckNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckNumber}</ppip:CheckNumber>\r
+               <ppip:CheckType xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckType}</ppip:CheckType>\r
+               <ppip:CheckNumberPosition xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CheckPos}</ppip:CheckNumberPosition>\r
+               <ppip:CVV2Code xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_CVV}</ppip:CVV2Code>\r
+               <ppip:ExpirationDate xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_ExpDate}</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_VehicleNumber}</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_PMCategory}</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation xmlns:ppip="http://www.ePayments.com/PPIPayment">${DataSourcePartialRefundUpgrade#V_EnforcePin}</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+         </ws:payment>\r
+      </ws:SubmitPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="92529ab2-b4b0-4875-934c-bb66fe946dff"/>
         <con:assertion type="XPath Match" id="295afc88-714c-4f5c-8160-0e64d889a5ab" name="Match content of [ns0:ResultCode]">
@@ -170,14 +234,40 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:RefundPPIPayment>
-         <ws:token><ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName><ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password><ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdf34efsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:paymentId>${PartialRefundSaleUpgrade#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId><ws:code>A01</ws:code><ws:comments>Doing a Partial Refund</ws:comments><ws:isRefundMemo>false</ws:isRefundMemo>
-         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount><ws:ppiPayment><ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI"><ppi:Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0</ppip:Amount></ppi:Fees><ppi:PaymentSegment><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">2.50</ppip:Amount><ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">Regular</ppip:SegmentType></ppi:PaymentSegment><ppi:PaymentType>Utility</ppi:PaymentType><ppi:ProcessDate>${DataGenPartialRefundTodayDate#Refund Today Date}</ppi:ProcessDate></ppi:AdditionalInfo><ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_CAN}</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly><ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource></ws:ppiPayment>
-      </ws:RefundPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:RefundPPIPayment>\r
+         <ws:token>\r
+            <ppi:UserName xmlns:ppi="http://www.ePayments.com/PPI">user2325</ppi:UserName>\r
+            <ppi:Password xmlns:ppi="http://www.ePayments.com/PPI">pwd2325</ppi:Password>\r
+            <ppi:PPITransactionRequestId xmlns:ppi="http://www.ePayments.com/PPI">dfsdf34efsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken xmlns:ppi="http://www.ePayments.com/PPI">2325</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:paymentId>${PartialRefundSaleUpgrade#Response#declare namespace ns0='http://www.ePayments.com/PPI'; declare namespace ns1='https://www.velocitypayment.com/ws'; //ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:PaymentID[1]}</ws:paymentId>\r
+         <ws:code>A01</ws:code>\r
+         <ws:comments>Doing a Partial Refund</ws:comments>\r
+         <ws:isRefundMemo>false</ws:isRefundMemo>\r
+         <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
+         <ws:ppiPayment>\r
+            <ppi:AdditionalInfo xmlns:ppi="http://www.ePayments.com/PPI">\r
+               <ppi:Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">2.50</ppip:Amount>\r
+                  <ppip:SegmentType xmlns:ppip="http://www.ePayments.com/PPIPayment">Regular</ppip:SegmentType>\r
+               </ppi:PaymentSegment>\r
+               <ppi:PaymentType>Utility</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenPartialRefundTodayDate#Refund Today Date}</ppi:ProcessDate>\r
+            </ppi:AdditionalInfo>\r
+            <ppi:ClientAccountNumber xmlns:ppi="http://www.ePayments.com/PPI">${DataSourcePartialRefundUpgrade#C_CAN}</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly xmlns:ppi="http://www.ePayments.com/PPI">false</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource xmlns:ppi="http://www.ePayments.com/PPI">Agent</ppi:PaymentSource>\r
+         </ws:ppiPayment>\r
+      </ws:RefundPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="20f6d412-9210-4355-b3ab-c2df2267f021"/>
         <con:assertion type="XPath Match" id="40b12310-b654-40fc-969f-736029fd15f3" name="Match content of [ns0:ResultCode]">

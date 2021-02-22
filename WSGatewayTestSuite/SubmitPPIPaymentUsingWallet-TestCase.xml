@@ -14,63 +14,63 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPaymentUsingWallet>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>de_temptags</ppi:UserName>
-            <!--Optional:-->
-            <ppi:Password>p@ssword829</ppi:Password>
-            <!--Optional:-->
-            <ppi:PPITransactionRequestId>dfds4ettrtrtr</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>3131</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <!--Optional:-->
-         <ws:ppiWalletPayment Notes="">
-            <!--Optional:-->
-            <ppi:Customer><ppi:AddressLine1>11 street</ppi:AddressLine1><ppi:Country>US</ppi:Country><ppi:Zip>22201</ppi:Zip></ppi:Customer><ppi:AdditionalInfo>
-               <!--Zero or more repetitions:-->
-               <ppi:Fees>
-                  <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>0</ppip:Amount>
-               </ppi:Fees>
-               <!--Zero or more repetitions:-->
-               
-               <!--Zero or more repetitions:-->
-               <ppi:PaymentSegment>
-                  <ppip:Amount>1.00</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
-                  <!--Optional:-->
-
-
-
-
-
-
-                  
-               </ppi:PaymentSegment>
-               <!--Optional:-->
-               
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2017-08-08T17:06:000-04:00</ppi:ProcessDate><ppi:CustomData><ppi:ID>CustomData1</ppi:ID><ppi:Value>hello</ppi:Value></ppi:CustomData>
-               <!--Zero or more repetitions:-->
-               
-            </ppi:AdditionalInfo>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
-            <ppi:ClientAccountNumber>asw123100</ppi:ClientAccountNumber><ppi:PaymentSource>Agent</ppi:PaymentSource><ppi:WalletID>3131WalletID201</ppi:WalletID><ppi:PaymentAccountToken>1301252222</ppi:PaymentAccountToken>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:ppiWalletPayment>
-      </ws:SubmitPPIPaymentUsingWallet>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPaymentUsingWallet>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>de_temptags</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>p@ssword829</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>dfds4ettrtrtr</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3131</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:ppiWalletPayment Notes="">\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>Customer</ppip:FeeType>\r
+                  <ppip:Amount>0</ppip:Amount>\r
+               </ppi:Fees>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>1.00</ppip:Amount>\r
+                  <ppip:SegmentType>Regular</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>Regular</ppi:PaymentType>\r
+               <ppi:ProcessDate>2017-08-08T17:06:000-04:00</ppi:ProcessDate>\r
+               <ppi:CustomData>\r
+                  <ppi:ID>CustomData1</ppi:ID>\r
+                  <ppi:Value>hello</ppi:Value>\r
+               </ppi:CustomData>\r
+               <!--Zero or more repetitions:-->\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <ppi:AddressLine1>11 street</ppi:AddressLine1>\r
+               <ppi:Country>US</ppi:Country>\r
+               <ppi:Zip>22201</ppi:Zip>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>asw123100</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>\r
+            <ppi:WalletID>3131WalletID201</ppi:WalletID>\r
+            <ppi:PaymentAccountToken>1301252222</ppi:PaymentAccountToken>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:ppiWalletPayment>\r
+      </ws:SubmitPPIPaymentUsingWallet>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -93,34 +93,37 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
-  <s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <SubmitPPIPaymentUsingWallet xmlns="https://www.velocitypayment.com/ws">
-      <token>
-        <UserName xmlns="http://www.ePayments.com/PPI">delcorp</UserName>
-        <Password xmlns="http://www.ePayments.com/PPI">D3lC0rp0r</Password>
-        <PPITransactionRequestId xmlns="http://www.ePayments.com/PPI">123456710</PPITransactionRequestId>
-        <PPIBusinessEntityIdentifierToken xmlns="http://www.ePayments.com/PPI">327</PPIBusinessEntityIdentifierToken>
-      </token>
-      <ppiWalletPayment>
-        <AdditionalInfo xmlns="http://www.ePayments.com/PPI">
-          <Fees><ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType><ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0</ppip:Amount></Fees><PaymentSegment>
-            <Amount xmlns="http://www.ePayments.com/PPIPayment">400</Amount>
-            <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>
-          </PaymentSegment>
-          <PaymentType>Regular</PaymentType>
-          <ProcessDate>2018-08-07T19:35:53.000Z</ProcessDate>
-          
-        </AdditionalInfo>
-        
-        <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">49389840</ClientAccountNumber>
-        <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>
-        <PaymentSource xmlns="http://www.ePayments.com/PPI">Web</PaymentSource>
-        <WalletID xmlns="http://www.ePayments.com/PPI">4344</WalletID>
-        <PaymentAccountToken xmlns="http://www.ePayments.com/PPI">3405052431</PaymentAccountToken>
-      <ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"/></ppiWalletPayment>
-    </SubmitPPIPaymentUsingWallet>
-  </s:Body>
+        <con:request><![CDATA[<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">\r
+   <s:Body>\r
+      <SubmitPPIPaymentUsingWallet xmlns="https://www.velocitypayment.com/ws">\r
+         <token>\r
+            <UserName xmlns="http://www.ePayments.com/PPI">delcorp</UserName>\r
+            <Password xmlns="http://www.ePayments.com/PPI">D3lC0rp0r</Password>\r
+            <PPITransactionRequestId xmlns="http://www.ePayments.com/PPI">123456710</PPITransactionRequestId>\r
+            <PPIBusinessEntityIdentifierToken xmlns="http://www.ePayments.com/PPI">327</PPIBusinessEntityIdentifierToken>\r
+         </token>\r
+         <ppiWalletPayment>\r
+            <AdditionalInfo xmlns="http://www.ePayments.com/PPI">\r
+               <Fees>\r
+                  <ppip:FeeType xmlns:ppip="http://www.ePayments.com/PPIPayment">Customer</ppip:FeeType>\r
+                  <ppip:Amount xmlns:ppip="http://www.ePayments.com/PPIPayment">0</ppip:Amount>\r
+               </Fees>\r
+               <PaymentSegment>\r
+                  <Amount xmlns="http://www.ePayments.com/PPIPayment">400</Amount>\r
+                  <SegmentType xmlns="http://www.ePayments.com/PPIPayment">Regular</SegmentType>\r
+               </PaymentSegment>\r
+               <PaymentType>Regular</PaymentType>\r
+               <ProcessDate>2018-08-07T19:35:53.000Z</ProcessDate>\r
+            </AdditionalInfo>\r
+            <ppi:Customer xmlns:ppi="http://www.ePayments.com/PPI"/>\r
+            <ClientAccountNumber xmlns="http://www.ePayments.com/PPI">49389840</ClientAccountNumber>\r
+            <PreAuthorizeOnly xmlns="http://www.ePayments.com/PPI">false</PreAuthorizeOnly>\r
+            <PaymentSource xmlns="http://www.ePayments.com/PPI">Web</PaymentSource>\r
+            <WalletID xmlns="http://www.ePayments.com/PPI">4344</WalletID>\r
+            <PaymentAccountToken xmlns="http://www.ePayments.com/PPI">3405052431</PaymentAccountToken>\r
+         </ppiWalletPayment>\r
+      </SubmitPPIPaymentUsingWallet>\r
+   </s:Body>\r
 </s:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -143,61 +146,60 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPaymentUsingWallet>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>User1286</ppi:UserName><ppi:Password>Pswd1286</ppi:Password><ppi:PPITransactionRequestId>sdfsd45fsdfsdg4tfsdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken></ws:token>
-         <!--Optional:-->
-         <ws:ppiWalletPayment Notes="">
-            <!--Optional:-->
-            <ppi:AdditionalInfo>
-               <!--Zero or more repetitions:-->
-               <ppi:Fees>
-                  <ppip:FeeType>Customer</ppip:FeeType>
-                  <ppip:Amount>0</ppip:Amount>
-               </ppi:Fees>
-               <!--Zero or more repetitions:-->
-               
-               <!--Zero or more repetitions:-->
-               <ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Payment Amount</ppip:SegmentType>
-                  <!--Optional:-->
-                  
-               </ppi:PaymentSegment>
-               <!--Optional:-->
-               
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2018-08-07T13:59:00.000Z</ppi:ProcessDate>
-               <!--Zero or more repetitions:-->
-               <ppi:CustomData>
-                  <ppi:ID>CustomData1</ppi:ID><ppi:Value>some</ppi:Value>
-                  <!--Optional:-->
-                  
-               </ppi:CustomData>
-            </ppi:AdditionalInfo>
-            <!--Optional:-->
-            <ppi:Customer/>
-            <!--Optional:-->
-            
-            <ppi:ClientAccountNumber>12341100073</ppi:ClientAccountNumber><ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
-            <ppi:PaymentSource>Agent</ppi:PaymentSource><ppi:WalletID>1286WalletID201</ppi:WalletID><ppi:PaymentAccountToken>926402222</ppi:PaymentAccountToken>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:ppiWalletPayment>
-      </ws:SubmitPPIPaymentUsingWallet>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPaymentUsingWallet>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>User1286</ppi:UserName>\r
+            <ppi:Password>Pswd1286</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsd45fsdfsdg4tfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:ppiWalletPayment Notes="">\r
+            <!--Optional:-->\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>Customer</ppip:FeeType>\r
+                  <ppip:Amount>0</ppip:Amount>\r
+               </ppi:Fees>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>10</ppip:Amount>\r
+                  <ppip:SegmentType>Payment Amount</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>Regular</ppi:PaymentType>\r
+               <ppi:ProcessDate>2018-08-07T13:59:00.000Z</ppi:ProcessDate>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:CustomData>\r
+                  <ppi:ID>CustomData1</ppi:ID>\r
+                  <ppi:Value>some</ppi:Value>\r
+                  <!--Optional:-->\r
+               </ppi:CustomData>\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <ppi:Customer/>\r
+            <!--Optional:-->\r
+            <ppi:ClientAccountNumber>12341100073</ppi:ClientAccountNumber>\r
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource>Agent</ppi:PaymentSource>\r
+            <ppi:WalletID>1286WalletID201</ppi:WalletID>\r
+            <ppi:PaymentAccountToken>926402222</ppi:PaymentAccountToken>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:ppiWalletPayment>\r
+      </ws:SubmitPPIPaymentUsingWallet>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -220,83 +222,78 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPaymentUsingWallet>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>delcorp</ppi:UserName><ppi:Password>D3lC0rp0r</ppi:Password><ppi:PPITransactionRequestId>sdfsd45fsdfsdg4tfsdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken></ws:token>
-         <!--Optional:-->
-         <ws:ppiWalletPayment Notes="">
-            <!--Optional:-->
-            <ppi:AdditionalInfo>
-               <!--Zero or more repetitions:-->
-               
-               <!--Zero or more repetitions:-->
-               
-               <!--Zero or more repetitions:-->
-               <ppi:Fees><ppip:FeeType>Customer</ppip:FeeType><ppip:Amount>0</ppip:Amount></ppi:Fees><ppi:PaymentSegment>
-                  <ppip:Amount>10</ppip:Amount><ppip:SegmentType>Regular</ppip:SegmentType>
-                  <!--Optional:-->
-                  
-               </ppi:PaymentSegment>
-               <!--Optional:-->
-               
-               <ppi:PaymentType>Regular</ppi:PaymentType><ppi:ProcessDate>2018-08-03T13:59:00.000Z</ppi:ProcessDate>
-               <!--Zero or more repetitions:-->
-               <ppi:CustomData>
-                  <ppi:ID>CustomData1</ppi:ID><ppi:Value>some</ppi:Value>
-                  <!--Optional:-->
-                  
-               </ppi:CustomData>
-            </ppi:AdditionalInfo>
-            <!--Optional:-->
-            <ppi:Customer>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-            <ppi:AddressLine1>104 Main street</ppi:AddressLine1><ppi:AddressLine2>address line 2</ppi:AddressLine2><ppi:Country>US</ppi:Country><ppi:PhoneNumber>4106289874</ppi:PhoneNumber><ppi:Zip>19901</ppi:Zip></ppi:Customer>
-            <!--Optional:-->
-            
-            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
-            <ppi:ClientAccountNumber>can1112220</ppi:ClientAccountNumber><ppi:PaymentSource>Web</ppi:PaymentSource><ppi:WalletID>4344</ppi:WalletID><ppi:PaymentAccountToken>3405052431</ppi:PaymentAccountToken>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:ppiWalletPayment>
-      </ws:SubmitPPIPaymentUsingWallet>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPaymentUsingWallet>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>delcorp</ppi:UserName>\r
+            <ppi:Password>D3lC0rp0r</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfsd45fsdfsdg4tfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:ppiWalletPayment Notes="">\r
+            <!--Optional:-->\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>Customer</ppip:FeeType>\r
+                  <ppip:Amount>0</ppip:Amount>\r
+               </ppi:Fees>\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>10</ppip:Amount>\r
+                  <ppip:SegmentType>Regular</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>Regular</ppi:PaymentType>\r
+               <ppi:ProcessDate>2018-08-03T13:59:00.000Z</ppi:ProcessDate>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:CustomData>\r
+                  <ppi:ID>CustomData1</ppi:ID>\r
+                  <ppi:Value>some</ppi:Value>\r
+                  <!--Optional:-->\r
+               </ppi:CustomData>\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>104 Main street</ppi:AddressLine1>\r
+               <ppi:AddressLine2>address line 2</ppi:AddressLine2>\r
+               <ppi:Country>US</ppi:Country>\r
+               <ppi:PhoneNumber>4106289874</ppi:PhoneNumber>\r
+               <ppi:Zip>19901</ppi:Zip>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>can1112220</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource>Web</ppi:PaymentSource>\r
+            <ppi:WalletID>4344</ppi:WalletID>\r
+            <ppi:PaymentAccountToken>3405052431</ppi:PaymentAccountToken>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:ppiWalletPayment>\r
+      </ws:SubmitPPIPaymentUsingWallet>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

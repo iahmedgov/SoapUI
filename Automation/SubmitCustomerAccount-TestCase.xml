@@ -63,67 +63,65 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitCustomerAccount>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>${DataSourceRegister#TokenUserName}</ppi:UserName><ppi:Password>${DataSourceRegister#TokenPassword}</ppi:Password><ppi:PPITransactionRequestId>${DataSourceRegister#TokenRequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>${DataSourceRegister#TokenIdentifier}</ppi:PPIBusinessEntityIdentifierToken>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:token>
-         <!--Optional:-->
-         <ws:accountInformation Notes="${DataSourceRegister#AccountNotes}">
-            <!--Optional:-->
-            <ppi:Customer>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-            <ppi:AddressLine1>${DataSourceRegister#CAL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceRegister#CAL2}</ppi:AddressLine2><ppi:Country>${DataSourceRegister#Ccountry}</ppi:Country><ppi:EmailAddress>${DataSourceRegister#Cemail}</ppi:EmailAddress><ppi:FirstName>${DataSourceRegister#Cfname}</ppi:FirstName><ppi:LastName>${DataSourceRegister#Clname}</ppi:LastName><ppi:MiddleInitial>${DataSourceRegister#Cmi}</ppi:MiddleInitial><ppi:Notes>${DataSourceRegister#Cnotes}</ppi:Notes><ppi:PhoneNumber>${DataSourceRegister#Cphone}</ppi:PhoneNumber><ppi:Zip>${DataSourceRegister#Czip}</ppi:Zip><ppi:Username>${DataGen1#RandomNumber}</ppi:Username><ppi:Password>${DataSourceRegister#Cpassword}</ppi:Password></ppi:Customer>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:CustomData>
-               <ppi:ID>${DataSourceRegister#CustomData1Label}</ppi:ID><ppi:Value>${DataSourceRegister#CustomData1}</ppi:Value>
-               <!--Optional:-->
-               
-            </ppi:CustomData>
-            <ppi:ClientAccountNumber>${DataGen1#RandomNumber}</ppi:ClientAccountNumber><ppi:Action>Register</ppi:Action>
-            <ppi:MaxAmountForRecurringPayments>${DataSourceRegister#MaxAmountForRecurringPayments}</ppi:MaxAmountForRecurringPayments>
-         </ws:accountInformation>
-      </ws:SubmitCustomerAccount>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitCustomerAccount>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>${DataSourceRegister#TokenUserName}</ppi:UserName>\r
+            <ppi:Password>${DataSourceRegister#TokenPassword}</ppi:Password>\r
+            <ppi:PPITransactionRequestId>${DataSourceRegister#TokenRequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>${DataSourceRegister#TokenIdentifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:accountInformation Notes="${DataSourceRegister#AccountNotes}">\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>${DataSourceRegister#CAL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceRegister#CAL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceRegister#Ccountry}</ppi:Country>\r
+               <ppi:EmailAddress>${DataSourceRegister#Cemail}</ppi:EmailAddress>\r
+               <ppi:FirstName>${DataSourceRegister#Cfname}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceRegister#Clname}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceRegister#Cmi}</ppi:MiddleInitial>\r
+               <ppi:Notes>${DataSourceRegister#Cnotes}</ppi:Notes>\r
+               <ppi:PhoneNumber>${DataSourceRegister#Cphone}</ppi:PhoneNumber>\r
+               <ppi:Zip>${DataSourceRegister#Czip}</ppi:Zip>\r
+               <ppi:Username>${DataGen1#RandomNumber}</ppi:Username>\r
+               <ppi:Password>${DataSourceRegister#Cpassword}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>${DataGen1#RandomNumber}</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID>${DataSourceRegister#CustomData1Label}</ppi:ID>\r
+               <ppi:Value>${DataSourceRegister#CustomData1}</ppi:Value>\r
+               <!--Optional:-->\r
+            </ppi:CustomData>\r
+            <ppi:Action>Register</ppi:Action>\r
+            <ppi:MaxAmountForRecurringPayments>${DataSourceRegister#MaxAmountForRecurringPayments}</ppi:MaxAmountForRecurringPayments>\r
+         </ws:accountInformation>\r
+      </ws:SubmitCustomerAccount>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="a369f338-6fb0-4354-98e2-1f01322667ff" name="Match content of [ns0:ResultCode]">
           <con:configuration>

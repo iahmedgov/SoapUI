@@ -110,122 +110,120 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPayment>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>${DataSourceSubmitPPIPaymentPositive#AT_Username}</ppi:UserName>
-            <!--Optional:-->
-            <ppi:Password>${DataSourceSubmitPPIPaymentPositive#AT_Password}</ppi:Password><ppi:PPITransactionRequestId>${DataSourceSubmitPPIPaymentPositive#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>${DataSourceSubmitPPIPaymentPositive#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <!--Optional:-->
-         <ws:payment Notes="${DataSourceSubmitPPIPaymentPositive#Notes}">
-            <!--Optional:-->
-            <ppi:AdditionalInfo>
-               <!--Zero or more repetitions:-->
-               <ppi:Fees>
-                  <ppip:FeeType>${DataSourceSubmitPPIPaymentPositive#FeeType}</ppip:FeeType>
-                  <ppip:Amount>${DataSourceSubmitPPIPaymentPositive#FeeAmount}</ppip:Amount>
-               </ppi:Fees>
-               <!--Zero or more repetitions:-->
-               
-               <!--Zero or more repetitions:-->
-               <ppi:PaymentSegment>
-                  <ppip:Amount>${DataSourceSubmitPPIPaymentPositive#SegmentAmount}</ppip:Amount><ppip:SegmentType>${DataSourceSubmitPPIPaymentPositive#SegmentType}</ppip:SegmentType>
-                  <!--Optional:-->
-                  
-               </ppi:PaymentSegment>
-               <!--Optional:-->
-               
-               <ppi:PaymentType>${DataSourceSubmitPPIPaymentPositive#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>
-               <!--Zero or more repetitions:-->
-               
-            </ppi:AdditionalInfo>
-            <!--Optional:-->
-            <ppi:Customer>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-            <ppi:AddressLine1>${DataSourceSubmitPPIPaymentPositive#C_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceSubmitPPIPaymentPositive#C_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceSubmitPPIPaymentPositive#C_Country}</ppi:Country><ppi:EmailAddress>${DataSourceSubmitPPIPaymentPositive#C_Email}</ppi:EmailAddress><ppi:FirstName>${DataSourceSubmitPPIPaymentPositive#C_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceSubmitPPIPaymentPositive#C_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceSubmitPPIPaymentPositive#C_MI}</ppi:MiddleInitial><ppi:Notes>${DataSourceSubmitPPIPaymentPositive#C_Notest}</ppi:Notes><ppi:PhoneNumber>${DataSourceSubmitPPIPaymentPositive#C_Phone}</ppi:PhoneNumber><ppi:Zip>${DataSourceSubmitPPIPaymentPositive#C_ZIP}</ppi:Zip><ppi:Username>${DataSourceSubmitPPIPaymentPositive#C_Username}</ppi:Username><ppi:Password>${DataSourceSubmitPPIPaymentPositive#C_Password}</ppi:Password></ppi:Customer>
-            <!--Optional:-->
-            
-            <ppi:PreAuthorizeOnly>${DataSourceSubmitPPIPaymentPositive#C_PreAuthOnly}</ppi:PreAuthorizeOnly>
-            <ppi:ClientAccountNumber>${DataSourceSubmitPPIPaymentPositive#C_CAN}</ppi:ClientAccountNumber><ppi:PaymentSource>${DataSourceSubmitPPIPaymentPositive#C_PaymentSource}</ppi:PaymentSource>
-            <!--Optional:-->
-            <ppi:Payor>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <ppi:AccountName>${DataSourceSubmitPPIPaymentPositive#P_AccountName}</ppi:AccountName><ppi:AddressLine1>${DataSourceSubmitPPIPaymentPositive#P_AL1}</ppi:AddressLine1><ppi:AddressLine2>${DataSourceSubmitPPIPaymentPositive#P_AL2}</ppi:AddressLine2><ppi:Country>${DataSourceSubmitPPIPaymentPositive#P_Country}</ppi:Country><ppi:PhoneNumber>${DataSourceSubmitPPIPaymentPositive#P_Phone}</ppi:PhoneNumber><ppi:FirstName>${DataSourceSubmitPPIPaymentPositive#P_FirstName}</ppi:FirstName><ppi:LastName>${DataSourceSubmitPPIPaymentPositive#P_LastName}</ppi:LastName><ppi:MiddleInitial>${DataSourceSubmitPPIPaymentPositive#P_MI}</ppi:MiddleInitial><ppi:EmailAddress>${DataSourceSubmitPPIPaymentPositive#P_Email}</ppi:EmailAddress><ppi:ZipCode>${DataSourceSubmitPPIPaymentPositive#P_ZIP}</ppi:ZipCode><ppi:BusinessName>${DataSourceSubmitPPIPaymentPositive#P_BusinessName}</ppi:BusinessName><ppi:IsBusinessName>${DataSourceSubmitPPIPaymentPositive#P_IsBusiness}</ppi:IsBusinessName>
-            </ppi:Payor>
-            <!--Optional:-->
-            <ppi:Vehicle>
-               <!--Optional:-->
-               
-               <ppip:AbaNumber>${DataSourceSubmitPPIPaymentPositive#V_ABA}</ppip:AbaNumber><ppip:AccountType>${DataSourceSubmitPPIPaymentPositive#V_AccountType}</ppip:AccountType>
-               <!--Optional:-->
-               
-               <ppip:CheckNumber>${DataSourceSubmitPPIPaymentPositive#V_CheckNumber}</ppip:CheckNumber><ppip:CheckType>${DataSourceSubmitPPIPaymentPositive#V_CheckType}</ppip:CheckType>
-               <ppip:CheckNumberPosition>${DataSourceSubmitPPIPaymentPositive#V_CheckPos}</ppip:CheckNumberPosition>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <ppip:CVV2Code>${DataSourceSubmitPPIPaymentPositive#V_CVV}</ppip:CVV2Code><ppip:ExpirationDate>${DataSourceSubmitPPIPaymentPositive#V_ExpDate}</ppip:ExpirationDate><ppip:PaymentVehicleNumber>${DataSourceSubmitPPIPaymentPositive#V_VehicleNumber}</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>${DataSourceSubmitPPIPaymentPositive#V_PMCategory}</ppip:PaymentMethodCategory>
-               <ppip:EnforcePinDebitValidation>${DataSourceSubmitPPIPaymentPositive#V_EnforcePin}</ppip:EnforcePinDebitValidation>
-            </ppi:Vehicle>
-         </ws:payment>
-      </ws:SubmitPPIPayment>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPayment>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>${DataSourceSubmitPPIPaymentPositive#AT_Username}</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>${DataSourceSubmitPPIPaymentPositive#AT_Password}</ppi:Password>\r
+            <ppi:PPITransactionRequestId>${DataSourceSubmitPPIPaymentPositive#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>${DataSourceSubmitPPIPaymentPositive#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:payment Notes="${DataSourceSubmitPPIPaymentPositive#Notes}">\r
+            <!--Optional:-->\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>${DataSourceSubmitPPIPaymentPositive#FeeType}</ppip:FeeType>\r
+                  <ppip:Amount>${DataSourceSubmitPPIPaymentPositive#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>${DataSourceSubmitPPIPaymentPositive#SegmentAmount}</ppip:Amount>\r
+                  <ppip:SegmentType>${DataSourceSubmitPPIPaymentPositive#SegmentType}</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>${DataSourceSubmitPPIPaymentPositive#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenDateTest#TodayDate}</ppi:ProcessDate>\r
+               <!--Zero or more repetitions:-->\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>${DataSourceSubmitPPIPaymentPositive#C_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceSubmitPPIPaymentPositive#C_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceSubmitPPIPaymentPositive#C_Country}</ppi:Country>\r
+               <ppi:EmailAddress>${DataSourceSubmitPPIPaymentPositive#C_Email}</ppi:EmailAddress>\r
+               <ppi:FirstName>${DataSourceSubmitPPIPaymentPositive#C_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceSubmitPPIPaymentPositive#C_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceSubmitPPIPaymentPositive#C_MI}</ppi:MiddleInitial>\r
+               <ppi:Notes>${DataSourceSubmitPPIPaymentPositive#C_Notest}</ppi:Notes>\r
+               <ppi:PhoneNumber>${DataSourceSubmitPPIPaymentPositive#C_Phone}</ppi:PhoneNumber>\r
+               <ppi:Zip>${DataSourceSubmitPPIPaymentPositive#C_ZIP}</ppi:Zip>\r
+               <ppi:Username>${DataSourceSubmitPPIPaymentPositive#C_Username}</ppi:Username>\r
+               <ppi:Password>${DataSourceSubmitPPIPaymentPositive#C_Password}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>${DataSourceSubmitPPIPaymentPositive#C_CAN}</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <ppi:PreAuthorizeOnly>${DataSourceSubmitPPIPaymentPositive#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource>${DataSourceSubmitPPIPaymentPositive#C_PaymentSource}</ppi:PaymentSource>\r
+            <!--Optional:-->\r
+            <ppi:Payor>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AccountName>${DataSourceSubmitPPIPaymentPositive#P_AccountName}</ppi:AccountName>\r
+               <ppi:AddressLine1>${DataSourceSubmitPPIPaymentPositive#P_AL1}</ppi:AddressLine1>\r
+               <ppi:AddressLine2>${DataSourceSubmitPPIPaymentPositive#P_AL2}</ppi:AddressLine2>\r
+               <ppi:Country>${DataSourceSubmitPPIPaymentPositive#P_Country}</ppi:Country>\r
+               <ppi:PhoneNumber>${DataSourceSubmitPPIPaymentPositive#P_Phone}</ppi:PhoneNumber>\r
+               <ppi:FirstName>${DataSourceSubmitPPIPaymentPositive#P_FirstName}</ppi:FirstName>\r
+               <ppi:LastName>${DataSourceSubmitPPIPaymentPositive#P_LastName}</ppi:LastName>\r
+               <ppi:MiddleInitial>${DataSourceSubmitPPIPaymentPositive#P_MI}</ppi:MiddleInitial>\r
+               <ppi:EmailAddress>${DataSourceSubmitPPIPaymentPositive#P_Email}</ppi:EmailAddress>\r
+               <ppi:ZipCode>${DataSourceSubmitPPIPaymentPositive#P_ZIP}</ppi:ZipCode>\r
+               <ppi:BusinessName>${DataSourceSubmitPPIPaymentPositive#P_BusinessName}</ppi:BusinessName>\r
+               <ppi:IsBusinessName>${DataSourceSubmitPPIPaymentPositive#P_IsBusiness}</ppi:IsBusinessName>\r
+            </ppi:Payor>\r
+            <!--Optional:-->\r
+            <ppi:Vehicle>\r
+               <!--Optional:-->\r
+               <ppip:AbaNumber>${DataSourceSubmitPPIPaymentPositive#V_ABA}</ppip:AbaNumber>\r
+               <ppip:AccountType>${DataSourceSubmitPPIPaymentPositive#V_AccountType}</ppip:AccountType>\r
+               <!--Optional:-->\r
+               <ppip:CheckNumber>${DataSourceSubmitPPIPaymentPositive#V_CheckNumber}</ppip:CheckNumber>\r
+               <ppip:CheckType>${DataSourceSubmitPPIPaymentPositive#V_CheckType}</ppip:CheckType>\r
+               <ppip:CheckNumberPosition>${DataSourceSubmitPPIPaymentPositive#V_CheckPos}</ppip:CheckNumberPosition>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppip:CVV2Code>${DataSourceSubmitPPIPaymentPositive#V_CVV}</ppip:CVV2Code>\r
+               <ppip:ExpirationDate>${DataSourceSubmitPPIPaymentPositive#V_ExpDate}</ppip:ExpirationDate>\r
+               <ppip:PaymentVehicleNumber>${DataSourceSubmitPPIPaymentPositive#V_VehicleNumber}</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory>${DataSourceSubmitPPIPaymentPositive#V_PMCategory}</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation>${DataSourceSubmitPPIPaymentPositive#V_EnforcePin}</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+         </ws:payment>\r
+      </ws:SubmitPPIPayment>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="9dacde76-604c-4830-b32a-052a763ad771" name="Match content of [ns0:ResultCode]">
           <con:configuration>

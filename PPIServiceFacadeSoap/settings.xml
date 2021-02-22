@@ -7,7 +7,7 @@
     <con:part>
       <con:url>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService?WSDL</con:url>
       <con:content><![CDATA[<!--Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.10-b140319.1121 svn-revision#7b34660d6bc70e587e8ec81a17e4d76af68816a6.-->
-<wsdl:definitions targetNamespace="https://www.velocitypayment.com/ws" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.ePayments.com/PPI" xmlns:s2="http://www.ePayments.com/PPIPayment" xmlns:s3="http://tempuri.org/TransactionData.xsd" xmlns:s4="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:tns="https://www.velocitypayment.com/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<wsdl:definitions targetNamespace="https://www.velocitypayment.com/ws" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s1="http://www.ePayments.com/PPI" xmlns:s2="http://www.ePayments.com/PPIPayment" xmlns:s3="http://tempuri.org/TransactionData.xsd" xmlns:s4="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="https://www.velocitypayment.com/ws" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="https://www.velocitypayment.com/ws">
       <s:import namespace="http://www.ePayments.com/PPI"/>
@@ -89,6 +89,11 @@
           <s:sequence>
             <s:element maxOccurs="1" minOccurs="0" name="token" type="s1:PPIAuthenticationToken"/>
             <s:element maxOccurs="1" minOccurs="0" name="payment" type="s1:PPIPayment"/>
+            <s:element maxOccurs="1" minOccurs="1" name="storedCredential" type="s:boolean"/>
+            <s:element maxOccurs="1" minOccurs="0" name="billPaymentIndicator" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="credentialIndicator" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="scheduledIndicator" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="transactionInitIndicator" type="s:string"/>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -189,6 +194,7 @@
           <s:sequence>
             <s:element maxOccurs="1" minOccurs="0" name="token" type="s1:PPIAuthenticationToken"/>
             <s:element maxOccurs="1" minOccurs="0" name="paymentId" type="s:string"/>
+            <s:element maxOccurs="1" minOccurs="0" name="amount" type="s:string"/>
           </s:sequence>
         </s:complexType>
       </s:element>
@@ -342,6 +348,36 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="CreateInstallmentPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="token" type="s1:PPIAuthenticationToken"/>
+            <s:element maxOccurs="1" minOccurs="0" name="createInstallmentPlanInfo" type="s1:CreateInstallmentPlanInfo"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateInstallmentPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="CreateInstallmentPlanResult" type="s1:PPICreateInstallmentPlanResponse"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelInstallmentPlan">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="token" type="s1:PPIAuthenticationToken"/>
+            <s:element maxOccurs="1" minOccurs="0" name="paymentPlanID" type="s:string"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CancelInstallmentPlanResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element maxOccurs="1" minOccurs="0" name="CancelInstallmentPlanResult" type="s1:PPICancelInstallmentPlanResponse"/>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.ePayments.com/PPI">
       <s:import namespace="http://www.ePayments.com/PPIPayment"/>
@@ -363,6 +399,24 @@
           <s:element maxOccurs="1" minOccurs="0" name="ApprovalCode" type="s:string"/>
           <s:element maxOccurs="1" minOccurs="1" name="TransactionTime" type="s:dateTime"/>
           <s:element maxOccurs="1" minOccurs="0" name="ExistingPaymentResultCode" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="1" name="Success" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PPICreateInstallmentPlanResponse">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="ResultCode" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ResultText" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="PaymentPlanID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="1" name="PlanCreateTime" type="s:dateTime"/>
+          <s:element maxOccurs="1" minOccurs="1" name="Success" type="s:boolean"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PPICancelInstallmentPlanResponse">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="0" name="ResultCode" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ResultText" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="PaymentPlanID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="1" name="PlanCancelTime" type="s:dateTime"/>
           <s:element maxOccurs="1" minOccurs="1" name="Success" type="s:boolean"/>
         </s:sequence>
       </s:complexType>
@@ -551,10 +605,36 @@
             <s:sequence>
               <s:element maxOccurs="1" minOccurs="0" name="WalletID" type="s:string"/>
               <s:element maxOccurs="1" minOccurs="0" name="PaymentAccountToken" type="s:string"/>
+              <s:element maxOccurs="1" minOccurs="0" name="ScheduledIndicator" type="s:string"/>
+              <s:element maxOccurs="1" minOccurs="0" name="TransactionInitIndicator" type="s:string"/>
             </s:sequence>
           </s:extension>
         </s:complexContent>
       </s:complexType>
+      <s:complexType name="CreateInstallmentPlanInfo">
+        <s:sequence>
+          <s:element maxOccurs="1" minOccurs="1" name="StartDate" type="s:dateTime"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Frequency" type="s1:InstallmentPlanFrequencyEnum"/>
+          <s:element maxOccurs="1" minOccurs="0" name="NumberInstallments" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="1" name="PlanAmount" type="s:decimal"/>
+          <s:element maxOccurs="1" minOccurs="0" name="PaymentAccountToken" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="WalletID" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="Customer" type="s1:PPICustomer"/>
+          <s:element maxOccurs="1" minOccurs="0" name="ClientAccountNumber" type="s:string"/>
+          <s:element maxOccurs="unbounded" minOccurs="0" name="CustomData" type="s1:CustomInformation"/>
+          <s:element maxOccurs="1" minOccurs="0" name="BillLookup1" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="BillLookup2" type="s:string"/>
+          <s:element maxOccurs="1" minOccurs="0" name="BillLookup3" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="InstallmentPlanFrequencyEnum">
+        <s:restriction base="s:string">
+          <s:enumeration value="Daily"/>
+          <s:enumeration value="Weekly"/>
+          <s:enumeration value="BiWeekly"/>
+          <s:enumeration value="Monthly"/>
+        </s:restriction>
+      </s:simpleType>
     </s:schema>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.ePayments.com/PPIPayment">
       <s:import namespace="http://tempuri.org/TransactionData.xsd"/>
@@ -802,6 +882,18 @@
   <wsdl:message name="SubmitPPIPaymentUsingWalletSoapOut">
     <wsdl:part element="tns:SubmitPPIPaymentUsingWalletResponse" name="parameters"/>
   </wsdl:message>
+  <wsdl:message name="CreateInstallmentPlanSoapIn">
+    <wsdl:part element="tns:CreateInstallmentPlan" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CreateInstallmentPlanSoapOut">
+    <wsdl:part element="tns:CreateInstallmentPlanResponse" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CancelInstallmentPlanSoapIn">
+    <wsdl:part element="tns:CancelInstallmentPlan" name="parameters"/>
+  </wsdl:message>
+  <wsdl:message name="CancelInstallmentPlanSoapOut">
+    <wsdl:part element="tns:CancelInstallmentPlanResponse" name="parameters"/>
+  </wsdl:message>
   <wsdl:portType name="PPIServiceFacadeSoap">
     <wsdl:operation name="SubmitPPIRecurringPayment">
       <wsdl:input message="tns:SubmitPPIRecurringPaymentSoapIn"/>
@@ -882,6 +974,14 @@
     <wsdl:operation name="SubmitPPIPaymentUsingWallet">
       <wsdl:input message="tns:SubmitPPIPaymentUsingWalletSoapIn"/>
       <wsdl:output message="tns:SubmitPPIPaymentUsingWalletSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstallmentPlan">
+      <wsdl:input message="tns:CreateInstallmentPlanSoapIn"/>
+      <wsdl:output message="tns:CreateInstallmentPlanSoapOut"/>
+    </wsdl:operation>
+    <wsdl:operation name="CancelInstallmentPlan">
+      <wsdl:input message="tns:CancelInstallmentPlanSoapIn"/>
+      <wsdl:output message="tns:CancelInstallmentPlanSoapOut"/>
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="PPIServiceFacadeSoap" type="tns:PPIServiceFacadeSoap">
@@ -1059,6 +1159,24 @@
     </wsdl:operation>
     <wsdl:operation name="SubmitPPIPaymentUsingWallet">
       <soap:operation soapAction="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateInstallmentPlan">
+      <soap:operation soapAction="https://www.velocitypayment.com/ws/CreateInstallmentPlan" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelInstallmentPlan">
+      <soap:operation soapAction="https://www.velocitypayment.com/ws/CancelInstallmentPlan" style="document"/>
       <wsdl:input>
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1249,13 +1367,33 @@
         <soap12:body use="literal"/>
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="CreateInstallmentPlan">
+      <soap12:operation soapAction="https://www.velocitypayment.com/ws/CreateInstallmentPlan" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CancelInstallmentPlan">
+      <soap12:operation soapAction="https://www.velocitypayment.com/ws/CancelInstallmentPlan" style="document"/>
+      <wsdl:input>
+        <soap12:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:service name="VGatewayWebService">
     <wsdl:port binding="tns:PPIServiceFacadeSoap" name="PPIServiceFacadeSoap">
       <soap:address location="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService"/>
     </wsdl:port>
+  </wsdl:service>
+  <wsdl:service name="VGatewayWebService12">
     <wsdl:port binding="tns:PPIServiceFacadeSoap12" name="PPIServiceFacadeSoap12">
-      <soap12:address location="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService"/>
+      <soap12:address location="https://demo.velocitypayment.com:443/vgateway/VGatewayWebService12"/>
     </wsdl:port>
   </wsdl:service>
 </wsdl:definitions>]]></con:content>

@@ -76,82 +76,80 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitPPIPaymentUsingWallet>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>${DataSourcePaymentUsingWallet#AT_Username}</ppi:UserName>
-            <!--Optional:-->
-            <ppi:Password>${DataSourcePaymentUsingWallet#AT_Password}</ppi:Password>
-            <!--Optional:-->
-            <ppi:PPITransactionRequestId>${DataSourcePaymentUsingWallet#AT_RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>${DataSourcePaymentUsingWallet#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <!--Optional:-->
-         <ws:ppiWalletPayment Notes="${DataSourcePaymentUsingWallet#Notes}">
-            <!--Optional:-->
-            <ppi:AdditionalInfo>
-               <!--Zero or more repetitions:-->
-               <ppi:Fees>
-                  <ppip:FeeType>${DataSourcePaymentUsingWallet#FeeType}</ppip:FeeType>
-                  <ppip:Amount>${DataSourcePaymentUsingWallet#FeeAmount}</ppip:Amount>
-               </ppi:Fees>
-               <!--Zero or more repetitions:-->
-               
-               <!--Zero or more repetitions:-->
-               <ppi:PaymentSegment>
-                  <ppip:Amount>${DataSourcePaymentUsingWallet#SegmentAmount}</ppip:Amount><ppip:SegmentType>${DataSourcePaymentUsingWallet#SegmentType}</ppip:SegmentType>
-                  <!--Optional:-->
-                  
-               </ppi:PaymentSegment>
-               <!--Optional:-->
-               
-               <ppi:PaymentType>${DataSourcePaymentUsingWallet#PaymentType}</ppi:PaymentType><ppi:ProcessDate>${DataGenProcessDate#ProcessDateToday}</ppi:ProcessDate>
-               <!--Zero or more repetitions:-->
-               
-            </ppi:AdditionalInfo>
-            <!--Optional:-->
-            <ppi:Customer>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               <ppi:AddressLine1>${DataSourcePaymentUsingWallet#C_AL1}</ppi:AddressLine1>
-               <!--Optional:-->
-               <ppi:AddressLine2>${DataSourcePaymentUsingWallet#C_AL2}</ppi:AddressLine2>
-               <!--Optional:-->
-               <ppi:Country>${DataSourcePaymentUsingWallet#C_Country}</ppi:Country>
-               <!--Optional:-->
-               <ppi:EmailAddress>${DataSourcePaymentUsingWallet#C_Email}</ppi:EmailAddress>
-               <!--Optional:-->
-               <ppi:FirstName>${DataSourcePaymentUsingWallet#C_FirstName}</ppi:FirstName>
-               <!--Optional:-->
-               <ppi:LastName>${DataSourcePaymentUsingWallet#C_LastName}</ppi:LastName>
-               <!--Optional:-->
-               <ppi:MiddleInitial>${DataSourcePaymentUsingWallet#C_MI}</ppi:MiddleInitial>
-               <!--Optional:-->
-               <ppi:Notes>${DataSourcePaymentUsingWallet#C_Notest}</ppi:Notes>
-               <!--Optional:-->
-               <ppi:PhoneNumber>${DataSourcePaymentUsingWallet#C_Phone}</ppi:PhoneNumber>
-               <!--Optional:-->
-               <ppi:Zip>${DataSourcePaymentUsingWallet#C_ZIP}</ppi:Zip>
-               <!--Optional:-->
-               <ppi:Username>${DataSourcePaymentUsingWallet#C_Username}</ppi:Username><ppi:Password>${DataSourcePaymentUsingWallet#C_Password}</ppi:Password>
-            </ppi:Customer>
-            <!--Optional:-->
-            
-            <ppi:PreAuthorizeOnly>${DataSourcePaymentUsingWallet#C_PreAuthOnly}</ppi:PreAuthorizeOnly>
-            <ppi:ClientAccountNumber>${DataSourcePaymentUsingWallet#C_CAN}</ppi:ClientAccountNumber><ppi:PaymentSource>${DataSourcePaymentUsingWallet#C_PaymentSource}</ppi:PaymentSource><ppi:WalletID>${DataSourcePaymentUsingWallet#WalletID}</ppi:WalletID><ppi:PaymentAccountToken>${DataSourcePaymentUsingWallet#PaymentAcToken}</ppi:PaymentAccountToken>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:ppiWalletPayment>
-      </ws:SubmitPPIPaymentUsingWallet>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitPPIPaymentUsingWallet>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>${DataSourcePaymentUsingWallet#AT_Username}</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>${DataSourcePaymentUsingWallet#AT_Password}</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>${DataSourcePaymentUsingWallet#AT_RequestID}</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>${DataSourcePaymentUsingWallet#AT_Identifier}</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:ppiWalletPayment Notes="${DataSourcePaymentUsingWallet#Notes}">\r
+            <!--Optional:-->\r
+            <ppi:AdditionalInfo>\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:Fees>\r
+                  <ppip:FeeType>${DataSourcePaymentUsingWallet#FeeType}</ppip:FeeType>\r
+                  <ppip:Amount>${DataSourcePaymentUsingWallet#FeeAmount}</ppip:Amount>\r
+               </ppi:Fees>\r
+               <!--Zero or more repetitions:-->\r
+               <!--Zero or more repetitions:-->\r
+               <ppi:PaymentSegment>\r
+                  <ppip:Amount>${DataSourcePaymentUsingWallet#SegmentAmount}</ppip:Amount>\r
+                  <ppip:SegmentType>${DataSourcePaymentUsingWallet#SegmentType}</ppip:SegmentType>\r
+                  <!--Optional:-->\r
+               </ppi:PaymentSegment>\r
+               <!--Optional:-->\r
+               <ppi:PaymentType>${DataSourcePaymentUsingWallet#PaymentType}</ppi:PaymentType>\r
+               <ppi:ProcessDate>${DataGenProcessDate#ProcessDateToday}</ppi:ProcessDate>\r
+               <!--Zero or more repetitions:-->\r
+            </ppi:AdditionalInfo>\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>${DataSourcePaymentUsingWallet#C_AL1}</ppi:AddressLine1>\r
+               <!--Optional:-->\r
+               <ppi:AddressLine2>${DataSourcePaymentUsingWallet#C_AL2}</ppi:AddressLine2>\r
+               <!--Optional:-->\r
+               <ppi:Country>${DataSourcePaymentUsingWallet#C_Country}</ppi:Country>\r
+               <!--Optional:-->\r
+               <ppi:EmailAddress>${DataSourcePaymentUsingWallet#C_Email}</ppi:EmailAddress>\r
+               <!--Optional:-->\r
+               <ppi:FirstName>${DataSourcePaymentUsingWallet#C_FirstName}</ppi:FirstName>\r
+               <!--Optional:-->\r
+               <ppi:LastName>${DataSourcePaymentUsingWallet#C_LastName}</ppi:LastName>\r
+               <!--Optional:-->\r
+               <ppi:MiddleInitial>${DataSourcePaymentUsingWallet#C_MI}</ppi:MiddleInitial>\r
+               <!--Optional:-->\r
+               <ppi:Notes>${DataSourcePaymentUsingWallet#C_Notest}</ppi:Notes>\r
+               <!--Optional:-->\r
+               <ppi:PhoneNumber>${DataSourcePaymentUsingWallet#C_Phone}</ppi:PhoneNumber>\r
+               <!--Optional:-->\r
+               <ppi:Zip>${DataSourcePaymentUsingWallet#C_ZIP}</ppi:Zip>\r
+               <!--Optional:-->\r
+               <ppi:Username>${DataSourcePaymentUsingWallet#C_Username}</ppi:Username>\r
+               <ppi:Password>${DataSourcePaymentUsingWallet#C_Password}</ppi:Password>\r
+            </ppi:Customer>\r
+            <ppi:ClientAccountNumber>${DataSourcePaymentUsingWallet#C_CAN}</ppi:ClientAccountNumber>\r
+            <!--Optional:-->\r
+            <ppi:PreAuthorizeOnly>${DataSourcePaymentUsingWallet#C_PreAuthOnly}</ppi:PreAuthorizeOnly>\r
+            <ppi:PaymentSource>${DataSourcePaymentUsingWallet#C_PaymentSource}</ppi:PaymentSource>\r
+            <ppi:WalletID>${DataSourcePaymentUsingWallet#WalletID}</ppi:WalletID>\r
+            <ppi:PaymentAccountToken>${DataSourcePaymentUsingWallet#PaymentAcToken}</ppi:PaymentAccountToken>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:ppiWalletPayment>\r
+      </ws:SubmitPPIPaymentUsingWallet>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="c5a9541f-7ba4-4518-bea1-cec6e4d3ea61" name="Match content of [ns0:ResultCode]">
           <con:configuration>

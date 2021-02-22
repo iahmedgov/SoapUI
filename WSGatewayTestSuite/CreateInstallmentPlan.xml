@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="34c8fd5e-3867-44d2-8da1-a0a7f45fcd37" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="CreateInstallmentPlan" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="34c8fd5e-3867-44d2-8da1-a0a7f45fcd37fileName">CreateInstallmentPlan</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="e3725b78-057c-41e2-82e9-c7e02e682393" name="Copy of SubmitWalletInformationQA">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="Copy of SubmitWalletInformationQA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <ppi:Password>pwd495</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfsdf345rgsdfgsdfs2</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>AddToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>495WalletID7138</ppi:NickName>
+            <ppi:WalletID>495WalletID7138</ppi:WalletID>
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AccountType/>
+               <!--Optional:-->
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               
+               
+               
+               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>11/24</ppip:ExpirationDate><ppip:PaymentVehicleNumber>370000000000002</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation/>
+            </ppi:Vehicle>
+            <!--Optional:-->
+            <ppi:Payor>
+               <ppi:AccountName>My AC name</ppi:AccountName>
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               <ppi:PhoneNumber>7038945000</ppi:PhoneNumber>
+               <ppi:FirstName>Rosa</ppi:FirstName>
+               <ppi:LastName>Asad</ppi:LastName>
+               <ppi:ZipCode>22201</ppi:ZipCode>
+               <ppi:BusinessName>My Business</ppi:BusinessName><ppi:IsBusinessName/>
+            </ppi:Payor>
+            
+            <ppi:ClientReferenceNumber>495007138</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="13b08b8d-1d6b-47db-9049-0a499a36fcf4" name="Copy of GetWalletInformation-QA180">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>GetWalletInformation</con:operation>
+      <con:request name="Copy of GetWalletInformation-QA180" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="24ea61a1-41f8-41f5-af4c-8894b2dd46fc" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <ppi:Password>pwd495</ppi:Password>
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:walletID>495WalletID7135</ws:walletID>
+         <!--Optional:-->
+      </ws:GetWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/GetWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="2ce1d331-6d79-4293-a612-5d3ccb889e7d" name="CreateInstallmentPLan-QA">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>CreateInstallmentPlan</con:operation>
+      <con:request name="CreateInstallmentPLan-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="089c70b8-d718-4f1f-917f-1ca48681d113">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CreateInstallmentPlan>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd495</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>dfsdf46556dfgd</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:createInstallmentPlanInfo>
+            <ppi:StartDate>2021-02-22T00:00:00.000-05:00</ppi:StartDate>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Frequency>Daily</ppi:Frequency>
+            <ppi:NumberInstallments>3</ppi:NumberInstallments>
+            <ppi:PlanAmount>90</ppi:PlanAmount>
+            <!--Optional:-->
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            <ppi:PaymentAccountToken>1303440015</ppi:PaymentAccountToken><ppi:WalletID>495WalletID7131</ppi:WalletID>
+            <ppi:ClientAccountNumber>4950071320</ppi:ClientAccountNumber>
+            <!--Optional:-->
+            <!--Zero or more repetitions:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:createInstallmentPlanInfo>
+      </ws:CreateInstallmentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="05b16bb7-df9d-4afa-ad83-3531aec6b09e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="cdbd7953-4b34-4fbf-a740-f6d5f22c7933" name="Response SLA">
+          <con:configuration>
+            <SLA>2200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="a6798aaa-3e6c-45bf-88bc-883a042ceeed" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="b523d9e8-59f3-49f3-bdf2-1349d6e9c1cc" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="545e4d8f-86f6-4d0f-99fa-c0c9831c4217" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50019</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="7addff2c-e1aa-434d-ab2e-8485858c9d47" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Postdated payment request recieved</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="8c20708c-1c1f-43de-85fc-4416341c617f" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CreateInstallmentPlan"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="2ab99544-e1c3-4a89-b299-bef8374a2fef" name="CreateInstPlanWithLookup-QA">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>CreateInstallmentPlan</con:operation>
+      <con:request name="CreateInstPlanWithLookup-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="089c70b8-d718-4f1f-917f-1ca48681d113">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CreateInstallmentPlan>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>user495</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd495</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>dfsdf46556dfgd</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:createInstallmentPlanInfo>
+            <ppi:StartDate>2021-01-29T00:00:00.000-05:00</ppi:StartDate>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:Frequency>Daily</ppi:Frequency>
+            <ppi:NumberInstallments>2</ppi:NumberInstallments>
+            <ppi:PlanAmount>20</ppi:PlanAmount>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:PaymentAccountToken>1303261111</ppi:PaymentAccountToken>
+            <ppi:WalletID>495WalletID7131</ppi:WalletID>
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>105 main street</ppi:AddressLine1>
+               <ppi:AddressLine2>suite 100</ppi:AddressLine2>
+               <ppi:Country>US</ppi:Country>
+               <ppi:EmailAddress>iahmed@govolution.com</ppi:EmailAddress>
+               <ppi:FirstName>Alex</ppi:FirstName>
+               <ppi:LastName>Pucovic</ppi:LastName>
+               <ppi:PhoneNumber>4107280790</ppi:PhoneNumber>
+               <ppi:Zip>21114</ppi:Zip>
+            </ppi:Customer>
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>434214100</ppi:ClientAccountNumber><ppi:BillLookup1>138329020052004</ppi:BillLookup1><ppi:BillLookup2>28658</ppi:BillLookup2>
+            <!--Zero or more repetitions:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:createInstallmentPlanInfo>
+      </ws:CreateInstallmentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="Valid HTTP Status Codes" id="05b16bb7-df9d-4afa-ad83-3531aec6b09e" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="cdbd7953-4b34-4fbf-a740-f6d5f22c7933" name="Response SLA">
+          <con:configuration>
+            <SLA>2200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="a6798aaa-3e6c-45bf-88bc-883a042ceeed" name="Not SOAP Fault"/>
+        <con:assertion type="Schema Compliance" id="b523d9e8-59f3-49f3-bdf2-1349d6e9c1cc" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="545e4d8f-86f6-4d0f-99fa-c0c9831c4217" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50019</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="7addff2c-e1aa-434d-ab2e-8485858c9d47" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Postdated payment request recieved</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="8c20708c-1c1f-43de-85fc-4416341c617f" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CreateInstallmentPlanResponse[1]/ns1:CreateInstallmentPlanResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CreateInstallmentPlan"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="236414da-26be-43d7-9dda-17d787b41e91" name="CancelInstPlan-QA">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>CancelInstallmentPlan</con:operation>
+      <con:request name="CancelInstPlan-QA" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="27ec77b6-0042-47f0-a29e-4d85cfcfa3f4">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CancelInstallmentPlan>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user509</ppi:UserName>
+            <ppi:Password>pwd509</ppi:Password>
+            <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentPlanID>98755</ws:paymentPlanID>
+         <!--Optional:-->
+      </ws:CancelInstallmentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="XPath Match" id="9a0cc48c-b6cf-476b-8300-bd54d33309c9" name="Match content of [ns0:ResultCode]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>10217</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="a4fe2343-05a3-4258-93b0-229e66564092" name="Match content of [ns0:ResultText]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Plan canceled successfully</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="a68c7cc7-043b-4f5c-b088-fa534824512d" name="Check for existence of [ns0:PaymentPlanID]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:PaymentPlanID)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="df001c82-e395-43ba-860a-6f408548c30f" name="Check for existence of [ns0:PlanCancelTime]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+exists( //ns1:CancelInstallmentPlanResponse/ns1:CancelInstallmentPlanResult/ns0:PlanCancelTime)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="161d1cbc-e3d4-401a-89ee-aa0ab47e6f1e" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:CancelInstallmentPlanResponse[1]/ns1:CancelInstallmentPlanResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CancelInstallmentPlan"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+  <con:breakPoints>
+    <con:testStepId>e3725b78-057c-41e2-82e9-c7e02e682393</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>13b08b8d-1d6b-47db-9049-0a499a36fcf4</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2ab99544-e1c3-4a89-b299-bef8374a2fef</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+</con:testCase>

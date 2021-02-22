@@ -14,25 +14,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>user524</ppi:UserName><ppi:Password>pwd524</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>524Wallet151</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user524</ppi:UserName>\r
+            <ppi:Password>pwd524</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>524Wallet151</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -56,25 +56,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>res_CC</ppi:UserName><ppi:Password>brain29freeze</ppi:Password><ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>2987</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>2987WalletID118</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>res_CC</ppi:UserName>\r
+            <ppi:Password>brain29freeze</ppi:Password>\r
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>2987</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>2987WalletID118</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -98,25 +98,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>user2325</ppi:UserName><ppi:Password>pwd2325</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>2325CC652</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user2325</ppi:UserName>\r
+            <ppi:Password>pwd2325</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>2325CC652</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -141,25 +141,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>User1286</ppi:UserName><ppi:Password>Pswd1286</ppi:Password><ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>1286WalletID204</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>User1286</ppi:UserName>\r
+            <ppi:Password>Pswd1286</ppi:Password>\r
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>1286WalletID204</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -184,25 +184,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>temptag_prod</ppi:UserName><ppi:Password>rwhz6v7</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>3383</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>20170730120647</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>temptag_prod</ppi:UserName>\r
+            <ppi:Password>rwhz6v7</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3383</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>20170730120647</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -226,25 +226,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>de_temptags</ppi:UserName><ppi:Password>p@ssword829</ppi:Password><ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>3131</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>3131BC100</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>de_temptags</ppi:UserName>\r
+            <ppi:Password>p@ssword829</ppi:Password>\r
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3131</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>3131BC100</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -268,25 +268,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>user495</ppi:UserName><ppi:Password>pwd495</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>495WalletID850</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user495</ppi:UserName>\r
+            <ppi:Password>pwd495</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>495WalletID850</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -310,25 +310,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>user509</ppi:UserName><ppi:Password>pwd509</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>509Wallet100</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user509</ppi:UserName>\r
+            <ppi:Password>pwd509</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>509</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>509Wallet100</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -352,25 +352,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>delcorp</ppi:UserName><ppi:Password>D3lC0rp0r</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>327WalletID101</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>delcorp</ppi:UserName>\r
+            <ppi:Password>D3lC0rp0r</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>327WalletID101</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -394,25 +394,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>junit</ppi:UserName><ppi:Password>testing</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>180WalletID711</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>junit</ppi:UserName>\r
+            <ppi:Password>testing</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>ab12</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>180WalletID711</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -437,25 +437,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:UserName>tundralogic</ppi:UserName>
-            <ppi:Password>d33krs4s</ppi:Password>
-            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>3577</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:walletID>CAN02042019</ws:walletID>
-         <!--Optional:-->
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>tundralogic</ppi:UserName>\r
+            <ppi:Password>d33krs4s</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3577</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>CAN02042019</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -480,25 +480,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:UserName>res_CC</ppi:UserName>
-            <ppi:Password>brain29freeze</ppi:Password>
-            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>2987</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:walletID>2987WalletID118</ws:walletID>
-         <!--Optional:-->
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>res_CC</ppi:UserName>\r
+            <ppi:Password>brain29freeze</ppi:Password>\r
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>2987</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>2987WalletID118</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -523,25 +523,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>user665</ppi:UserName><ppi:Password>pwd665</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>665</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>665WalletID110</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user665</ppi:UserName>\r
+            <ppi:Password>pwd665</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>665</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>665WalletID110</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -566,25 +566,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>user667</ppi:UserName><ppi:Password>pwd667</ppi:Password><ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>667</ppi:PPIBusinessEntityIdentifierToken></ws:token><ws:walletID>667WalletID111</ws:walletID>
-         <!--Optional:-->
-         
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user667</ppi:UserName>\r
+            <ppi:Password>pwd667</ppi:Password>\r
+            <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>667</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>667WalletID111</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>
@@ -609,25 +609,25 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:UserName>dtc_paratransit</ppi:UserName>
-            <ppi:Password>velocity2020</ppi:Password>
-            <ppi:PPITransactionRequestId>gdfg54gdgdssg555</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token><ws:walletID>3792WalletID193</ws:walletID>
-         
-         <!--Optional:-->
-      </ws:GetWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>dtc_paratransit</ppi:UserName>\r
+            <ppi:Password>velocity2020</ppi:Password>\r
+            <ppi:PPITransactionRequestId>gdfg54gdgdssg555</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3792</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:walletID>3792WalletID193</ws:walletID>\r
+         <!--Optional:-->\r
+      </ws:GetWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="b6f29816-5711-4e74-82f5-49dd828f7121" name="SOAP Response"/>
         <con:credentials>

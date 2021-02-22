@@ -15,79 +15,68 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>de_temptags</ppi:UserName><ppi:Password>p@ssword829</ppi:Password><ppi:PPITransactionRequestId>dfsdfsdfsdfsdf</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>3131</ppi:PPIBusinessEntityIdentifierToken></ws:token>
-         <!--Optional:-->
-         <ws:walletRequest>
-            <ppi:Action>AddToken</ppi:Action>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:WalletID>TestWallet101</ppi:WalletID><ppi:Vehicle>
-               <!--Optional:-->
-               
-               <ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Savings</ppip:AccountType>
-               <!--Optional:-->
-               
-               <ppip:CheckType>Business</ppip:CheckType>
-               <ppip:CheckNumberPosition/>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <ppip:PaymentVehicleNumber>33333333</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
-               <ppip:EnforcePinDebitValidation/>
-            </ppi:Vehicle>
-            <!--Optional:-->
-            <ppi:Payor>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <ppi:AddressLine1>2311 york road</ppi:AddressLine1><ppi:PhoneNumber>1478523698</ppi:PhoneNumber><ppi:FirstName>fname</ppi:FirstName><ppi:LastName>lname</ppi:LastName><ppi:ZipCode>22201</ppi:ZipCode><ppi:BusinessName>reger</ppi:BusinessName><ppi:IsBusinessName/>
-            </ppi:Payor>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:walletRequest>
-      </ws:SubmitWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>de_temptags</ppi:UserName>\r
+            <ppi:Password>p@ssword829</ppi:Password>\r
+            <ppi:PPITransactionRequestId>dfsdfsdfsdfsdf</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>3131</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:walletRequest>\r
+            <ppi:Action>AddToken</ppi:Action>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:WalletID>TestWallet101</ppi:WalletID>\r
+            <ppi:Vehicle>\r
+               <!--Optional:-->\r
+               <ppip:AbaNumber>256072691</ppip:AbaNumber>\r
+               <ppip:AccountType>Savings</ppip:AccountType>\r
+               <!--Optional:-->\r
+               <ppip:CheckType>Business</ppip:CheckType>\r
+               <ppip:CheckNumberPosition/>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppip:PaymentVehicleNumber>33333333</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation/>\r
+            </ppi:Vehicle>\r
+            <!--Optional:-->\r
+            <ppi:Payor>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>\r
+               <ppi:PhoneNumber>1478523698</ppi:PhoneNumber>\r
+               <ppi:FirstName>fname</ppi:FirstName>\r
+               <ppi:LastName>lname</ppi:LastName>\r
+               <ppi:ZipCode>22201</ppi:ZipCode>\r
+               <ppi:BusinessName>reger</ppi:BusinessName>\r
+               <ppi:IsBusinessName/>\r
+            </ppi:Payor>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:walletRequest>\r
+      </ws:SubmitWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -110,79 +99,69 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:SubmitWalletInformation>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         <ppi:UserName>delcorp</ppi:UserName><ppi:Password>D3lC0rp0r</ppi:Password><ppi:PPITransactionRequestId>311222</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken></ws:token>
-         <!--Optional:-->
-         <ws:walletRequest>
-            <ppi:Action>AddToken</ppi:Action>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:WalletID>45449</ppi:WalletID><ppi:Vehicle>
-               <!--Optional:-->
-               
-               <ppip:AbaNumber>333333</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType>
-               <!--Optional:-->
-               
-               <ppip:CheckType>Personal</ppip:CheckType>
-               <ppip:CheckNumberPosition/>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <ppip:PaymentVehicleNumber>233329</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
-               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
-            </ppi:Vehicle>
-            <!--Optional:-->
-            <ppi:Payor>
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <!--Optional:-->
-               
-               <ppi:AddressLine1>401 Fed St</ppi:AddressLine1><ppi:Country>US</ppi:Country><ppi:PhoneNumber>3028573031</ppi:PhoneNumber><ppi:FirstName>Sam</ppi:FirstName><ppi:LastName>Ackah</ppi:LastName><ppi:ZipCode>19901</ppi:ZipCode><ppi:IsBusinessName/>
-            </ppi:Payor><ppi:ClientReferenceNumber>Somxxsd</ppi:ClientReferenceNumber>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            
-         </ws:walletRequest>
-      </ws:SubmitWalletInformation>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:SubmitWalletInformation>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>delcorp</ppi:UserName>\r
+            <ppi:Password>D3lC0rp0r</ppi:Password>\r
+            <ppi:PPITransactionRequestId>311222</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>327</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:walletRequest>\r
+            <ppi:Action>AddToken</ppi:Action>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:WalletID>45449</ppi:WalletID>\r
+            <ppi:Vehicle>\r
+               <!--Optional:-->\r
+               <ppip:AbaNumber>333333</ppip:AbaNumber>\r
+               <ppip:AccountType>Checking</ppip:AccountType>\r
+               <!--Optional:-->\r
+               <ppip:CheckType>Personal</ppip:CheckType>\r
+               <ppip:CheckNumberPosition/>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppip:PaymentVehicleNumber>233329</ppip:PaymentVehicleNumber>\r
+               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>\r
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>\r
+            </ppi:Vehicle>\r
+            <!--Optional:-->\r
+            <ppi:Payor>\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>401 Fed St</ppi:AddressLine1>\r
+               <ppi:Country>US</ppi:Country>\r
+               <ppi:PhoneNumber>3028573031</ppi:PhoneNumber>\r
+               <ppi:FirstName>Sam</ppi:FirstName>\r
+               <ppi:LastName>Ackah</ppi:LastName>\r
+               <ppi:ZipCode>19901</ppi:ZipCode>\r
+               <ppi:IsBusinessName/>\r
+            </ppi:Payor>\r
+            <ppi:ClientReferenceNumber>Somxxsd</ppi:ClientReferenceNumber>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+         </ws:walletRequest>\r
+      </ws:SubmitWalletInformation>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

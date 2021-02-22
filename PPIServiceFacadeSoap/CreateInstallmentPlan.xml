@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="3e221842-5fc1-4b7b-adfd-46b18920d0eb" isOneWay="false" action="https://www.velocitypayment.com/ws/CreateInstallmentPlan" name="CreateInstallmentPlan" bindingOperationName="CreateInstallmentPlan" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="3e221842-5fc1-4b7b-adfd-46b18920d0ebfileName">CreateInstallmentPlan</con:setting>
+  </con:settings>
+  <con:call id="8495ab90-72cf-4cf5-9339-527e6d8acd44" name="Request 1">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://demo.velocitypayment.com/vgateway/VGatewayWebService?WSDL</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:CreateInstallmentPlan>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <ppi:UserName>?</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>?</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
+            <!--Optional:-->\r
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <!--Optional:-->\r
+         <ws:createInstallmentPlanInfo>\r
+            <ppi:StartDate>?</ppi:StartDate>\r
+            <!--Optional:-->\r
+            <ppi:Frequency>?</ppi:Frequency>\r
+            <!--Optional:-->\r
+            <ppi:NumberInstallments>?</ppi:NumberInstallments>\r
+            <ppi:PlanAmount>?</ppi:PlanAmount>\r
+            <!--Optional:-->\r
+            <ppi:PaymentAccountToken>?</ppi:PaymentAccountToken>\r
+            <!--Optional:-->\r
+            <ppi:WalletID>?</ppi:WalletID>\r
+            <!--Optional:-->\r
+            <ppi:Customer>\r
+               <!--Optional:-->\r
+               <ppi:AddressLine1>?</ppi:AddressLine1>\r
+               <!--Optional:-->\r
+               <ppi:AddressLine2>?</ppi:AddressLine2>\r
+               <!--Optional:-->\r
+               <ppi:Country>?</ppi:Country>\r
+               <!--Optional:-->\r
+               <ppi:EmailAddress>?</ppi:EmailAddress>\r
+               <!--Optional:-->\r
+               <ppi:FirstName>?</ppi:FirstName>\r
+               <!--Optional:-->\r
+               <ppi:LastName>?</ppi:LastName>\r
+               <!--Optional:-->\r
+               <ppi:MiddleInitial>?</ppi:MiddleInitial>\r
+               <!--Optional:-->\r
+               <ppi:Notes>?</ppi:Notes>\r
+               <!--Optional:-->\r
+               <ppi:PhoneNumber>?</ppi:PhoneNumber>\r
+               <!--Optional:-->\r
+               <ppi:Zip>?</ppi:Zip>\r
+               <!--Optional:-->\r
+               <ppi:Username>?</ppi:Username>\r
+               <!--Optional:-->\r
+               <ppi:Password>?</ppi:Password>\r
+            </ppi:Customer>\r
+            <!--Optional:-->\r
+            <ppi:ClientAccountNumber>?</ppi:ClientAccountNumber>\r
+            <!--Zero or more repetitions:-->\r
+            <ppi:CustomData>\r
+               <ppi:ID>?</ppi:ID>\r
+               <!--Optional:-->\r
+               <ppi:Value>?</ppi:Value>\r
+            </ppi:CustomData>\r
+            <!--Optional:-->\r
+            <ppi:BillLookup1>?</ppi:BillLookup1>\r
+            <!--Optional:-->\r
+            <ppi:BillLookup2>?</ppi:BillLookup2>\r
+            <!--Optional:-->\r
+            <ppi:BillLookup3>?</ppi:BillLookup3>\r
+         </ws:createInstallmentPlanInfo>\r
+      </ws:CreateInstallmentPlan>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CreateInstallmentPlan"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+  <con:call id="78a0f430-12d7-4761-82a7-a80f18b45971" name="Request 2">
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://demo.velocitypayment.com/vgateway/VGatewayWebService?WSDL</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:CreateInstallmentPlan>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>?</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>?</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:createInstallmentPlanInfo>
+            <ppi:StartDate>?</ppi:StartDate>
+            <!--Optional:-->
+            <ppi:Frequency>?</ppi:Frequency>
+            <!--Optional:-->
+            <ppi:NumberInstallments>?</ppi:NumberInstallments>
+            <ppi:PlanAmount>?</ppi:PlanAmount>
+            <!--Optional:-->
+            <ppi:PaymentAccountToken>?</ppi:PaymentAccountToken>
+            <!--Optional:-->
+            <ppi:WalletID>?</ppi:WalletID>
+            <!--Optional:-->
+            <ppi:Customer>
+               <!--Optional:-->
+               <ppi:AddressLine1>?</ppi:AddressLine1>
+               <!--Optional:-->
+               <ppi:AddressLine2>?</ppi:AddressLine2>
+               <!--Optional:-->
+               <ppi:Country>?</ppi:Country>
+               <!--Optional:-->
+               <ppi:EmailAddress>?</ppi:EmailAddress>
+               <!--Optional:-->
+               <ppi:FirstName>?</ppi:FirstName>
+               <!--Optional:-->
+               <ppi:LastName>?</ppi:LastName>
+               <!--Optional:-->
+               <ppi:MiddleInitial>?</ppi:MiddleInitial>
+               <!--Optional:-->
+               <ppi:Notes>?</ppi:Notes>
+               <!--Optional:-->
+               <ppi:PhoneNumber>?</ppi:PhoneNumber>
+               <!--Optional:-->
+               <ppi:Zip>?</ppi:Zip>
+               <!--Optional:-->
+               <ppi:Username>?</ppi:Username>
+               <!--Optional:-->
+               <ppi:Password>?</ppi:Password>
+            </ppi:Customer>
+            <!--Optional:-->
+            <ppi:ClientAccountNumber>?</ppi:ClientAccountNumber>
+            <!--Zero or more repetitions:-->
+            <ppi:CustomData>
+               <ppi:ID>?</ppi:ID>
+               <!--Optional:-->
+               <ppi:Value>?</ppi:Value>
+            </ppi:CustomData>
+            <!--Optional:-->
+            <ppi:BillLookup1>?</ppi:BillLookup1>
+            <!--Optional:-->
+            <ppi:BillLookup2>?</ppi:BillLookup2>
+            <!--Optional:-->
+            <ppi:BillLookup3>?</ppi:BillLookup3>
+         </ws:createInstallmentPlanInfo>
+      </ws:CreateInstallmentPlan>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/CreateInstallmentPlan"/>
+    <con:wsrmConfig version="1.2"/>
+  </con:call>
+</con:operation>

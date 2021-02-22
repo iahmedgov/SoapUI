@@ -47,32 +47,32 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:GetVelocityFee>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            
-            <!--Optional:-->
-            <ppi:UserName>user5621</ppi:UserName>
-            <!--Optional:-->
-            <ppi:Password>pwd5621</ppi:Password>
-            <!--Optional:-->
-            <ppi:PPITransactionRequestId>sgdfg45tgdfgdfg34gg</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>BEID-Token562</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:amount>${DataSourceFeeSingle#AmountSent}</ws:amount>
-         <ws:paymentType>${DataSourceFeeSingle#PaymentTypeSent}</ws:paymentType><ws:accountNumber>${DataSourceFeeSingle#AccountSent}</ws:accountNumber>
-         <!--Optional:-->
-         
-      </ws:GetVelocityFee>
-   </soapenv:Body>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:GetVelocityFee>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user5621</ppi:UserName>\r
+            <!--Optional:-->\r
+            <ppi:Password>pwd5621</ppi:Password>\r
+            <!--Optional:-->\r
+            <ppi:PPITransactionRequestId>sgdfg45tgdfgdfg34gg</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>BEID-Token562</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:amount>${DataSourceFeeSingle#AmountSent}</ws:amount>\r
+         <ws:paymentType>${DataSourceFeeSingle#PaymentTypeSent}</ws:paymentType>\r
+         <ws:accountNumber>${DataSourceFeeSingle#AccountSent}</ws:accountNumber>\r
+         <!--Optional:-->\r
+      </ws:GetVelocityFee>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="XPath Match" id="0a82f94c-958c-473b-9a5c-3a6c2681558b" name="Match content of [PPIFeeValue]">
           <con:configuration>
-            <path>declare namespace ns1='http://www.ePayments.com/PPI';
-declare namespace ns2='https://www.velocitypayment.com/ws';
+            <path>declare namespace ns2='https://www.velocitypayment.com/ws';
+declare namespace ns1='http://www.ePayments.com/PPI';
 //ns2:GetVelocityFeeResponse[1]/ns2:GetVelocityFeeResult[1]/ns1:PPIFeeValue[1]/text()</path>
             <content>${DataSourceFeeSingle#FeeValue}</content>
             <allowWildcards>false</allowWildcards>
@@ -82,8 +82,8 @@ declare namespace ns2='https://www.velocitypayment.com/ws';
         </con:assertion>
         <con:assertion type="XPath Match" id="90e7e9ba-7849-488e-8957-3f19a05f97f4" name="Match content of [TenderType]">
           <con:configuration>
-            <path>declare namespace ns1='http://www.ePayments.com/PPI';
-declare namespace ns2='https://www.velocitypayment.com/ws';
+            <path>declare namespace ns2='https://www.velocitypayment.com/ws';
+declare namespace ns1='http://www.ePayments.com/PPI';
 //ns2:GetVelocityFeeResponse[1]/ns2:GetVelocityFeeResult[1]/ns1:TenderType[1]/text()</path>
             <content>${DataSourceFeeSingle#TenderType}</content>
             <allowWildcards>false</allowWildcards>
@@ -93,8 +93,8 @@ declare namespace ns2='https://www.velocitypayment.com/ws';
         </con:assertion>
         <con:assertion type="XPath Match" id="ed47f756-bf1c-4e9d-a811-cfdc5445cbd8" name="Match content of [Success]">
           <con:configuration>
-            <path>declare namespace ns1='http://www.ePayments.com/PPI';
-declare namespace ns2='https://www.velocitypayment.com/ws';
+            <path>declare namespace ns2='https://www.velocitypayment.com/ws';
+declare namespace ns1='http://www.ePayments.com/PPI';
 //ns2:GetVelocityFeeResponse[1]/ns2:GetVelocityFeeResult[1]/ns1:Success[1]/text()</path>
             <content>${DataSourceFeeSingle#SuccessR}</content>
             <allowWildcards>false</allowWildcards>
