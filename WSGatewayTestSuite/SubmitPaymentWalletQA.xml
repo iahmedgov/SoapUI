@@ -364,13 +364,13 @@
                <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>10.50</ppip:Amount>
+                  <ppip:Amount>0</ppip:Amount>
                   <ppip:SegmentType>Utility</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
                <!--Optional:-->
                <ppi:PaymentType>Regular</ppi:PaymentType>
-               <ppi:ProcessDate>2021-02-21T23:20:00.000Z</ppi:ProcessDate>
+               <ppi:ProcessDate>2021-02-22T23:20:00.000Z</ppi:ProcessDate>
                <!--Zero or more repetitions:-->
             </ppi:AdditionalInfo>
             <!--Optional:-->
@@ -383,7 +383,7 @@
             <!--Optional:-->
             <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource/>
-            <ppi:WalletID>495WalletID7131</ppi:WalletID><ppi:PaymentAccountToken>1303440015</ppi:PaymentAccountToken>
+            <ppi:WalletID>495WalletID7131</ppi:WalletID><ppi:PaymentAccountToken>1303261111</ppi:PaymentAccountToken>
             
          </ws:ppiWalletPayment>
       </ws:SubmitPPIPaymentUsingWallet>
