@@ -35,21 +35,21 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>495WalletID7138</ppi:NickName>
-            <ppi:WalletID>495WalletID7138</ppi:WalletID>
+            <ppi:NickName>495WalletID7194</ppi:NickName>
+            <ppi:WalletID>495WalletID7194</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
-               <ppip:AccountType/>
+               <ppip:AbaNumber>256072691</ppip:AbaNumber><ppip:AccountType>Checking</ppip:AccountType>
                <!--Optional:-->
-               <ppip:CheckType/>
+               <ppip:CheckType>Personal</ppip:CheckType>
                <ppip:CheckNumberPosition/>
                <!--Optional:-->
                <!--Optional:-->
                <!--Optional:-->
                
                
-               
-               <ppip:CVV2Code>123</ppip:CVV2Code><ppip:ExpirationDate>11/24</ppip:ExpirationDate><ppip:PaymentVehicleNumber>370000000000002</ppip:PaymentVehicleNumber><ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:PaymentVehicleNumber>4111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
                <ppip:EnforcePinDebitValidation/>
             </ppi:Vehicle>
             <!--Optional:-->
@@ -60,10 +60,10 @@
                <ppi:FirstName>Rosa</ppi:FirstName>
                <ppi:LastName>Asad</ppi:LastName>
                <ppi:ZipCode>22201</ppi:ZipCode>
-               <ppi:BusinessName>My Business</ppi:BusinessName><ppi:IsBusinessName/>
+               <ppi:BusinessName>My Business</ppi:BusinessName>
+               <ppi:IsBusinessName/>
             </ppi:Payor>
-            
-            <ppi:ClientReferenceNumber>495007138</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>495007193</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
@@ -108,7 +108,7 @@
             <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:walletID>495WalletID7135</ws:walletID>
+         <ws:walletID>495WalletID7194</ws:walletID>
          <!--Optional:-->
       </ws:GetWalletInformation>
    </soapenv:Body>
@@ -153,18 +153,18 @@
          </ws:token>
          <!--Optional:-->
          <ws:createInstallmentPlanInfo>
-            <ppi:StartDate>2021-03-15T00:00:00.000-05:00</ppi:StartDate>
+            <ppi:StartDate>2021-05-19T00:00:00.000-05:00</ppi:StartDate>
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:Frequency>Daily</ppi:Frequency>
-            <ppi:NumberInstallments>3</ppi:NumberInstallments>
-            <ppi:PlanAmount>20</ppi:PlanAmount>
+            <ppi:Frequency>Quarterly</ppi:Frequency>
+            <ppi:NumberInstallments>2</ppi:NumberInstallments>
+            <ppi:PlanAmount>10.00</ppi:PlanAmount>
+            <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
             
-            <!--Optional:-->
-            <ppi:PaymentAccountToken>1303261111</ppi:PaymentAccountToken><ppi:WalletID>495WalletID7132</ppi:WalletID>
-            <ppi:ClientAccountNumber>495007133</ppi:ClientAccountNumber>
+            <ppi:PaymentAccountToken>1303400015 </ppi:PaymentAccountToken><ppi:WalletID>495WalletID7133</ppi:WalletID><ppi:ClientAccountNumber>495007137</ppi:ClientAccountNumber>
+            
             <!--Optional:-->
             <!--Zero or more repetitions:-->
             <!--Optional:-->
@@ -260,7 +260,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
          </ws:token>
          <!--Optional:-->
          <ws:createInstallmentPlanInfo>
-            <ppi:StartDate>2021-01-29T00:00:00.000-05:00</ppi:StartDate>
+            <ppi:StartDate>2021-05-29T00:00:00.000-05:00</ppi:StartDate>
             <!--Optional:-->
             <!--Optional:-->
             <ppi:Frequency>Daily</ppi:Frequency>
@@ -294,7 +294,9 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
                <ppi:Zip>21114</ppi:Zip>
             </ppi:Customer>
             <!--Optional:-->
-            <ppi:ClientAccountNumber>434214100</ppi:ClientAccountNumber><ppi:BillLookup1>138329020052004</ppi:BillLookup1><ppi:BillLookup2>28658</ppi:BillLookup2>
+            <ppi:ClientAccountNumber>434214100</ppi:ClientAccountNumber>
+            <ppi:BillLookup1>138329020052004</ppi:BillLookup1>
+            <ppi:BillLookup2>28658</ppi:BillLookup2>
             <!--Zero or more repetitions:-->
             <!--Optional:-->
             <!--Optional:-->
@@ -387,7 +389,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
             <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:paymentPlanID>98803</ws:paymentPlanID>
+         <ws:paymentPlanID>98913</ws:paymentPlanID>
          <!--Optional:-->
       </ws:CancelInstallmentPlan>
    </soapenv:Body>

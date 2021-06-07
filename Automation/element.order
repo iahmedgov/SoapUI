@@ -11,3 +11,5 @@ Refund.xml
 PartialRefund.xml
 MultiplePartialRefund.xml
 ZeroDollarError.xml
+ACHabusePolicy-SubmitPayment.xml
+ACHabusePolicy-PaymentWithWallet.xml

@@ -4,32 +4,34 @@
     <con:setting id="fb739bd1-6ac1-4aa0-9611-d9eee91758f7fileName">VoidPPIPayment</con:setting>
   </con:settings>
   <con:call id="229607db-042c-4713-a951-7caa9b516c59" defaultOutgoingWss="" defaultIncomingWss="" name="Request 1">
-    <con:settings/>
+    <con:settings>
+      <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+    </con:settings>
     <con:encoding>UTF-8</con:encoding>
     <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:VoidPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>?</ppi:UserName>\r
-            <!--Optional:-->\r
-            <ppi:Password>?</ppi:Password>\r
-            <!--Optional:-->\r
-            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>\r
-            <!--Optional:-->\r
-            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <ws:paymentId>?</ws:paymentId>\r
-         <!--Optional:-->\r
-         <ws:code>?</ws:code>\r
-         <!--Optional:-->\r
-         <ws:comments>?</ws:comments>\r
-      </ws:VoidPPIPayment>\r
-   </soapenv:Body>\r
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:VoidPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            
+            <!--Optional:-->
+            <ppi:Password>?</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>?</ppi:PPITransactionRequestId>
+            <!--Optional:-->
+            <ppi:PPIBusinessEntityIdentifierToken>?</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <!--Optional:-->
+         <ws:paymentId>?</ws:paymentId>
+         <!--Optional:-->
+         <ws:code>?</ws:code>
+         <!--Optional:-->
+         <ws:comments>?</ws:comments>
+      </ws:VoidPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
     <con:credentials>
       <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -37,5 +39,6 @@
     </con:credentials>
     <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
     <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/VoidPPIPayment"/>
+    <con:wsrmConfig version="1.2"/>
   </con:call>
 </con:operation>

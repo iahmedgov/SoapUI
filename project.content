@@ -1,4 +1,6 @@
+PPIServiceFacadeSoap\CancelInstallmentPlan.xml
 PPIServiceFacadeSoap\CapturePayment.xml
+PPIServiceFacadeSoap\CreateInstallmentPlan.xml
 PPIServiceFacadeSoap\FinalizePPIPayment.xml
 PPIServiceFacadeSoap\GetIVRTransferOptions.xml
 PPIServiceFacadeSoap\GetPPIPaymentFee.xml
@@ -18,8 +20,6 @@ PPIServiceFacadeSoap\SubmitWalletInformation.xml
 PPIServiceFacadeSoap\ValidateFinancialInfo.xml
 PPIServiceFacadeSoap\ValidatePPICustomer.xml
 PPIServiceFacadeSoap\VoidPPIPayment.xml
-PPIServiceFacadeSoap\CreateInstallmentPlan.xml
-PPIServiceFacadeSoap\CancelInstallmentPlan.xml
 PPIServiceFacadeSoap12\CapturePayment.xml
 PPIServiceFacadeSoap12\FinalizePPIPayment.xml
 PPIServiceFacadeSoap12\GetIVRTransferOptions.xml
@@ -160,6 +160,9 @@ WSGatewayTestSuite\SubmitPPIPaymentUsingWalletAutomation.xml
 WSGatewayTestSuite\SubmitPPIPaymentAutomationTesting.xml
 WSGatewayTestSuite\SubmitPPIPayment-DataCreation.xml
 WSGatewayTestSuite\CreateInstallmentPlan.xml
+WSGatewayTestSuite\CreateInstallmentPlan-Upgrade.xml
+WSGatewayTestSuite\SchedulerProcessorTestingQAApp19.xml
+WSGatewayTestSuite\ACH-AbusePolicy-Testing.xml
 PPIServiceFacadeSoap12-TestSuite\CapturePayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\FinalizePPIPayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\GetIVRTransferOptions-TestCase.xml
@@ -194,6 +197,8 @@ Automation\Refund.xml
 Automation\PartialRefund.xml
 Automation\MultiplePartialRefund.xml
 Automation\ZeroDollarError.xml
+Automation\ACHabusePolicy-SubmitPayment.xml
+Automation\ACHabusePolicy-PaymentWithWallet.xml
 AutomationUpgrade\SubmitPPIPaymentUpgrade.xml
 AutomationUpgrade\GetVelocityFeeUpgrade.xml
 AutomationUpgrade\SubmitWalletUpgrade.xml

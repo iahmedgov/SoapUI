@@ -59,27 +59,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>SGUD</ppi:UserName>\r
-            <ppi:Password>@pple123</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>3310</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>20</ws:amount>\r
-         <ws:paymentType>1</ws:paymentType>\r
-         <ws:accountNumber>411111</ws:accountNumber>\r
-         <!--Optional:-->\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>SGUD</ppi:UserName>
+            <ppi:Password>@pple123</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>3310</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>20</ws:amount>
+         <ws:paymentType>1</ws:paymentType>
+         <ws:accountNumber>411111</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -103,27 +103,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>user2325</ppi:UserName>\r
-            <ppi:Password>pwd2325</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>2.25</ws:amount>\r
-         <ws:paymentType>1</ws:paymentType>\r
-         <ws:accountNumber>6011000000000004</ws:accountNumber>\r
-         <!--Optional:-->\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user2325</ppi:UserName>
+            <ppi:Password>pwd2325</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>2.25</ws:amount>
+         <ws:paymentType>1</ws:paymentType>
+         <ws:accountNumber>6011000000000004</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -147,27 +147,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>comm_CC</ppi:UserName>\r
-            <ppi:Password>magic88tide</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>2989</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>1</ws:amount>\r
-         <ws:paymentType>1</ws:paymentType>\r
-         <ws:accountNumber>5424000000000015</ws:accountNumber>\r
-         <!--Optional:-->\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>comm_CC</ppi:UserName>
+            <ppi:Password>magic88tide</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2989</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>100</ws:amount>
+         <ws:paymentType>1</ws:paymentType>
+         <ws:accountNumber>6011000000000004</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -190,27 +190,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com/vgateway/VGatewayWebService?WSDL</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>User1286</ppi:UserName>\r
-            <ppi:Password>Pswd1286</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>10</ws:amount>\r
-         <ws:paymentType>1</ws:paymentType>\r
-         <ws:accountNumber>4111111111111111</ws:accountNumber>\r
-         <!--Optional:-->\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>User1286</ppi:UserName>
+            <ppi:Password>Pswd1286</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>10</ws:amount>
+         <ws:paymentType>1</ws:paymentType>
+         <ws:accountNumber>4111111111111111</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -535,27 +535,27 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:GetVelocityFee>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>comm_CC</ppi:UserName>\r
-            <ppi:Password>magic88tide</ppi:Password>\r
-            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>2989</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:amount>100</ws:amount>\r
-         <ws:paymentType>1</ws:paymentType>\r
-         <ws:accountNumber>4111111111111111</ws:accountNumber>\r
-         <!--Optional:-->\r
-      </ws:GetVelocityFee>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:GetVelocityFee>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>comm_CC</ppi:UserName>
+            <ppi:Password>magic88tide</ppi:Password>
+            <ppi:PPITransactionRequestId>sdf34tegdfg456rgdfg</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2989</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:amount>100</ws:amount>
+         <ws:paymentType>1</ws:paymentType>
+         <ws:accountNumber>4111111111111111</ws:accountNumber>
+         <!--Optional:-->
+      </ws:GetVelocityFee>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

@@ -43,25 +43,25 @@
     </con:settings>
     <con:encoding>UTF-8</con:encoding>
     <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <ws:CancelInstallmentPlan>
-         <!--Optional:-->
-         <ws:token>
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <!--Optional:-->
-            <ppi:UserName>user495</ppi:UserName>
-            <ppi:Password>pwd495</ppi:Password>
-            <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
-            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>
-         </ws:token>
-         <ws:paymentPlanID>98713</ws:paymentPlanID>
-         <!--Optional:-->
-      </ws:CancelInstallmentPlan>
-   </soapenv:Body>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <ws:CancelInstallmentPlan>\r
+         <!--Optional:-->\r
+         <ws:token>\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <!--Optional:-->\r
+            <ppi:UserName>user495</ppi:UserName>\r
+            <ppi:Password>pwd495</ppi:Password>\r
+            <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>\r
+            <ppi:PPIBusinessEntityIdentifierToken>495</ppi:PPIBusinessEntityIdentifierToken>\r
+         </ws:token>\r
+         <ws:paymentPlanID>98713</ws:paymentPlanID>\r
+         <!--Optional:-->\r
+      </ws:CancelInstallmentPlan>\r
+   </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
     <con:credentials>
       <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>

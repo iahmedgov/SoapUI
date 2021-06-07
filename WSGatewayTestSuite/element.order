@@ -35,3 +35,6 @@ SubmitPPIPaymentUsingWalletAutomation.xml
 SubmitPPIPaymentAutomationTesting.xml
 SubmitPPIPayment-DataCreation.xml
 CreateInstallmentPlan.xml
+CreateInstallmentPlan-Upgrade.xml
+SchedulerProcessorTestingQAApp19.xml
+ACH-AbusePolicy-Testing.xml
