@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="34c8fd5e-3867-44d2-8da1-a0a7f45fcd37fileName">CreateInstallmentPlan</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="request" id="e3725b78-057c-41e2-82e9-c7e02e682393" name="Copy of SubmitWalletInformationQA">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

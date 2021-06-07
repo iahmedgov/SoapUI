@@ -199,6 +199,7 @@ Automation\MultiplePartialRefund.xml
 Automation\ZeroDollarError.xml
 Automation\ACHabusePolicy-SubmitPayment.xml
 Automation\ACHabusePolicy-PaymentWithWallet.xml
+Automation\ACHabusePolicy-SubmitPaymentNegative.xml
 AutomationUpgrade\SubmitPPIPaymentUpgrade.xml
 AutomationUpgrade\GetVelocityFeeUpgrade.xml
 AutomationUpgrade\SubmitWalletUpgrade.xml

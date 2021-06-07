@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="8c589f6d-6682-49ca-8401-b258901a84a4" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ACHabusePolicy-PaymentWithWallet" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="20668804-405c-45aa-9148-a2e37e7ca2c0" discardOkResults="true" failOnError="false" failTestCaseOnErrors="true" keepSession="false" name="ACHabusePolicy-SubmitPaymentNegative" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" zephyrTestName="" zephyrTestId="" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="8c589f6d-6682-49ca-8401-b258901a84a4fileName">ACHabusePolicy-PaymentWithWallet</con:setting>
+    <con:setting id="20668804-405c-45aa-9148-a2e37e7ca2c0fileName">ACHabusePolicy-SubmitPaymentNegative</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
-  <con:testStep type="datasource" name="Data SourceACHAbuseWallet" id="fde4ffc2-e007-49a2-82cd-120145753ef8">
+  <con:testStep type="datasource" name="DataSourceACHAbuse" id="7ab2b33b-e6a9-48df-a5c1-ae52d93f584f">
     <con:settings/>
     <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:dataSource type="Excel">
         <con:configuration>
           <file>C:/SoapData/ACHabusePolicy.xlsx</file>
-          <worksheet>SubmitPaymentWallet</worksheet>
+          <worksheet>SubmitPaymentNegative</worksheet>
           <cell>A2</cell>
           <ignoreEmpty>true</ignoreEmpty>
           <evaluateFormulas>false</evaluateFormulas>
@@ -22,16 +22,14 @@
       <con:property>Password</con:property>
       <con:property>RequestID</con:property>
       <con:property>IdentifierToken</con:property>
-      <con:property>CAN</con:property>
-      <con:property>WalletID</con:property>
-      <con:property>PaymentACToken</con:property>
-      <con:property>AccountNumber</con:property>
+      <con:property>ABAnumber</con:property>
       <con:property>AccountType</con:property>
       <con:property>CheckType</con:property>
+      <con:property>AccountNumber</con:property>
       <con:restartOnRun>true</con:restartOnRun>
     </con:config>
   </con:testStep>
-  <con:testStep type="datagen" name="DataGenDateTest" id="a624be0a-32d1-4d72-a59a-87a9d34b7cf8">
+  <con:testStep type="datagen" name="DataGenDateTest" id="cc9acb16-6758-46db-a473-200f0b20f54c">
     <con:settings/>
     <con:config xsi:type="con:DataGeneratorStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:property type="Script">
@@ -45,12 +43,12 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
       </con:property>
     </con:config>
   </con:testStep>
-  <con:testStep type="request" id="9cc5b875-0d7c-4ec0-a5fc-362de7b0de15" name="SubmitPPIPaymentUsingWalletQA562">
+  <con:testStep type="request" id="2cbada4f-9ec6-4b67-8327-87313a188c1b" name="SubmitPPIPayment-QA562">
     <con:settings/>
     <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:interface>PPIServiceFacadeSoap</con:interface>
-      <con:operation>SubmitPPIPaymentUsingWallet</con:operation>
-      <con:request name="SubmitPPIPaymentUsingWalletQA562" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="4e94b2d9-5405-4495-b954-05552be1cbd6" defaultOutgoingWss="" defaultIncomingWss="">
+      <con:operation>SubmitPPIPayment</con:operation>
+      <con:request name="SubmitPPIPayment-QA562" id="cca17b28-ce9c-4350-90f9-d7d63fce8108" defaultOutgoingWss="" defaultIncomingWss="">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
@@ -59,31 +57,31 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
-      <ws:SubmitPPIPaymentUsingWallet>
+      <ws:SubmitPPIPayment>
          <!--Optional:-->
          <ws:token>
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
+            <ppi:UserName>${DataSourceACHAbuse#Username}</ppi:UserName>
             <!--Optional:-->
-            <ppi:UserName>${Data SourceACHAbuseWallet#Username}</ppi:UserName>
-            
-            <ppi:Password>${Data SourceACHAbuseWallet#Password}</ppi:Password><ppi:PPITransactionRequestId>${Data SourceACHAbuseWallet#RequestID}</ppi:PPITransactionRequestId><ppi:PPIBusinessEntityIdentifierToken>${Data SourceACHAbuseWallet#IdentifierToken}</ppi:PPIBusinessEntityIdentifierToken>
-            
+            <ppi:Password>${DataSourceACHAbuse#Password}</ppi:Password>
+            <ppi:PPITransactionRequestId>${DataSourceACHAbuse#RequestID}</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>${DataSourceACHAbuse#IdentifierToken}</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
          <!--Optional:-->
-         <ws:ppiWalletPayment Notes="">
+         <ws:payment Notes="">
             <!--Optional:-->
             <ppi:AdditionalInfo>
+               <!--Zero or more repetitions:-->
+               <!--Zero or more repetitions:-->
                <!--Zero or more repetitions:-->
                <ppi:Fees>
                   <ppip:FeeType>Customer</ppip:FeeType>
                   <ppip:Amount>0</ppip:Amount>
                </ppi:Fees>
-               <!--Zero or more repetitions:-->
-               <!--Zero or more repetitions:-->
                <ppi:PaymentSegment>
-                  <ppip:Amount>20</ppip:Amount>
+                  <ppip:Amount>20.00</ppip:Amount>
                   <ppip:SegmentType>Enter Amount</ppip:SegmentType>
                   <!--Optional:-->
                </ppi:PaymentSegment>
@@ -95,70 +93,116 @@ return sdf.format(new Date()) + "T08:59:00.000-04:00"</script>
             <!--Optional:-->
             <!--Optional:-->
             <ppi:Customer>
-               <ppi:AddressLine1>2311 York road</ppi:AddressLine1><ppi:FirstName>Micke</ppi:FirstName><ppi:LastName>Ckarlk</ppi:LastName><ppi:PhoneNumber>7038954125</ppi:PhoneNumber><ppi:Zip>22201</ppi:Zip>
+               <ppi:AddressLine1>1853 Mandan Terrace</ppi:AddressLine1>
+               <ppi:FirstName>Himan</ppi:FirstName>
+               <ppi:LastName>Verma</ppi:LastName>
+               <ppi:Zip>21054</ppi:Zip>
             </ppi:Customer>
-            <ppi:ClientAccountNumber>${Data SourceACHAbuseWallet#CAN}</ppi:ClientAccountNumber>
-            <!--Optional:-->
-            <!--Optional:-->
+            <ppi:ClientAccountNumber>12345</ppi:ClientAccountNumber>
             <ppi:PreAuthorizeOnly>false</ppi:PreAuthorizeOnly>
             <ppi:PaymentSource>Agent</ppi:PaymentSource>
-            <ppi:WalletID>${Data SourceACHAbuseWallet#WalletID}</ppi:WalletID><ppi:PaymentAccountToken>${Data SourceACHAbuseWallet#PaymentACToken}</ppi:PaymentAccountToken>
-            
-         </ws:ppiWalletPayment>
-      </ws:SubmitPPIPaymentUsingWallet>
+            <!--Optional:-->
+            <ppi:Payor>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               <ppi:AddressLine1>2311 york road</ppi:AddressLine1>
+               <ppi:PhoneNumber>(717) 983-2345</ppi:PhoneNumber>
+               <ppi:FirstName>Michael</ppi:FirstName>
+               <ppi:LastName>Clarke</ppi:LastName>
+               <ppi:EmailAddress>imtiazster@gmail.com</ppi:EmailAddress>
+               <ppi:ZipCode>21054</ppi:ZipCode>
+               <ppi:BusinessName>My Business</ppi:BusinessName><ppi:IsBusinessName>false</ppi:IsBusinessName>
+            </ppi:Payor>
+            <!--Optional:-->
+            <ppi:Vehicle>
+               <!--Optional:-->
+               <ppip:AbaNumber>${DataSourceACHAbuse#ABAnumber}</ppip:AbaNumber><ppip:AccountType>${DataSourceACHAbuse#AccountType}</ppip:AccountType>
+               <!--Optional:-->
+               <ppip:CheckType>${DataSourceACHAbuse#CheckType}</ppip:CheckType>
+               <ppip:CheckNumberPosition/>
+               <!--Optional:-->
+               <!--Optional:-->
+               <!--Optional:-->
+               
+               
+               <ppip:PaymentVehicleNumber>${DataSourceACHAbuse#AccountNumber}</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>Ach</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+         </ws:payment><ws:storedCredential/>
+      </ws:SubmitPPIPayment>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
-        <con:assertion type="SOAP Response" id="719435cb-0ff9-4ac5-a061-f1c65e68970f" name="SOAP Response"/>
-        <con:assertion type="XPath Match" id="b0448828-2d04-4b3e-8f0d-c26af1086459" name="Match content of [ns0:ResultCode]">
+        <con:assertion type="XPath Match" id="0e711a43-42b2-413a-b773-e447b1a12206" name="Match content of [ns0:ResultCode]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultCode[1]/text()</path>
-            <content>50044</content>
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultCode[1]/text()</path>
+            <content>50018</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="838a1344-9a66-4add-823f-fe6cc2512992" name="Match content of [ns0:ResultText]">
+        <con:assertion type="XPath Match" id="a7a7a1d9-4089-437e-b00b-5bd2f5989163" name="Match content of [ns0:ResultText]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:ResultText[1]/text()</path>
-            <content>Abuse is applied to payment account</content>
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:ResultText[1]/text()</path>
+            <content>Payment Approved</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="3999f956-5925-42ee-85e4-579f600601f4" name="Check for existence of [ns0:PaymentID]">
+        <con:assertion type="XPath Match" id="23c4ec3e-ea78-491a-a4f7-4340c6a54700" name="Check for existence of [ns0:PaymentID]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-exists( //ns1:SubmitPPIPaymentUsingWalletResponse/ns1:SubmitPPIPaymentUsingWalletResult/ns0:PaymentID)</path>
+exists( //ns1:SubmitPPIPaymentResponse/ns1:SubmitPPIPaymentResult/ns0:PaymentID)</path>
             <content>true</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="807eba5c-411e-470f-b32a-2820feb2c30f" name="Check for existence of [ns0:TransactionTime]">
+        <con:assertion type="XPath Match" id="b196a15a-d118-4cc5-92c8-9f94c46ce04f" name="Check for existence of [ns0:TransactionTime]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-exists( //ns1:SubmitPPIPaymentUsingWalletResponse/ns1:SubmitPPIPaymentUsingWalletResult/ns0:TransactionTime)</path>
+exists( //ns1:SubmitPPIPaymentResponse/ns1:SubmitPPIPaymentResult/ns0:TransactionTime)</path>
             <content>true</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
           </con:configuration>
         </con:assertion>
-        <con:assertion type="XPath Match" id="ed5cb9dc-a075-455d-863b-9d2a8c35208e" name="Match content of [ns0:Success]">
+        <con:assertion type="XPath Match" id="5c3d7330-307d-4616-b18c-f5caf421eea4" name="Check for existence of [ns0:ApprovalCode]">
           <con:configuration>
             <path>declare namespace ns0='http://www.ePayments.com/PPI';
 declare namespace ns1='https://www.velocitypayment.com/ws';
-//ns1:SubmitPPIPaymentUsingWalletResponse[1]/ns1:SubmitPPIPaymentUsingWalletResult[1]/ns0:Success[1]/text()</path>
-            <content>false</content>
+exists( //ns1:SubmitPPIPaymentResponse/ns1:SubmitPPIPaymentResult/ns0:ApprovalCode)</path>
+            <content>true</content>
+            <allowWildcards>false</allowWildcards>
+            <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
+            <ignoreComments>false</ignoreComments>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="XPath Match" id="7dd12e3c-6d03-4e49-b3be-7272ae711186" name="Match content of [ns0:Success]">
+          <con:configuration>
+            <path>declare namespace ns0='http://www.ePayments.com/PPI';
+declare namespace ns1='https://www.velocitypayment.com/ws';
+//ns1:SubmitPPIPaymentResponse[1]/ns1:SubmitPPIPaymentResult[1]/ns0:Success[1]/text()</path>
+            <content>true</content>
             <allowWildcards>false</allowWildcards>
             <ignoreNamspaceDifferences>false</ignoreNamspaceDifferences>
             <ignoreComments>false</ignoreComments>
@@ -169,28 +213,29 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitPPIPaymentUsingWallet"/>
+        <con:jmsPropertyConfig/>
+        <con:wsaConfig action="https://www.velocitypayment.com/ws/SubmitPPIPayment" mustUnderstand="NONE" version="200508"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
     </con:config>
   </con:testStep>
-  <con:testStep type="datasourceloop" name="Data Source Loop" id="6c9b9093-4f13-4a81-8f43-877bba25be07">
+  <con:testStep type="datasourceloop" name="Data Source Loop" id="1b2dd87b-d6fd-426f-9f14-036863cb299e">
     <con:settings/>
     <con:config>
-      <dataSourceStep>Data SourceACHAbuseWallet</dataSourceStep>
-      <targetStep>SubmitPPIPaymentUsingWalletQA562</targetStep>
+      <dataSourceStep>DataSourceACHAbuse</dataSourceStep>
+      <targetStep>SubmitPPIPayment-QA562</targetStep>
       <discardResults>true</discardResults>
     </con:config>
   </con:testStep>
   <con:properties/>
   <con:reportParameters/>
   <con:breakPoints>
-    <con:testStepId>fde4ffc2-e007-49a2-82cd-120145753ef8</con:testStepId>
+    <con:testStepId>e6c68352-a183-43ab-8598-3372dee7ce58</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
   <con:breakPoints>
-    <con:testStepId>a624be0a-32d1-4d72-a59a-87a9d34b7cf8</con:testStepId>
+    <con:testStepId>77bd003a-f80e-4f36-b84c-341df11fd965</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>
