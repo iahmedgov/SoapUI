@@ -14,7 +14,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
    <soapenv:Header/>
    <soapenv:Body>
@@ -36,8 +36,8 @@
             <!--Optional:-->
             <!--Optional:-->
             <!--Optional:-->
-            <ppi:NickName>2325CC682</ppi:NickName>
-            <ppi:WalletID>2325CC682</ppi:WalletID>
+            <ppi:NickName>2325CC683</ppi:NickName>
+            <ppi:WalletID>2325CC683</ppi:WalletID>
             <ppi:Vehicle>
                <!--Optional:-->
                <ppip:AccountType/>
@@ -73,7 +73,7 @@
                <ppi:ZipCode>21054</ppi:ZipCode>
                <ppi:IsBusinessName>false</ppi:IsBusinessName>
             </ppi:Payor>
-            <ppi:ClientReferenceNumber>536563652</ppi:ClientReferenceNumber>
+            <ppi:ClientReferenceNumber>536563653</ppi:ClientReferenceNumber>
             <!--Optional:-->
             <!--Optional:-->
          </ws:walletRequest>
@@ -118,7 +118,7 @@
             <ppi:PPITransactionRequestId>sdfdf345345sdfsdfsd</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:walletID>2325CC682</ws:walletID>
+         <ws:walletID>2325CC683</ws:walletID>
          <!--Optional:-->
       </ws:GetWalletInformation>
    </soapenv:Body>
@@ -145,7 +145,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -163,7 +163,7 @@
          </ws:token>
          <!--Optional:-->
          <ws:createInstallmentPlanInfo>
-            <ppi:StartDate>2021-04-28T00:00:00.000-05:00</ppi:StartDate>
+            <ppi:StartDate>2021-06-09T00:00:00.000-05:00</ppi:StartDate>
             <!--Optional:-->
             <ppi:Frequency>Daily</ppi:Frequency>
             <!--Optional:-->
@@ -174,7 +174,7 @@
             <!--Optional:-->
             
             <!--Optional:-->
-            <ppi:PaymentAccountToken>26238591111</ppi:PaymentAccountToken><ppi:WalletID>2325CC682</ppi:WalletID><ppi:Customer>
+            <ppi:PaymentAccountToken>27159151111</ppi:PaymentAccountToken><ppi:WalletID>2325CC683</ppi:WalletID><ppi:Customer>
                <!--Optional:-->
                
                <!--Optional:-->
@@ -199,7 +199,7 @@
                
                <!--Optional:-->
                
-            </ppi:Customer><ppi:ClientAccountNumber>can147852</ppi:ClientAccountNumber>
+            </ppi:Customer><ppi:ClientAccountNumber>can147853</ppi:ClientAccountNumber>
             <!--Optional:-->
             
             <!--Zero or more repetitions:-->
@@ -249,7 +249,7 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
-        <con:endpoint>https://www.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:endpoint>https://upgrade.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
         <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
    <soapenv:Header/>
    <soapenv:Body>
@@ -265,7 +265,7 @@
             <ppi:PPITransactionRequestId>75675675hhfgh6</ppi:PPITransactionRequestId>
             <ppi:PPIBusinessEntityIdentifierToken>2325</ppi:PPIBusinessEntityIdentifierToken>
          </ws:token>
-         <ws:paymentPlanID>1006377</ws:paymentPlanID>
+         <ws:paymentPlanID>1032898</ws:paymentPlanID>
          <!--Optional:-->
       </ws:CancelInstallmentPlan>
    </soapenv:Body>
