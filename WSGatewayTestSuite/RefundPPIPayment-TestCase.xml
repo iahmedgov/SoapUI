@@ -374,9 +374,9 @@
          <!--Optional:-->\r
          <!--Optional:-->\r
          <!--Optional:-->\r
-         <ws:paymentId>10103910907939262</ws:paymentId>\r
-         <ws:code>other</ws:code>\r
-         <ws:comments>State of Delaware - Division of corporations refunded payment for SR: 20180139136</ws:comments>\r
+         <ws:paymentId>1744075947913302</ws:paymentId>\r
+         <ws:code>A2</ws:code>\r
+         <ws:comments>This is a comment</ws:comments>\r
          <ws:isRefundMemo>false</ws:isRefundMemo>\r
          <ws:isDiffpaymentAccount>false</ws:isDiffpaymentAccount>\r
          <!--Optional:-->\r

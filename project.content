@@ -163,6 +163,7 @@ WSGatewayTestSuite\CreateInstallmentPlan.xml
 WSGatewayTestSuite\CreateInstallmentPlan-Upgrade.xml
 WSGatewayTestSuite\SchedulerProcessorTestingQAApp19.xml
 WSGatewayTestSuite\ACH-AbusePolicy-Testing.xml
+WSGatewayTestSuite\JacksonHewitt-Test-Case.xml
 PPIServiceFacadeSoap12-TestSuite\CapturePayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\FinalizePPIPayment-TestCase.xml
 PPIServiceFacadeSoap12-TestSuite\GetIVRTransferOptions-TestCase.xml

@@ -693,7 +693,7 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   <con:properties>
     <con:property>
       <con:name>WalletID</con:name>
-      <con:value>7391542833</con:value>
+      <con:value>2468968223</con:value>
     </con:property>
   </con:properties>
   <con:reportParameters/>
@@ -734,6 +734,71 @@ declare namespace ns1='https://www.velocitypayment.com/ws';
   </con:breakPoints>
   <con:breakPoints>
     <con:testStepId>f72cfc91-aecb-4f5c-9892-a27f0d898c3f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ba5f2a2a-7742-4ca5-bea4-1c9dd95e9120</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>2e75cb68-3400-484c-b5d9-97f704e5c43f</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>50048371-5d59-4934-9d88-7302884dafa3</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>6dbe1ae3-e0f3-48cb-9c9d-957afec47b44</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>87feccf5-b41a-46b0-bbdc-694f58352a53</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>bc59a91b-fe19-49dd-bcbf-0972ab0af234</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>51f0882a-83c9-4724-b6e4-66d3cd90edb1</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>1ca7c597-d831-4389-8167-3b5f586f1689</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>8901f5bb-34ec-43ed-8d9c-3265d88ed69d</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>0bed34dd-35db-4658-b884-54a3bacc91bb</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>a55e61a1-4a28-4856-8219-3a38aebe1711</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>ff4cc9ca-a10f-45b4-9227-45187b2920e9</con:testStepId>
+    <con:status>NONE</con:status>
+    <con:properties/>
+  </con:breakPoints>
+  <con:breakPoints>
+    <con:testStepId>9f8b1284-cd51-4515-acd6-f2bd487e16cd</con:testStepId>
     <con:status>NONE</con:status>
     <con:properties/>
   </con:breakPoints>

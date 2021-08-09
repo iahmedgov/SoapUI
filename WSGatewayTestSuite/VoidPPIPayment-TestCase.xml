@@ -14,28 +14,28 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://qa.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:VoidPPIPayment>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:UserName>user524</ppi:UserName>\r
-            <!--Optional:-->\r
-            <ppi:Password>pwd524</ppi:Password>\r
-            <!--Optional:-->\r
-            <ppi:PPITransactionRequestId>sdfsdf345fsdfsdffs</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>\r
-         </ws:token>\r
-         <ws:paymentId>5944950881735699</ws:paymentId>\r
-         <ws:code>A1</ws:code>\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-         <!--Optional:-->\r
-      </ws:VoidPPIPayment>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:VoidPPIPayment>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:UserName>user524</ppi:UserName>
+            <!--Optional:-->
+            <ppi:Password>pwd524</ppi:Password>
+            <!--Optional:-->
+            <ppi:PPITransactionRequestId>sdfsdf345fsdfsdffs</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>524</ppi:PPIBusinessEntityIdentifierToken>
+         </ws:token>
+         <ws:paymentId>5944950881735699</ws:paymentId>
+         <ws:code>A1</ws:code>
+         <!--Optional:-->
+         <!--Optional:-->
+         <!--Optional:-->
+      </ws:VoidPPIPayment>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:credentials>
           <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
@@ -297,8 +297,9 @@
             <ppi:PPITransactionRequestId>sdfsdf345fsdfsdffs</ppi:PPITransactionRequestId>\r
             <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>\r
          </ws:token>\r
-         <ws:paymentId>10104518158872756</ws:paymentId>\r
+         <ws:paymentId>1743070243142387</ws:paymentId>\r
          <ws:code>A1</ws:code>\r
+         <ws:comments>This is a comment</ws:comments>\r
          <!--Optional:-->\r
          <!--Optional:-->\r
          <!--Optional:-->\r

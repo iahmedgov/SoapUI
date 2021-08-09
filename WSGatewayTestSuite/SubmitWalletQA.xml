@@ -340,54 +340,54 @@
         </con:settings>
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
-        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">\r
-   <soapenv:Header/>\r
-   <soapenv:Body>\r
-      <ws:SubmitWalletInformation>\r
-         <!--Optional:-->\r
-         <ws:token>\r
-            <!--Optional:-->\r
-            <ppi:UserName>User1286</ppi:UserName>\r
-            <ppi:Password>Pswd1286</ppi:Password>\r
-            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>\r
-            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:token>\r
-         <!--Optional:-->\r
-         <ws:walletRequest>\r
-            <ppi:Action>AddToken</ppi:Action>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <ppi:NickName>1286Nickname205</ppi:NickName>\r
-            <ppi:WalletID>1286WalletID205</ppi:WalletID>\r
-            <ppi:Vehicle>\r
-               <ppip:AccountType/>\r
-               <ppip:CheckType/>\r
-               <ppip:CheckNumberPosition/>\r
-               <ppip:CVV2Code>123</ppip:CVV2Code>\r
-               <ppip:ExpirationDate>12/21</ppip:ExpirationDate>\r
-               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>\r
-               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>\r
-               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>\r
-            </ppi:Vehicle>\r
-            <ppi:Payor>\r
-               <ppi:AddressLine1>2311 main road</ppi:AddressLine1>\r
-               <ppi:PhoneNumber>4444444444</ppi:PhoneNumber>\r
-               <ppi:FirstName>Jamesx</ppi:FirstName>\r
-               <ppi:LastName>Anthonyx</ppi:LastName>\r
-               <ppi:ZipCode>21114</ppi:ZipCode>\r
-               <ppi:IsBusinessName/>\r
-            </ppi:Payor>\r
-            <ppi:ClientReferenceNumber>asd123</ppi:ClientReferenceNumber>\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-            <!--Optional:-->\r
-         </ws:walletRequest>\r
-      </ws:SubmitWalletInformation>\r
-   </soapenv:Body>\r
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>User1286</ppi:UserName>
+            <ppi:Password>Pswd1286</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>1286</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>AddToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>1286Nickname205</ppi:NickName>
+            <ppi:WalletID>1286WalletID205</ppi:WalletID>
+            <ppi:Vehicle>
+               <ppip:AccountType/>
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <ppip:CVV2Code>123</ppip:CVV2Code>
+               <ppip:ExpirationDate>12/21</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <ppi:Payor>
+               <ppi:AddressLine1>2311 main road</ppi:AddressLine1>
+               <ppi:PhoneNumber>4444444444</ppi:PhoneNumber>
+               <ppi:FirstName>Jamesx</ppi:FirstName>
+               <ppi:LastName>Anthonyx</ppi:LastName>
+               <ppi:ZipCode>21114</ppi:ZipCode>
+               <ppi:IsBusinessName/>
+            </ppi:Payor>
+            <ppi:ClientReferenceNumber>asd123</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request>
         <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
         <con:credentials>
@@ -1740,6 +1740,76 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="ac67ceda-3537-44a1-a7a1-825ce5050dc9" name="SubmitWalletInformation-Demo2989">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>PPIServiceFacadeSoap</con:interface>
+      <con:operation>SubmitWalletInformation</con:operation>
+      <con:request name="SubmitWalletInformation-Demo2989" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8069539d-f842-40ba-aa58-e15e3455ca98" defaultOutgoingWss="" defaultIncomingWss="">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://demo.velocitypayment.com:443/vgateway/VGatewayWebService</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ws="https://www.velocitypayment.com/ws" xmlns:ppi="http://www.ePayments.com/PPI" xmlns:ppip="http://www.ePayments.com/PPIPayment">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ws:SubmitWalletInformation>
+         <!--Optional:-->
+         <ws:token>
+            <!--Optional:-->
+            <ppi:UserName>comm_CC</ppi:UserName>
+            <ppi:Password>magic88tide</ppi:Password>
+            <ppi:PPITransactionRequestId>11111111</ppi:PPITransactionRequestId>
+            <ppi:PPIBusinessEntityIdentifierToken>2989</ppi:PPIBusinessEntityIdentifierToken>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:token>
+         <!--Optional:-->
+         <ws:walletRequest>
+            <ppi:Action>AddToken</ppi:Action>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+            <ppi:NickName>Visa Nickname120</ppi:NickName>
+            <ppi:WalletID>2987WalletID210</ppi:WalletID>
+            <ppi:Vehicle>
+               <ppip:AccountType/>
+               <ppip:CheckType/>
+               <ppip:CheckNumberPosition/>
+               <ppip:ExpirationDate>12/22</ppip:ExpirationDate>
+               <ppip:PaymentVehicleNumber>4111111111111111</ppip:PaymentVehicleNumber>
+               <ppip:PaymentMethodCategory>CreditCard</ppip:PaymentMethodCategory>
+               <ppip:EnforcePinDebitValidation>false</ppip:EnforcePinDebitValidation>
+            </ppi:Vehicle>
+            <ppi:Payor>
+               <ppi:AddressLine1>2311 main road</ppi:AddressLine1>
+               <ppi:PhoneNumber>4444444444</ppi:PhoneNumber>
+               <ppi:FirstName>Jamesx</ppi:FirstName>
+               <ppi:LastName>Anthonyx</ppi:LastName>
+               <ppi:ZipCode>21114</ppi:ZipCode>
+               <ppi:IsBusinessName/>
+            </ppi:Payor><ppi:ClientReferenceNumber>14725800</ppi:ClientReferenceNumber>
+            <!--Optional:-->
+            <!--Optional:-->
+            <!--Optional:-->
+         </ws:walletRequest>
+      </ws:SubmitWalletInformation>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="8d414cc5-3acb-4cb0-aae9-9cc6539e8d58" name="SOAP Response"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:jmsPropertyConfig/>
         <con:wsaConfig mustUnderstand="NONE" version="200508" action="https://www.velocitypayment.com/ws/SubmitWalletInformation"/>
         <con:wsrmConfig version="1.2"/>
       </con:request>
